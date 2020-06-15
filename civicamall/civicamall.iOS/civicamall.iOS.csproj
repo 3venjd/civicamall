@@ -140,24 +140,45 @@
     <BundleResource Include="Resources\user_profile.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\payment-24px.png" />
+    <BundleResource Include="Resources\payment_24px.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\person_pin_circle-24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\receipt-24px.png" />
+    <BundleResource Include="Resources\receipt_24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Wish-List.png" />
+    <BundleResource Include="Resources\Wish_List.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\star_rate-24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\local_activity-24px.png" />
+    <BundleResource Include="Resources\local_activity_24px.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\exit_to_app-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\local_mall_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_mall_directory-24px.png" />
   </ItemGroup>
 </Project>
