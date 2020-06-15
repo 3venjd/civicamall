@@ -10,18 +10,20 @@ using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class IndexViewModel : BaseViewModel
+    public class PromosViewModel : BaseViewModel
     {
         public ObservableCollection<Advertisement> Advertisements { get; set; }
 
-        public ObservableCollection<Store> Stores { get; set; }
+        public ObservableCollection<Category> Categories { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
 
-        public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
+        public ICommand GoToDetailCommand { get { return new RelayCommand(GoToDetail); } }
 
-        public IndexViewModel()
+
+        public PromosViewModel()
         {
+
             Advertisements = new ObservableCollection<Advertisement>
             {
                 new Advertisement
@@ -51,37 +53,32 @@ namespace civicamall.ViewModels
                 },
             };
 
-            Stores = new ObservableCollection<Store>
+            Categories = new ObservableCollection<Category>
             {
-                new Store
+                new Category
                 {
-                    Title = "Moda",
-                    Image = "Moda.jpg"
+                    Name = "Calzado",
+                    Image = "Calzado.jpg"
                 },
-                new Store
+                new Category
                 {
-                    Title = "Tecnología",
-                    Image = "Tecnologia.jpg"
+                    Name = "Camisetas",
+                    Image = "Camisetas.jpg"
                 },
-                new Store
+                new Category
                 {
-                    Title = "Comida",
-                    Image = "Comidas.jpg"
+                    Name = "Vestidos",
+                    Image = "Vestidos.jpg"
                 },
-                new Store
+                new Category
                 {
-                    Title = "Salud",
-                    Image = "Salud.jpg"
+                    Name = "Pantalones",
+                    Image = "Pantalones.jpg"
                 },
-                new Store
+                new Category
                 {
-                    Title = "Motos",
-                    Image = "Motos.jpg"
-                },
-                new Store
-                {
-                    Title = "Carros",
-                    Image = "Carros.jpg"
+                    Name = "Gorras",
+                    Image = "Gorras.jpg"
                 },
             };
 
@@ -158,16 +155,12 @@ namespace civicamall.ViewModels
                 },
 
             };
+
         }
 
-        private async void GoToPromo()
+        private async void GoToDetail()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new PromosPage());
-            
-            //Application.Current.MainPage = new NavigationPage(new PromosPage());
-            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
-
+            await Application.Current.MainPage.Navigation.PushAsync(new IndexPage());
         }
     }
 }
