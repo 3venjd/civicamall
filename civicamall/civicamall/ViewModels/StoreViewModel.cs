@@ -1,5 +1,9 @@
 ﻿using civicamall.Models;
+using civicamall.Views;
+using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
@@ -10,6 +14,8 @@ namespace civicamall.ViewModels
         public ObservableCollection<Brand> Brands { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
+
+        public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
         public StoreViewModel()
         {
@@ -157,7 +163,7 @@ namespace civicamall.ViewModels
                 {
                      Name = "NIKE",
                      Image = "ic_nike.jgg",
-                     IsOpen = true,
+                     IsOpen = false,
                      IsClose = true,
                      Open_Hour = "8:30 AM",
                 },
@@ -165,5 +171,10 @@ namespace civicamall.ViewModels
 
         }
 
+        private async void GoToProductBrand()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
+        }
     }
 }

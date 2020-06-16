@@ -90,6 +90,7 @@ namespace civicamall.ViewModels
                 },
             };
 
+
             Products = new ObservableCollection<Product>
             {
                 new Product
@@ -179,9 +180,6 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new ProductsPage());
-
-            //Application.Current.MainPage = new NavigationPage(new PromosPage());
-            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
         }
         private async void GoToStoreList()
         {
