@@ -4,20 +4,65 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:ip="clr-namespace:civicamall.ViewModels"
+             xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView"
+             xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView"
+             xmlns:Local="clr-namespace:civicamall.Views"
              mc:Ignorable="d"
              x:Class="civicamall.Views.TabbedBrandPage">
     <ContentPage.BindingContext>
         <ip:StoreViewModel/>
     </ContentPage.BindingContext>
+    <ScrollView>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="0" Grid.Row="0" Source="{Binding Products.Image}"/>
-        
+        <Image Grid.Column="0" Grid.Row="0" Source="ic_adidas.png"/>
+
+        <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" TabClicked="Tab_TabClicked"
+                    HeaderColor="#7E2081" HeaderTextColor="Black" SelectionColor="White" CornerRadius="5" HasShadow="True" SelectedIndex="0">
+            <control:XFTabControl.XFTabPages >
+                <tabview:XFTabPage>
+                    <tabview:XFTabPage.Header>
+                        <tabview:XFTabHeader Padding="0">
+                            <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                   Text="Mis Fotos" />
+                        </tabview:XFTabHeader>
+                    </tabview:XFTabPage.Header>
+                    <tabview:XFTabPage.CustomContentPage>
+                        <Local:BrandProductsPage/>
+                    </tabview:XFTabPage.CustomContentPage>
+                </tabview:XFTabPage>
+                <tabview:XFTabPage>
+                    <tabview:XFTabPage.Header>
+                        <tabview:XFTabHeader>
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White"
+                                        FontAttributes="Bold" Text="Mis Amigos" />
+                        </tabview:XFTabHeader>
+                    </tabview:XFTabPage.Header>
+                    <tabview:XFTabPage.CustomContentPage>
+                        <Local:PromosBrandPage/>
+                    </tabview:XFTabPage.CustomContentPage>
+                </tabview:XFTabPage>
+                <tabview:XFTabPage>
+                    <tabview:XFTabPage.Header>
+                        <tabview:XFTabHeader>
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White"
+                                   FontAttributes="Bold" Text="Mi Diario" />
+                        </tabview:XFTabHeader>
+                    </tabview:XFTabPage.Header>
+                    <tabview:XFTabPage.CustomContentPage>
+                        <Local:InfoBrandPage />
+                    </tabview:XFTabPage.CustomContentPage>
+                </tabview:XFTabPage>
+
+            </control:XFTabControl.XFTabPages>
+        </control:XFTabControl>
+
     </Grid>
+    </ScrollView>
 </ContentPage>

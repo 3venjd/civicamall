@@ -3,6 +3,8 @@ using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Xam.TabView;
+using Xam.TabView.Control;
 using Xamarin.Forms;
 
 namespace civicamall.ViewModels
@@ -14,6 +16,8 @@ namespace civicamall.ViewModels
         public ObservableCollection<Brand> Brands { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
+
+        //public XFTabControl Tabcomponent { get; set; }
 
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
@@ -170,11 +174,10 @@ namespace civicamall.ViewModels
             };
 
         }
-
         private async void GoToProductBrand()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
+            await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
     }
 }
