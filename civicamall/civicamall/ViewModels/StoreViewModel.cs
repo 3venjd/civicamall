@@ -1,31 +1,17 @@
 ﻿using civicamall.Models;
-using civicamall.Views;
-using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class IndexViewModel : BaseViewModel
+    public class StoreViewModel : BaseViewModel
     {
         public ObservableCollection<Advertisement> Advertisements { get; set; }
 
-        public ObservableCollection<Store> Stores { get; set; }
+        public ObservableCollection<Brand> Brands { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
 
-        public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
-
-        public ICommand GoToProducts { get { return new RelayCommand(GoToProductList); } }
-
-        public ICommand GoToStores { get { return new RelayCommand(GoToStoreList); } }
-
-        //
-        public IndexViewModel()
+        public StoreViewModel()
         {
             Advertisements = new ObservableCollection<Advertisement>
             {
@@ -53,40 +39,6 @@ namespace civicamall.ViewModels
                 {
                     Title = "Promo 5",
                     Image = "promocion_5.jpg"
-                },
-            };
-
-            Stores = new ObservableCollection<Store>
-            {
-                new Store
-                {
-                    Title = "Moda",
-                    Image = "Moda.jpg"
-                },
-                new Store
-                {
-                    Title = "Tecnología",
-                    Image = "Tecnologia.jpg"
-                },
-                new Store
-                {
-                    Title = "Comida",
-                    Image = "Comidas.jpg"
-                },
-                new Store
-                {
-                    Title = "Salud",
-                    Image = "Salud.jpg"
-                },
-                new Store
-                {
-                    Title = "Motos",
-                    Image = "Motos.jpg"
-                },
-                new Store
-                {
-                    Title = "Carros",
-                    Image = "Carros.jpg"
                 },
             };
 
@@ -163,30 +115,55 @@ namespace civicamall.ViewModels
                 },
 
             };
+
+            Brands = new ObservableCollection<Brand>
+            {
+                new Brand
+                {
+                     Name = "ADIDAS",
+                     Image = "ic_adidas.png",
+                     Close_Day = "Viernes",
+                     CLose_hour = "7:00 PM",
+                     Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+                     HolyDay_open = false,
+                     IsOpen = true,
+                     IsClose = false,
+                     Open_Day = "Lunes",
+                     Open_Hour = "9:00 AM",
+                     Saturday_Open = true,
+                     Url_Facebook = "www.facebook.com",
+                     Url_Instagram = "www.instagram.com",
+                     Url_Twitter = "www.twitter.com",
+                     Url_Web = "www.adidas.com",
+                     Url_Youtube = "www.youtube.com"
+                },
+                new Brand
+                {
+                     Name = "RIFLE",
+                     Image = "ic_rifle.png",
+                     IsOpen = false,
+                     IsClose = false,
+                     Open_Hour = "7:00 AM",
+                },
+                new Brand
+                {
+                     Name = "AMERICANINO",
+                     Image = "ic_americanino.png",
+                     IsOpen = false,
+                     IsClose = true,
+                     Open_Hour = "8:30 AM",
+                },
+                new Brand
+                {
+                     Name = "NIKE",
+                     Image = "ic_nike.jgg",
+                     IsOpen = true,
+                     IsClose = true,
+                     Open_Hour = "8:30 AM",
+                },
+            };
+
         }
 
-        private async void GoToPromo()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new PromosPage());
-            
-            //Application.Current.MainPage = new NavigationPage(new PromosPage());
-            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
-
-        }
-
-        private async void GoToProductList()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ProductsPage());
-
-            //Application.Current.MainPage = new NavigationPage(new PromosPage());
-            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
-        }
-        private async void GoToStoreList()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new StorePage());
-        }
     }
 }

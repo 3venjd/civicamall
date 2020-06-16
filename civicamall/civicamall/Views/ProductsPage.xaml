@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:sp="clr-namespace:civicamall.ViewModels"
+             mc:Ignorable="d"
+             x:Class="civicamall.Views.ProductsPage"
+             Title="¡Explora!">
+    <ContentPage.BindingContext>
+        <sp:ProductsViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        
+        <Grid BackgroundColor="#F2EDF8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.78*"/>
+                <ColumnDefinition Width="0.22*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Column="0" Grid.Row="0" CornerRadius="10" HeightRequest="40" Padding="0" Margin="35,30,0,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" ImageSource="search_24px.png" BackgroundColor="White" />
+                    <Entry Grid.Column="1" Margin="0,0,0,-9" Placeholder="¿Qué necesitas?" PlaceholderColor="#1C1229" BackgroundColor="Transparent"/>
+                </Grid>
+            </Frame>
+            
+            <Button Grid.Column="1" Grid.Row="0" Margin="0,30,35,10" ImageSource="keyboard_voice_24px.png" CornerRadius="10" HeightRequest="40" BackgroundColor="#7E2081"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Large" TextColor="#7E2081" Text="Categorías" />
+
+            <CollectionView  Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan="2" SelectionMode="Single" Margin="32,24"
+                            ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" CornerRadius="7" HeightRequest="140">
+                            <Grid Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
+                                <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start" TranslationY="55" TranslationX="10" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="{Binding Name}"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
+    
+</ContentPage>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ip="clr-namespace:civicamall.ViewModels"
+             mc:Ignorable="d"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="civicamall.Views.StorePage"
+             Title="Tiendas">
+    <ContentPage.BindingContext>
+        <ip:StoreViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <Grid BackgroundColor="#F2EDF8" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <CarouselView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Advertisements}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding Image}"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <Label Grid.Column="0" Grid.Row="1" Margin="24,37,0,0" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
+            
+            
+            <Frame Grid.Column="1" Grid.Row="1" Margin="0,40,24,0" BackgroundColor="White" Padding="1" >
+                <Grid Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#7E2081" Text="Filtrar por"/>
+                    <Image Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Source="filter_list_24px.png"/>
+                </Grid>
+            </Frame>
+
+
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,34,124,0" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="La más visitada"/>
+
+
+            <CollectionView Grid.Column ="0" Grid.Row="3" Grid.ColumnSpan="2" SelectionMode="Single" Margin="32,24"
+                            ItemsSource="{Binding Brands}" SelectionChangedCommand="{Binding GoToBrand}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Vertical" HorizontalItemSpacing="0" VerticalItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" HeightRequest="100">
+                            <Grid Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*"/>
+                                    <ColumnDefinition Width="0.33*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.7*"/>
+                                    <RowDefinition Height="0.3*"/>
+                                    <RowDefinition Height="2"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Image}"/>
+                                <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,20,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="{Binding Name}"/>
+                                
+                                
+                                <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="0,0,0,10" HeightRequest="20" CornerRadius="5" BackgroundColor="#FF7D27">
+                                    <Grid Padding="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.5*"/>
+                                            <ColumnDefinition Width="0.5*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" FontSize="Micro" TextColor="White" Margin="2,0,0,0" Text="Abre a las"/>
+                                        <Label Grid.Column="1" FontSize="Micro" HorizontalTextAlignment="Start" HorizontalOptions="Start" TextColor="White" Text="{Binding Open_Hour}"/>
+                                    </Grid>
+                                </Frame>
+                                <Frame Grid.Column="1" Grid.Row="1" Padding="-1" Margin="0,0,0,10" HeightRequest="20" CornerRadius="5" BackgroundColor="#FF2727" IsVisible="{Binding IsClose}">
+                                    <Label TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Cerrado"/>
+                                </Frame>
+                                <Frame Grid.Column="1" Grid.Row="1" Padding="-1" Margin="0,0,0,10" HeightRequest="20" CornerRadius="5" BackgroundColor="#3DAA35" IsVisible="{Binding IsOpen}">
+                                    <Label TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Abierto"/>
+                                </Frame>
+                                
+                                
+                                <BoxView Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="LightGray"/>
+                                <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" Source="navigate_next_24px.png" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
