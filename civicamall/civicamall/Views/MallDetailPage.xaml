@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mv="clr-namespace:civicamall.ViewModels"
+             mc:Ignorable="d"
+             x:Class="civicamall.Views.MallDetailPage">
+    <ContentPage.BindingContext>
+        <mv:MallsViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <Grid BackgroundColor="#F2EDF8" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="Fill" Source="{Binding MallDetail.Image}"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" Margin="0,12,0,16" FontSize="Medium" TextColor="#4C4456" Text="{Binding MallDetail.Name}"/>
+
+            <Frame Grid.Row="2" Grid.Column="0" Padding="0" Margin="24,0,24,0">
+                <Grid Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Column="0" Source="price_tag.png" TranslationX="5"/>
+                    <Button Grid.Column="1" TextColor="#7E2081" Text="Promos" BackgroundColor="White" Command="{Binding GoToPromos}"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="1" Padding="0" Margin="24,0,24,0">
+                <Grid Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Column="0" Source="store.png" TranslationX="5"/>
+                    <Button Grid.Column="1" TextColor="#7E2081" Text="Tiendas" BackgroundColor="White" Command="{Binding GoToStores}"/>
+                </Grid>
+            </Frame>
+
+            <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20" HeightRequest="400" Padding="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" FontAttributes="Bold" Margin="24,12" FontSize="Medium" TextColor="#7E2081" Text="Novedades"/>
+                    <Image Grid.Row="1" HeightRequest="300" Aspect="AspectFill" Margin="24,0" Source="city_image.png"/>
+                </Grid>
+            </Frame>
+
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="24,0" HeightRequest="34" Padding="0" FontAttributes="Bold" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" Text="Nuestra Información"/>
+
+            <Label Grid.Row="5" Grid.Column="0"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

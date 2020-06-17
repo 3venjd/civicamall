@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mv="clr-namespace:civicamall.ViewModels"
+             mc:Ignorable="d"
+             x:Class="civicamall.Views.MallPage">
+    <ContentPage.BindingContext>
+        <mv:MallsViewModel/>
+    </ContentPage.BindingContext>
+    <Grid BackgroundColor="#F2EDF8" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <CarouselView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Advertisements}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Image}"/>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Label Grid.Column="0" Grid.Row="1" Margin="20" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
+
+        <CollectionView Grid.Column ="0" Grid.Row="2" SelectionMode="Single" Margin="24,0,24,0"
+                            ItemsSource="{Binding Malls}" SelectionChangedCommand="{Binding GoToMallDetail}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="0" CornerRadius="7" HeightRequest="129">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.7*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
+                            <Label Grid.Column="0" Grid.Row="1" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="#7E2081" Text="{Binding Name}"/>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

@@ -30,7 +30,7 @@
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader Padding="0">
                             <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
-                                   Text="Mis Fotos" />
+                                   Text="Productos" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>
                     <tabview:XFTabPage.CustomContentPage>
@@ -40,8 +40,8 @@
                 <tabview:XFTabPage>
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader>
-                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White"
-                                        FontAttributes="Bold" Text="Mis Amigos" />
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                   Text="Promos" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>
                     <tabview:XFTabPage.CustomContentPage>
@@ -51,8 +51,8 @@
                 <tabview:XFTabPage>
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader>
-                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White"
-                                   FontAttributes="Bold" Text="Mi Diario" />
+                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                   Text="Información" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>
                     <tabview:XFTabPage.CustomContentPage>

@@ -1,10 +1,7 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -23,6 +20,9 @@ namespace civicamall.ViewModels
         public ICommand GoToProducts { get { return new RelayCommand(GoToProductList); } }
 
         public ICommand GoToStores { get { return new RelayCommand(GoToStoreList); } }
+
+        public ICommand GoToMalls { get { return new RelayCommand(GoToMallList); } }
+
 
         //
         public IndexViewModel()
@@ -170,7 +170,7 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new PromosPage());
-            
+
             //Application.Current.MainPage = new NavigationPage(new PromosPage());
             //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
 
@@ -185,6 +185,11 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new StorePage());
+        }
+        private async void GoToMallList()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new MallPage());
         }
     }
 }
