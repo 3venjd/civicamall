@@ -136,7 +136,7 @@
             <Label Grid.Row="6" Grid.Column ="1" Margin="0,10,21,16" FontAttributes="Bold" TextColor="#2CBFFF" VerticalTextAlignment="End" FontSize="Small" Text="Ver todo"/>
 
             <CollectionView  Grid.Row="7" Grid.Column ="0" Grid.ColumnSpan="2" HeightRequest="200" SelectionMode="Single" Margin="24,0,24,0"
-                            ItemsSource="{Binding Products}" SelectionChangedCommand="{Binding GoToProduct}">
+                            ItemsSource="{Binding Products}" SelectionChangedCommand="{Binding GoToProductDetail}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
                 </CollectionView.ItemsLayout>
