@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:sp="clr-namespace:civicamall.ViewModels"
+             xmlns:sp="clr-namespace:civicamall.ViewModels" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.ProductsPage"
-             Title="¡Explora!">
+             NavigationPage.HasNavigationBar="False"
+             x:Class="civicamall.Views.ProductsPage">
     <ContentPage.BindingContext>
         <sp:ProductsViewModel/>
     </ContentPage.BindingContext>
@@ -26,7 +27,17 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Frame Grid.Column="0" Grid.Row="0" CornerRadius="10" HeightRequest="40" Padding="0" Margin="35,30,0,10">
+            <pv:PancakeView HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,0" CornerRadius="0,0,0,20" BackgroundColor="White" Padding="0">
+                <Button Margin="0" BackgroundColor="White" ImageSource="round_arrow_back_24px.png" Command="{Binding Backtopreviospage}"/>
+            </pv:PancakeView>
+
+            <pv:PancakeView HorizontalOptions="End" Grid.ColumnSpan="2" VerticalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,0" CornerRadius="0,0,20,0" BackgroundColor="White" Padding="0">
+                <Button Margin="0" BackgroundColor="White" ImageSource="shopping_cart_24px.png" Command="{Binding GoToShopping}"/>
+            </pv:PancakeView>
+
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,10" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="#4C4456" Text="¡Explora!"/>
+
+            <Frame Grid.Column="0" Grid.Row="1" CornerRadius="10" HeightRequest="40" Padding="0" Margin="35,30,0,10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.2*"/>
@@ -40,11 +51,11 @@
                 </Grid>
             </Frame>
             
-            <Button Grid.Column="1" Grid.Row="0" Margin="0,30,35,10" ImageSource="keyboard_voice_24px.png" CornerRadius="10" HeightRequest="40" BackgroundColor="#7E2081"/>
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,30,35,10" ImageSource="keyboard_voice_24px.png" CornerRadius="10" HeightRequest="40" BackgroundColor="#7E2081"/>
 
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Large" TextColor="#7E2081" Text="Categorías" />
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Large" TextColor="#7E2081" Text="Categorías" />
 
-            <CollectionView  Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan="2" SelectionMode="Single" Margin="32,24"
+            <CollectionView  Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="2" SelectionMode="Single" Margin="32,24"
                             ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />

@@ -1,5 +1,9 @@
 ﻿using civicamall.Models;
+using civicamall.Views;
+using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
@@ -11,6 +15,12 @@ namespace civicamall.ViewModels
         public ObservableCollection<ProdcutSize> Sizes { get; set; }
 
         public ObservableCollection<ProductColor> Colors { get; set; }
+
+        public ICommand GoToShopping { get { return new RelayCommand(GoToShop); } }
+
+        public ICommand Backtopreviospage { get { return new RelayCommand(Backpage); } }
+
+        
 
         public Product Productdetail { get; set; }
 
@@ -136,5 +146,17 @@ namespace civicamall.ViewModels
                 IsDiscount = false
             };
         }
+        private async void Backpage()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
+        private async void GoToShop()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingPage());
+        }
+
     }
 }

@@ -19,6 +19,12 @@ namespace civicamall.ViewModels
 
         //public XFTabControl Tabcomponent { get; set; }
 
+        public ICommand GoToShopping { get { return new RelayCommand(GoToShop); } }
+
+        public ICommand Backtopreviospage { get { return new RelayCommand(Backpage); } }
+
+        
+
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
         public StoreViewModel()
@@ -179,5 +185,17 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
+        private async void Backpage()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
+        private async void GoToShop()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingPage());
+        }
+
     }
 }

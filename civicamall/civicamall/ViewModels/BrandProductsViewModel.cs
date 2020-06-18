@@ -1,10 +1,18 @@
 ﻿using civicamall.Models;
+using civicamall.Views;
+using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
     public class BrandProductsViewModel
     {
+        public ICommand GoToShopping { get { return new RelayCommand(GoToShop); } }
+
+        public ICommand Backtopreviospage { get { return new RelayCommand(Backpage); } }
+
         public ObservableCollection<Product> Products { get; set; }
 
         public BrandProductsViewModel()
@@ -82,6 +90,18 @@ namespace civicamall.ViewModels
                 },
 
             };
+        }
+
+        private async void Backpage()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
+        private async void GoToShop()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingPage());
         }
     }
 }

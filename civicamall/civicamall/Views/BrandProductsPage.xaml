@@ -6,8 +6,7 @@
              xmlns:bp="clr-namespace:civicamall.ViewModels" 
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.BrandProductsPage"
-             Title="Products Brand">
+             x:Class="civicamall.Views.BrandProductsPage">
 
     <ContentPage.BindingContext>
         <bp:BrandProductsViewModel/>
