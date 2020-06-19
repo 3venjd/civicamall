@@ -9,125 +9,94 @@
              Title="Menu">
     <ContentPage.Content>
         <ScrollView>
-        <Grid BackgroundColor="#F2EDF8">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" HeightRequest="16" WidthRequest="16" Padding="10" Margin="16,16,10,0" BackgroundColor="white" ImageSource="close_24px.png" />
+                <Button Grid.Row="0" Grid.Column="0" HeightRequest="16" WidthRequest="16" Padding="10" Margin="16,16,10,0" BackgroundColor="white" ImageSource="close_24px.png" />
+                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16,24,0" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
 
-            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16,24,0" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
-
-            <Frame  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="24,10,24,10" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.44*"/>
-                        <ColumnDefinition Width="0.56*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" Margin="9,16,10,0" Padding="0" CornerRadius="44">
-                        <Image Source="user_profile.jpg" Aspect="AspectFill" HeightRequest="88"/>
-                    </pv:PancakeView>
-
-                    <Label Grid.Column="1" Grid.Row="0" Margin="0,16,5,0" FontAttributes="Bold" FontSize="Large" TextColor="#4C4456" Text="Carolina T."/>
-
-                    <Label Grid.Column="1" Grid.Row="1" HeightRequest="1" Margin="0" BackgroundColor="#D0C7D6"/>
-
-                    <Label Grid.Column="1" Grid.Row="2" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="Grafico@dobleplus.com"/>
-
-                    <Label Grid.Column="1" Grid.Row="3" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="+57 123 456 78 09"/>
-                    
-                    
-                </Grid>
-            </Frame>
-
-            <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="24,32,24,20" BackgroundColor="#F2EDF8" Padding="0" BorderColor="Transparent">
-                <Grid ColumnSpacing="15">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-
-                    <Button Grid.Row="0" Grid.Column="0" BackgroundColor="White" ImageSource="payment_24px.png" HeightRequest="48" WidthRequest="48" CornerRadius="5" Padding="0"/>
-                    <Button Grid.Row="0" Grid.Column="1" BackgroundColor="White" ImageSource="person_pin_circle_24px.png" HeightRequest="48" CornerRadius="5" WidthRequest="48"/>
-                    <Button Grid.Row="0" Grid.Column="2" BackgroundColor="White" ImageSource="receipt_24px.png" HeightRequest="48" CornerRadius="5" WidthRequest="48"/>
-                    <Button Grid.Row="0" Grid.Column="3" BackgroundColor="White" ImageSource="Wish_List.png" HeightRequest="48" CornerRadius="5" WidthRequest="48"/>
+                <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="Center" HeightRequest="110" Margin="24,10,24,10" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">
+                    <Grid Padding="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="2"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Center" VerticalOptions="Center" Padding="0" CornerRadius="44" Margin="0,10,0,0">
+                            <Image Source="user_profile.jpg" Aspect="AspectFill" HeightRequest="90"/>
+                        </pv:PancakeView>
+                        <Label Grid.Column="1" Grid.Row="0" Margin="0,16,5,0" FontAttributes="Bold" FontSize="Large" TextColor="#4C4456" Text="Carolina T."/>
+                        <Label Grid.Column="1" Grid.Row="1" Margin="0" BackgroundColor="#D0C7D6"/>
+                        <Label Grid.Column="1" Grid.Row="2" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="Grafico@dobleplus.com"/>
+                        <Label Grid.Column="1" Grid.Row="3" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="+57 123 456 78 09"/>
+                    </Grid>
+                </pv:PancakeView>
 
 
-                    <Label Grid.Row="1" Grid.Column="0" FontSize="Micro" Text="Métodos de pago"/>
-                    <Label Grid.Row="1" Grid.Column="1" FontSize="Micro" Text="Ubicaciones" Margin="-4,0,0,0"/>
-                    <Label Grid.Row="1" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos"/>
-                    <Label Grid.Row="1" Grid.Column="3" FontSize="Micro" Text="Deseados"/>
+                <Button Grid.Row="2" Grid.Column="0" BackgroundColor="White" ImageSource="payment_24px.png" Margin="24,0,0,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50"/>
+                <Button Grid.Row="2" Grid.Column="1" BackgroundColor="White" ImageSource="person_pin_circle_24px.png" TranslationX="5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50"/>
+                <Button Grid.Row="2" Grid.Column="2" BackgroundColor="White" ImageSource="receipt_24px.png" TranslationX="-5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50"/>
+                <Button Grid.Row="2" Grid.Column="3" BackgroundColor="White" ImageSource="Wish_List.png" Margin="0,0,24,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50"/>
 
-                </Grid>
-            </Frame>
-            
-            <pv:PancakeView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,0,24,0" Padding="10" CornerRadius="10,10,0,0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".9*"/>
-                        <ColumnDefinition Width=".1*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Favoritos"/>
-                    <Image Grid.Column="1" Source="star_rate_24px.png"/>
-                </Grid>
-            </pv:PancakeView>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="Micro" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0,0,0"/>
+                <Label Grid.Row="3" Grid.Column="1" FontSize="Micro" Text="Ubicaciones" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Row="3" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Row="3" Grid.Column="3" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,24,0"/>
 
-            <pv:PancakeView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,-5,24,0" Padding="10" CornerRadius="0,0,10,10">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".9*"/>
-                        <ColumnDefinition Width=".1*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Cupones" />
-                    <Image Grid.Column="1" Source="local_activity_24px.png"/>
-                </Grid>
-            </pv:PancakeView>
+                <pv:PancakeView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,10,24,0" Padding="10" CornerRadius="10,10,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".7*"/>
+                            <ColumnDefinition Width=".3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Favoritos"/>
+                        <Image Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="star_rate_24px.png"/>
+                    </Grid>
+                </pv:PancakeView>
 
-            <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Margin="40,32,40,0" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
+                <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,-5,24,0" Padding="10" CornerRadius="0,0,10,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".7*"/>
+                            <ColumnDefinition Width=".3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Cupones" />
+                        <Image Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="local_activity_24px.png"/>
+                    </Grid>
+                </pv:PancakeView>
 
+                <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Margin="40,32,40,0" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
 
+                <Image Grid.Row="7" Grid.Column="0" Source="exit_to_app_24px.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="41,0,0,0"/>
 
+                <Label Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" />
 
-
-            <Image Grid.Row="6" Grid.Column="0" Source="exit_to_app_24px.png" Margin="41,91,0,40"/>
-
-            <Label Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Medium" TextColor="#7E2081"  Margin="0,91,0,40" Text="Cerrar sesión" />
-
-
-
-
-        </Grid>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
