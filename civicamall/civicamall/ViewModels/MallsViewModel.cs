@@ -21,12 +21,6 @@ namespace civicamall.ViewModels
 
         public ICommand GoToStores { get { return new RelayCommand(GoToStore); } }
 
-        public ICommand GoToShopping { get { return new RelayCommand(GoToShop); } }
-
-        public ICommand Backtopreviospage { get { return new RelayCommand(Backpage); } }
-
-        
-
 
         public MallsViewModel()
         {
@@ -101,18 +95,6 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new StorePage());
-        }
-
-        private async void Backpage()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PopAsync();
-        }
-
-        private async void GoToShop()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingPage());
         }
     }
 }

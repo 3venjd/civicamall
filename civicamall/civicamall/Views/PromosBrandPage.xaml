@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:pp="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.PromosBrandPage">
+             x:Class="civicamall.Views.PromosBrandPage"
+             Title="Promos Page">
 
     <ContentPage.BindingContext>
         <pp:BrandProductsViewModel/>

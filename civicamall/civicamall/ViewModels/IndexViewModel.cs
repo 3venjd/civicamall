@@ -92,6 +92,7 @@ namespace civicamall.ViewModels
                 },
             };
 
+
             Products = new ObservableCollection<Product>
             {
                 new Product

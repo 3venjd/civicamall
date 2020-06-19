@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:ip="clr-namespace:civicamall.ViewModels" 
              x:Class="civicamall.Views.IndexPage">
     <ContentPage.BindingContext>
@@ -31,16 +30,15 @@
             <CarouselView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" ItemsSource="{Binding Advertisements}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding Image}"/>
+                        <Image Source="{Binding Image}"/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <Label Grid.Column ="0" Grid.Row="1" Margin="33,20,0,16" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Tus favoritos"/>
 
             <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="32,0,32,0" BackgroundColor="#F2EDF8" Padding="0" BorderColor="Transparent">
-                <Grid ColumnSpacing="10">
+                <Grid ColumnSpacing="57">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -53,13 +51,11 @@
                     <Button Grid.Row="0" Grid.Column="0" BackgroundColor="White" ImageSource="Wish_List.png" CornerRadius="5"/>
                     <Button Grid.Row="0" Grid.Column="1" BackgroundColor="White" ImageSource="local_mall_24px.png" CornerRadius="5"/>
                     <Button Grid.Row="0" Grid.Column="2" BackgroundColor="White" ImageSource="store_mall_directory_24px.png" CornerRadius="5"/>
-                    <Button Grid.Row="0" Grid.Column="3" BackgroundColor="White" ImageSource="person_pin_circle_24px.png" CornerRadius="5"/>
 
 
                     <Label Grid.Row="1" Grid.Column="0" FontSize="13" HorizontalTextAlignment="Center" TextColor="#4C4456" Text="Deseados" />
                     <Label Grid.Row="1" Grid.Column="1" FontSize="13" HorizontalTextAlignment="Center" TextColor="#4C4456" Text="Malls" />
                     <Label Grid.Row="1" Grid.Column="2" FontSize="13" HorizontalTextAlignment="Center" TextColor="#4C4456" Text="Tiendas"/>
-                    <Label Grid.Row="1" Grid.Column="3" FontSize="13" HorizontalTextAlignment="Center" TextColor="#4C4456" Text="Visitados"/>
 
                 </Grid>
             </Frame>
@@ -146,11 +142,11 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView Padding="0" CornerRadius="0,0,6,6" BackgroundColor="White" IsClippedToBounds="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="100">
+                        <Frame Padding="0" CornerRadius="7" IsClippedToBounds="False" WidthRequest="150">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.6*"/>
-                                    <ColumnDefinition Width="0.4*"/>
+                                    <ColumnDefinition Width="0.7*"/>
+                                    <ColumnDefinition Width="0.3*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="0.7*"/>
@@ -161,11 +157,11 @@
                                 <Label Grid.Column="0" Grid.Row="1" Margin="6,0,0,0" FontSize="Medium" TextColor="#7E2081" Text="{Binding Name}"/>
                                 <Label Grid.Column="0" Grid.Row="2" Margin="6,0,0,0" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
 
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png" />
+                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" CornerRadius="30" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
+                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" CornerRadius="30" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png"/>
 
                             </Grid>
-                        </pv:PancakeView>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
@@ -182,7 +178,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView Padding="0" CornerRadius="0,0,6,6" BackgroundColor="White" IsClippedToBounds="False" WidthRequest="150">
+                        <Frame Padding="0" CornerRadius="7" IsClippedToBounds="False" WidthRequest="150">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.7*"/>
@@ -197,12 +193,11 @@
                                 <Label Grid.Column="0" Grid.Row="1" Margin="6,0,0,0" FontSize="Medium" TextColor="#7E2081" Text="{Binding Title}"/>
                                 <Label Grid.Column="0" Grid.Row="2" Margin="6,0,0,0" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
 
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png" />
-                                
-                                
+                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" CornerRadius="30" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
+                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" CornerRadius="30" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png"/>
+
                             </Grid>
-                        </pv:PancakeView>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 

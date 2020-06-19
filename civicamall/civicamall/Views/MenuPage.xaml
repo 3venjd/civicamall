@@ -4,9 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.MenuPage">
+             x:Class="civicamall.Views.MenuPage"
+             Title="Menu">
     <ContentPage.Content>
         <ScrollView>
         <Grid BackgroundColor="#F2EDF8">

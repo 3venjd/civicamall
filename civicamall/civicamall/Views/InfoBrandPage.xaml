@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:sp="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.InfoBrandPage">
+             x:Class="civicamall.Views.InfoBrandPage"
+             Title="Información">
     <ContentPage.BindingContext>
         <sp:StoreViewModel/>
     </ContentPage.BindingContext>

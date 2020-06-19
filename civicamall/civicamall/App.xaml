@@ -7,21 +7,5 @@
              x:Class="civicamall.App">
     <Application.Resources>
 
-        <Style TargetType="{x:Type NavigationPage}">
-            <Setter Property="BarBackgroundColor" Value="Transparent" />
-            <Setter Property="BarTextColor" Value="Black" />
-        </Style>
-
-        <Style
-            TargetType="{x:Type ContentPage}"
-            ApplyToDerivedTypes="True">
-            <Setter Property="BackgroundColor" Value="Transparent" />
-        </Style>
-
-        <Style
-            TargetType="{x:Type MasterDetailPage}"
-            ApplyToDerivedTypes="True">
-            <Setter Property="BackgroundColor" Value="Transparent" />
-        </Style>
     </Application.Resources>
 </Application>

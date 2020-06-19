@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:mv="clr-namespace:civicamall.ViewModels" 
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:mv="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
-             NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.MallPage">
     <ContentPage.BindingContext>
         <mv:MallsViewModel/>
@@ -24,28 +22,10 @@
         <CarouselView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Advertisements}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Image Aspect="AspectFill" Source="{Binding Image}"/>
+                    <Image Source="{Binding Image}"/>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <pv:PancakeView HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,0" CornerRadius="0,0,0,20" BackgroundColor="White" Padding="0">
-            <Button Margin="0" BackgroundColor="White" ImageSource="round_arrow_back_24px.png" Command="{Binding Backtopreviospage}"/>
-        </pv:PancakeView>
-
-        <pv:PancakeView HorizontalOptions="End" VerticalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,0" CornerRadius="0,0,20,0" BackgroundColor="White" Padding="0">
-            <Button Margin="0" BackgroundColor="White" ImageSource="shopping_cart_24px.png" Command="{Binding GoToShopping}"/>
-        </pv:PancakeView>
-
-        <pv:PancakeView HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="30" WidthRequest="200" Padding="0" Margin="0,10" BackgroundColor="White" BorderColor="Black" CornerRadius="6">
-            <Grid Padding="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.9*"/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="search_24px" Aspect="AspectFit" VerticalOptions="Center"/>
-                <Entry Grid.Column="1" Margin="0,0,0,-9" Placeholder="¿Qué necesitas?" PlaceholderColor="#1C1229" BackgroundColor="Transparent"/>
-            </Grid>
-        </pv:PancakeView>
 
         <Label Grid.Column="0" Grid.Row="1" Margin="20" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
 
