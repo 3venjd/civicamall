@@ -5,17 +5,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:sp="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.ProductsPage"
-             Title="¡Explora!">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="civicamall.Views.ProductsPage">
     <ContentPage.BindingContext>
         <sp:ProductsViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-        
-        <Grid BackgroundColor="#F2EDF8">
+
+        <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.78*"/>
-                <ColumnDefinition Width="0.22*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -26,32 +28,29 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Frame Grid.Column="0" Grid.Row="0" CornerRadius="10" HeightRequest="40" Padding="0" Margin="35,30,0,10">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Button Grid.Column="0" ImageSource="search_24px.png" BackgroundColor="White" />
-                    <Entry Grid.Column="1" Margin="0,0,0,-9" Placeholder="¿Qué necesitas?" PlaceholderColor="#1C1229" BackgroundColor="Transparent"/>
-                </Grid>
-            </Frame>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"
+                   TextColor="#4C4456" Text="¡Explora!" Margin="0,8,0,32"/>
+
+            <Button Grid.Column="0" Grid.Row="1" ImageSource="search_24px.png" Margin="37,0,0,0" BackgroundColor="White" VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center" HeightRequest="40" WidthRequest="40"/>
             
-            <Button Grid.Column="1" Grid.Row="0" Margin="0,30,35,10" ImageSource="keyboard_voice_24px.png" CornerRadius="10" HeightRequest="40" BackgroundColor="#7E2081"/>
+            <Entry Grid.Column="1" Grid.Row="1" Placeholder="¿Qué necesitas?" PlaceholderColor="#1C1229" BackgroundColor="White" 
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HeightRequest="40" WidthRequest="200"/>
+            
+            <Button Grid.Column="2" Grid.Row="1" ImageSource="keyboard_voice_24px.png" CornerRadius="10" Margin="8,0,0,0"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HeightRequest="40" WidthRequest="40" BackgroundColor="#7E2081"/>
 
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Large" TextColor="#7E2081" Text="Categorías" />
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="Center" Margin="0,32,0,0" VerticalOptions="Center" FontAttributes="Bold"
+                   FontSize="Large" TextColor="#7E2081" Text="Categorías" />
 
-            <CollectionView  Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan="2" SelectionMode="Single" Margin="32,24"
+            <CollectionView Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,24"
                             ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="0" CornerRadius="7" HeightRequest="140">
+                        <pv:PancakeView Padding="0" CornerRadius="7" HeightRequest="140">
                             <Grid Padding="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -62,7 +61,7 @@
                                 <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
                                 <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start" TranslationY="55" TranslationX="10" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="{Binding Name}"/>
                             </Grid>
-                        </Frame>
+                        </pv:PancakeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
