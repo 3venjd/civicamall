@@ -21,6 +21,12 @@ namespace civicamall.ViewModels
 
         public ICommand GoToStores { get { return new RelayCommand(GoToStore); } }
 
+        public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
+
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
+        
+
 
         public MallsViewModel()
         {
@@ -96,5 +102,17 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new StorePage());
         }
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
+
+        private async void GoBack()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
     }
 }

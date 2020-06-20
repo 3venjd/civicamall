@@ -38,7 +38,7 @@
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Aspect="AspectFit" Source="{Binding Image}"/>
+                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Aspect="AspectFill" Source="{Binding Image}"/>
                                 <Grid Grid.Column="1">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>

@@ -18,7 +18,9 @@ namespace civicamall.ViewModels
 
         public ObservableCollection<Product> Products { get; set; }
 
-        public ICommand GoToDetailCommand { get { return new RelayCommand(GoToDetail); } }
+        public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
+
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 
 
         public PromosViewModel()
@@ -158,9 +160,17 @@ namespace civicamall.ViewModels
 
         }
 
-        private async void GoToDetail()
+        private async void GoCar()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new IndexPage());
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
         }
+
+        private async void GoBack()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
     }
 }

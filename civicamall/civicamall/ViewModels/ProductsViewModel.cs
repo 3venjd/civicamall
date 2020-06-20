@@ -1,5 +1,9 @@
 ﻿using civicamall.Models;
+using civicamall.Views;
+using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
@@ -13,6 +17,12 @@ namespace civicamall.ViewModels
         public ObservableCollection<ProductColor> Colors { get; set; }
 
         public Product Productdetail { get; set; }
+
+        public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
+
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
+        
 
         public ProductsViewModel()
         {
@@ -135,6 +145,18 @@ namespace civicamall.ViewModels
                 IsFavorite = true,
                 IsDiscount = false
             };
+        }
+
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
+
+        private async void GoBack()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
         }
     }
 }

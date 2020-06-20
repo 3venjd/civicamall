@@ -26,12 +26,15 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Margin="32,30,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="Adidas" />
+            <Label Grid.Column="0" Grid.Row="0" Margin="32,30,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="{Binding BranDetail.Name}" />
             <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#3DAA35">
                 <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="Abierto"/>
             </Frame>
+            <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#FF2727" IsVisible="{Binding BranDetail.IsClose}">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="Cerrado"/>
+            </Frame>
 
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="36,12,0,0" TextColor="#41CBFF" Text="www.adidas.com.co" />
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="36,12,0,0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Web}" />
 
             <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="36,12" Padding="0" BorderColor="Transparent" HeightRequest="200">
                 <Grid>
@@ -47,18 +50,18 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Image Grid.Column="0" Grid.Row="0" Source="ic_facebook.png" HorizontalOptions="Start"/>
-                    <Label Grid.Column="1" Grid.Row="0" TextColor="#41CBFF" Text="www.facebook.com"/>
+                    <Label Grid.Column="1" Grid.Row="0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Facebook}"/>
 
                     <Image Grid.Column="0" Grid.Row="1" Source="ic_instagram.png" HorizontalOptions="Start"/>
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="#41CBFF" Text="www.instagram.com"/>
+                    <Label Grid.Column="1" Grid.Row="1" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Instagram}"/>
 
                     <Image Grid.Column="0" Grid.Row="2" Source="ic_twitter.png" HorizontalOptions="Start"/>
-                    <Label Grid.Column="1" Grid.Row="2" TextColor="#41CBFF" Text="www.twitter.com"/>
+                    <Label Grid.Column="1" Grid.Row="2" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Twitter}"/>
 
                     <Image Grid.Column="0" Grid.Row="3" Source="ic_youtube.png" HorizontalOptions="Start"/>
-                    <Label Grid.Column="1" Grid.Row="3" TextColor="#41CBFF" Text="www.youtube.com"/>
+                    <Label Grid.Column="1" Grid.Row="3" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Youtube}"/>
 
-                    <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,12,0,0" TextColor="#99AAA9" HorizontalTextAlignment="Start" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+                    <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,12,0,0" TextColor="#99AAA9" HorizontalTextAlignment="Start" Text="{Binding BranDetail.Description}"/>
                 </Grid>
             </Frame>
 
@@ -67,8 +70,8 @@
                 <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="0.4*"/>
-                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="2"/>
                     <ColumnDefinition Width="0.5*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -84,22 +87,22 @@
 
                     <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Lunes a viernes"/>
 
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="#979797" Text="8:00AM"/>
+                    <Label Grid.Column="1" Grid.Row="1" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
                     <Label Grid.Column="2" Grid.Row="1" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="1" TextColor="#979797" Text="10:00PM"/>
+                    <Label Grid.Column="3" Grid.Row="1" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
                 
                 
                     <Label Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Sábados"/>
 
-                    <Label Grid.Column="1" Grid.Row="3" TextColor="#979797" Text="8:00AM"/>
+                    <Label Grid.Column="1" Grid.Row="3" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
                     <Label Grid.Column="2" Grid.Row="3" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="3" TextColor="#979797" Text="10:00PM"/>
+                    <Label Grid.Column="3" Grid.Row="3" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
 
                     <Label Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Domingos y festivos"/>
 
-                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" Text="8:00AM"/>
+                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
                     <Label Grid.Column="2" Grid.Row="5" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" Text="10:00PM"/>
+                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="5" BackgroundColor="#B6C1C8" HeightRequest="2"/>
                 </Grid>

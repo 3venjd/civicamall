@@ -15,6 +15,16 @@ namespace civicamall.ViewModels
 
         public ObservableCollection<Brand> Brands { get; set; }
 
+        public Brand BranDetail { get; set; }
+
+        public ObservableCollection<ShoppingCar> ShopInCar { get; set; }
+
+        public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
+
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
+        
+
         public ObservableCollection<Product> Products { get; set; }
 
         //public XFTabControl Tabcomponent { get; set; }
@@ -173,11 +183,93 @@ namespace civicamall.ViewModels
                 },
             };
 
+            BranDetail = new Brand 
+            {
+                Name = "ADIDAS",
+                Image = "ic_adidas.png",
+                Close_Day = "Viernes",
+                CLose_hour = "7:00 PM",
+                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+                HolyDay_open = false,
+                IsOpen = true,
+                IsClose = false,
+                Open_Day = "Lunes",
+                Open_Hour = "9:00 AM",
+                Saturday_Open = true,
+                Url_Facebook = "www.facebook.com",
+                Url_Instagram = "www.instagram.com",
+                Url_Twitter = "www.twitter.com",
+                Url_Web = "www.adidas.com",
+                Url_Youtube = "www.youtube.com"
+            };
+
+            ShopInCar = new ObservableCollection<ShoppingCar>
+            {
+                new ShoppingCar
+                {
+                     Name = "Camiseta",
+                     Image = "camiseta_1.jpg",
+                     Base_cost = 50000,
+                     Discount = 0,
+                     IsDiscount = false
+
+                },
+                new ShoppingCar
+                {
+                     Name = "Gorra",
+                     Image = "gorra_1.jpg",
+                     Base_cost = 90000,
+                     Discount = 0,
+                     IsDiscount = false
+
+                },
+                new ShoppingCar
+                {
+                     Name = "Pantalon",
+                     Image = "pantalon_1.jpg",
+                     Base_cost = 40000,
+                     Discount = 30,
+                     IsDiscount = true
+
+                },
+                new ShoppingCar
+                {
+                     Name = "Vestido",
+                     Image = "Vestido_1_1",
+                     Base_cost = 90000,
+                     Discount = 40,
+                     IsDiscount = true
+
+                },
+                new ShoppingCar
+                {
+                     Name = "Zapatillas",
+                     Image = "zapatillas_1",
+                     Base_cost = 110000,
+                     Discount = 20,
+                     IsDiscount = true
+
+                },
+            };
+
+
         }
         private async void GoToProductBrand()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
+
+        private async void GoBack()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PopAsync();
+        }
+
     }
 }

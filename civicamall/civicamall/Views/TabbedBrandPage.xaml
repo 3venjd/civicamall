@@ -6,7 +6,8 @@
              xmlns:ip="clr-namespace:civicamall.ViewModels"
              xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView"
              xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView"
-             xmlns:Local="clr-namespace:civicamall.Views"
+             xmlns:Local="clr-namespace:civicamall.Views" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
              x:Class="civicamall.Views.TabbedBrandPage">
     <ContentPage.BindingContext>
@@ -23,7 +24,26 @@
         </Grid.RowDefinitions>
         <Image Grid.Column="0" Grid.Row="0" Source="ic_adidas.png"/>
 
-        <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" TabClicked="Tab_TabClicked"
+            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="White" CornerRadius="0,0,0,9">
+                <Button ImageSource="round_arrow_back_24px.png" HeightRequest="30" WidthRequest="40" BackgroundColor="White" Command="{Binding GoBackCommand}"/>
+            </pv:PancakeView>
+
+            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200" HeightRequest="40" BackgroundColor="White" Padding="0" Margin="0,10">
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" ImageSource="search_24px.png" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="40" BackgroundColor="White"/>
+                    <Entry Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Start" Placeholder="¿Qué necesitas?"/>
+                </Grid>
+            </pv:PancakeView>
+
+            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="White" CornerRadius="0,0,9,0">
+                <Button ImageSource="shopping_cart_24px.png" HeightRequest="30" WidthRequest="40" BackgroundColor="White" Command="{Binding GoToCarCommand}"/>
+            </pv:PancakeView>
+
+            <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" TabClicked="Tab_TabClicked"
                     HeaderColor="#7E2081" HeaderTextColor="Black" SelectionColor="White" CornerRadius="5" HasShadow="True" SelectedIndex="0">
             <control:XFTabControl.XFTabPages >
                 <tabview:XFTabPage>
