@@ -1,18 +1,58 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class BrandProductsViewModel
+    public class LocationViewModel
     {
+        public Location LocationObject { get; set; }
+
         public ObservableCollection<Product> Products { get; set; }
 
-        public BrandProductsViewModel()
+        public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
+
+        public ICommand GoToProducts { get { return new RelayCommand(GoToProductList); } }
+
+        public ICommand GoToStores { get { return new RelayCommand(GoToStoreList); } }
+
+        public ICommand GoToMalls { get { return new RelayCommand(GoToMallList); } }
+
+        public ICommand GoToProductDetail { get { return new RelayCommand(GoToProductDetails); } }
+
+        public LocationViewModel()
         {
+            LocationObject = new Location
+            {
+                Name = "El Hueco",
+                Images = new ObservableCollection<LocationImages>
+                {
+                    new LocationImages
+                    {
+                         Image = "city_image.png"
+                    },
+                    new LocationImages
+                    {
+                         Image = "el_hueco_2.jpg"
+                    },
+                    new LocationImages
+                    {
+                         Image = "el_hueco_3.jpg"
+                    },
+                    new LocationImages
+                    {
+                         Image = "el_hueco_4.jpg"
+                    },
+                    
+                }
+            };
+
             Products = new ObservableCollection<Product>
             {
                 new Product
@@ -88,5 +128,35 @@ namespace civicamall.ViewModels
             };
         }
 
+        private async void GoToPromo()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new PromosPage());
+
+            //Application.Current.MainPage = new NavigationPage(new PromosPage());
+            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
+
+        }
+        private async void GoToProductList()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ProductsPage());
+        }
+        private async void GoToStoreList()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new StorePage());
+        }
+        private async void GoToMallList()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new MallPage());
+        }
+
+        private async void GoToProductDetails()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ProductDetailPage());
+        }
     }
 }

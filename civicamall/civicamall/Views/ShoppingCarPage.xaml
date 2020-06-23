@@ -88,9 +88,6 @@
                     <Label Grid.Column="1" Margin="0,5,27,5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" TextColor="White" Text="$200.000"/>
                 </Grid>
             </pv:PancakeView>
-            
-
-
         </Grid>
     </ScrollView>
 

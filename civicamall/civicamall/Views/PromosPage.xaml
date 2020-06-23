@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:pp="clr-namespace:civicamall.ViewModels"
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.PromosPage">
@@ -33,26 +33,11 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="White" CornerRadius="0,0,0,9">
-                <Button ImageSource="round_arrow_back_24px.png" HeightRequest="30" WidthRequest="40" BackgroundColor="White" Command="{Binding GoBackCommand}"/>
-            </pv:PancakeView>
+            <Local:HeaderButtons VerticalOptions="Start"/>
 
-            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200" HeightRequest="40" BackgroundColor="White" Padding="0" Margin="0,10">
-                <Grid ColumnSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="0.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" ImageSource="search_24px.png" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="40" BackgroundColor="White"/>
-                    <Entry Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Start" Placeholder="¿Qué necesitas?"/>
-                </Grid>
-            </pv:PancakeView>
 
-            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="White" CornerRadius="0,0,9,0">
-                <Button ImageSource="shopping_cart_24px.png" HeightRequest="30" WidthRequest="40" BackgroundColor="White" Command="{Binding GoToCarCommand}"/>
-            </pv:PancakeView>
 
-            <Label Grid.Row="1" Margin="0,32" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Promociones"/>
+            <Label Grid.Row="1" Margin="0,20,0,5" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Promociones"/>
 
             <CollectionView Grid.Row="2" HeightRequest="140" Margin="24,0,24,0" SelectionMode="Single" ItemsSource="{Binding Categories}">
                 <CollectionView.ItemsLayout>
