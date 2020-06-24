@@ -27,6 +27,14 @@ namespace civicamall.ViewModels
 
         public ICommand GoToLocation { get { return new RelayCommand(GoToLocations); } }
 
+
+        public ICommand OpenMasterCommand { get { return new RelayCommand(OpenMaster); } }
+
+        private void OpenMaster()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = true;
+        }
+
         //
         public IndexViewModel()
         {
