@@ -15,9 +15,10 @@
 
         <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -28,13 +29,15 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Local:HeaderButtons Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalOptions="Start"/>
+            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
+            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
 
 
             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"
-                   TextColor="#4C4456" Text="¡Explora!" Margin="0,8,0,20"/>
+                   TextColor="#4C4456" Text="¡Explora!" Margin="0,8,0,10"/>
 
-            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="Center" Margin="0,20,0,0" VerticalOptions="Center" FontAttributes="Bold"
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="Center" Margin="0,5" VerticalOptions="Center" FontAttributes="Bold"
                    FontSize="Large" TextColor="#7E2081" Text="Categorías" />
 
             <CollectionView Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,5"

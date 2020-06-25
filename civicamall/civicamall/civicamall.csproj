@@ -19,10 +19,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Controls\HeaderButtons.xaml">
+    <EmbeddedResource Update="Controls\BackArrow.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Controls\HeaderButtons2.xaml">
+    <EmbeddedResource Update="Controls\EntrySearch.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ShoppingCart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\Trash.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\BrandProductsPage.xaml">

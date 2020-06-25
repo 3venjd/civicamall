@@ -42,7 +42,9 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <Local:HeaderButtons Grid.Row="0" Grid.ColumnSpan="4" VerticalOptions="Start"/>
+            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
+            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
 
             <Label Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="0,5" HorizontalOptions="Center" VerticalOptions="End" TranslationY="10" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="{Binding LocationObject.Name}"/>
 

@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              xmlns:ip="clr-namespace:civicamall.ViewModels" 
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:Local="clr-namespace:civicamall.Controls"
+             NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.IndexPage">
     <ContentPage.BindingContext>
         <ip:IndexViewModel/>
@@ -40,7 +42,13 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
+
+            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="0,0,0,20">
+                <Button ImageSource="ic_hamburger.png" BackgroundColor="White" Command="{Binding ShowMasterCommand}"/>
+            </pv:PancakeView>
             
+            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
+
             <Label Grid.Column ="0" Grid.Row="1" Margin="33,20,0,5" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Tus favoritos"/>
 
             <Button Grid.Row="2" Grid.Column="0" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="56" WidthRequest="56" Margin="32,0,0,0" ImageSource="Wish_List.png" CornerRadius="5"/>

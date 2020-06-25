@@ -36,7 +36,9 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <Local:HeaderButtons Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalOptions="Start"/>
+            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
+            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
 
 
             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="24,37,0,0" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />

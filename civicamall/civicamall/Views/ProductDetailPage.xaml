@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:sp="clr-namespace:civicamall.ViewModels" 
-             xmlns:header1="clr-namespace:civicamall.Controls"
+             xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.ProductDetailPage">
@@ -36,8 +36,9 @@
                         </CarouselView.ItemTemplate>
                     </CarouselView>
                 </Frame>
-                
-                <header1:HeaderButtons2 Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="Start"/>
+
+                <Local:BackArrow HorizontalOptions="Start"/>
+                <Local:ShoppingCart Grid.Column="1" HorizontalOptions="End"/>
 
 
                 <Button Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="End" WidthRequest="50" TranslationY="10" CornerRadius="50" BackgroundColor="White" ImageSource="favorite_purple_24px.png" Margin="0,0,16,0"/>

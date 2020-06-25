@@ -27,7 +27,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoToLocation { get { return new RelayCommand(GoToLocations); } }
 
-        //
+        public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
+
         public IndexViewModel()
         {
             Advertisements = new ObservableCollection<Advertisement>
@@ -203,6 +204,11 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new LocationPage());
+        }
+
+        private void ShowMaster()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
     }
 }

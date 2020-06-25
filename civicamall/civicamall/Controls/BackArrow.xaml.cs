@@ -1,16 +1,18 @@
-﻿using civicamall.Views;
-using GalaSoft.MvvmLight.Command;
-using System;
-using System.Windows.Input;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace civicamall.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HeaderButtons : ContentView
+    public partial class BackArrow : ContentView
     {
-        public HeaderButtons()
+        public BackArrow()
         {
             InitializeComponent();
         }

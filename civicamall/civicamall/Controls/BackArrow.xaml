@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pp="clr-namespace:civicamall.Controls" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="civicamall.Controls.BackArrow">
+    <ContentView.BindingContext>
+        <pp:HeaderControlViewModel/>
+    </ContentView.BindingContext>
+    <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,0,20">
+        <Button ImageSource="round_arrow_back_24px.png" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Command="{Binding GoBackCommand}"/>
+    </pv:PancakeView>
+</ContentView>

@@ -25,7 +25,9 @@
         </Grid.RowDefinitions>
         <Image Grid.Column="0" Grid.Row="0" Source="ic_adidas.png"/>
 
-            <header1:HeaderButtons Grid.Row="0" VerticalOptions="Start"/>
+            <header1:BackArrow HorizontalOptions="Start"/>
+            <header1:EntrySearch HorizontalOptions="Center"/>
+            <header1:ShoppingCart HorizontalOptions="End"/>
 
             <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" TabClicked="Tab_TabClicked"
                     HeaderColor="#7E2081" HeaderTextColor="Black" SelectionColor="White" CornerRadius="5" HasShadow="True" SelectedIndex="0">

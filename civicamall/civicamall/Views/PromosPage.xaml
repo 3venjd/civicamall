@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:pp="clr-namespace:civicamall.ViewModels"
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:Local="clr-namespace:civicamall.Controls"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.PromosPage">
@@ -33,7 +34,9 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <Local:HeaderButtons VerticalOptions="Start"/>
+            <Local:BackArrow HorizontalOptions="Start"/>
+            <Local:EntrySearch HorizontalOptions="Center"/>
+            <Local:ShoppingCart HorizontalOptions="End"/>
 
 
 
