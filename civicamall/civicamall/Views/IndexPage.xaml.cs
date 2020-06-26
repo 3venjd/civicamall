@@ -10,11 +10,6 @@ namespace civicamall.Views
         public IndexPage()
         {
             InitializeComponent();
-            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
-            {
-                MainCarouselView.Position = (MainCarouselView.Position + 1) % 5;
-                return true;
-            }));
         }
     }
 }

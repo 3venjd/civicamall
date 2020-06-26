@@ -36,7 +36,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CarouselView x:Name="MainCarouselView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}" Position="{Binding Position}" 
+            <CarouselView x:Name="MainCarouselView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}" Position="{Binding Position, Mode=TwoWay}" 
                           HorizontalScrollBarVisibility="Always">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
