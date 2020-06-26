@@ -1,10 +1,7 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -49,7 +46,7 @@ namespace civicamall.ViewModels
                     {
                          Image = "el_hueco_4.jpg"
                     },
-                    
+
                 }
             };
 

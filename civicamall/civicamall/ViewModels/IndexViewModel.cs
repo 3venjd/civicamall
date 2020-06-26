@@ -1,13 +1,15 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class IndexViewModel : BaseViewModel
+    public class IndexViewModel : BaseViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<Advertisement> Advertisements { get; set; }
 
@@ -28,6 +30,8 @@ namespace civicamall.ViewModels
         public ICommand GoToLocation { get { return new RelayCommand(GoToLocations); } }
 
         public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
+
+        public int Position { get; set; }
 
         public IndexViewModel()
         {
@@ -59,7 +63,6 @@ namespace civicamall.ViewModels
                     Image = "promocion_5.jpg"
                 },
             };
-
             Stores = new ObservableCollection<Store>
             {
                 new Store
@@ -93,8 +96,6 @@ namespace civicamall.ViewModels
                     Image = "Carros.jpg"
                 },
             };
-
-
             Products = new ObservableCollection<Product>
             {
                 new Product
@@ -168,6 +169,7 @@ namespace civicamall.ViewModels
                 },
 
             };
+            //Slider();
         }
 
         private async void GoToPromo()
@@ -210,5 +212,16 @@ namespace civicamall.ViewModels
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
+
+        /*private  void Slider()
+        {
+            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
+            {
+
+                 Position = (Position + 1) % Advertisements.Count;
+                return true;
+            }));
+        }*/
+
     }
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,11 @@ namespace civicamall.Views
         public IndexPage()
         {
             InitializeComponent();
+            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
+            {
+                MainCarouselView.Position = (MainCarouselView.Position + 1) % 5;
+                return true;
+            }));
         }
     }
 }

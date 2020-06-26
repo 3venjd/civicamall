@@ -20,6 +20,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="auto"/>
@@ -35,7 +36,8 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CarouselView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}">
+            <CarouselView x:Name="MainCarouselView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}" Position="{Binding Position}" 
+                          HorizontalScrollBarVisibility="Always">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Image Aspect="AspectFill" Source="{Binding Image}"/>
