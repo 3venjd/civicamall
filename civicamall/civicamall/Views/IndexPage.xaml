@@ -36,14 +36,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CarouselView x:Name="MainCarouselView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}" Position="{Binding Position, Mode=TwoWay}" 
-                          HorizontalScrollBarVisibility="Always">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding Image}"/>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
+            <Local:Advertisements Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
 
             <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" BackgroundColor="White" CornerRadius="0,0,0,20">
                 <Button ImageSource="ic_hamburger.png" BackgroundColor="White" Command="{Binding ShowMasterCommand}"/>

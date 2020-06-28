@@ -32,23 +32,10 @@ namespace civicamall.ViewModels
 
         public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
 
-
-        private int _position;
-
-        public int Position 
-        { 
-            get => _position;
-            set 
-            { 
-                _position = value;
-                OnPropertyChanged();
-            }
-        }
-
         public IndexViewModel()
         {
             LoadData();
-            Slider();
+            
         }
 
         private void LoadData()
@@ -230,15 +217,7 @@ namespace civicamall.ViewModels
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
 
-        private void Slider()
-        {
-            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
-            {
-                Position = (Position + 1) % Advertisements.Count;
-                return true;
-            }));
-
-        }
+        
 
 
     }

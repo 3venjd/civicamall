@@ -28,13 +28,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CarouselView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" ItemsSource="{Binding Advertisements}">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding Image}"/>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
+            <Local:Advertisements Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
 
             <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
             <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
