@@ -11,6 +11,6 @@
         <pp:HeaderControlViewModel/>
     </ContentView.BindingContext>
     <pv:PancakeView Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="End" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,20,0">
-        <Button ImageSource="shopping_cart_24px.png" BackgroundColor="White"  Command="{Binding GoToCarCommand}"/>
+        <ImageButton Source="delete_forever_24px.png" BackgroundColor="White" Padding="9" Command="{Binding GoToCarCommand}"/>
     </pv:PancakeView>
 </ContentView>
