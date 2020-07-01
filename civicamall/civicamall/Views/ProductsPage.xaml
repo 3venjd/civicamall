@@ -12,7 +12,6 @@
         <sp:ProductsViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-
         <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -25,20 +24,16 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-
-            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
-            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
-
-
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"
-                   TextColor="#4C4456" Text="¡Explora!" Margin="0,8,0,10"/>
-
-            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="Center" Margin="0,5" VerticalOptions="Center" FontAttributes="Bold"
-                   FontSize="Large" TextColor="#7E2081" Text="Categorías" />
+            <Local:BackArrow Grid.Column="0" Grid.Row="0"/>
+            <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="Large"
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   TextColor="#4C4456" Text="¡Explora!"/>
+            <Local:ShoppingCart Grid.Column="3" Grid.Row="0" />
+            <Local:EntrySearch Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="EndAndExpand" 
+                               WidthRequest="220" Padding="0"/>
+            <ImageButton Grid.Column="3" Grid.Row="1" BackgroundColor="#7E2081" VerticalOptions="Center" HorizontalOptions="Start"
+                    HeightRequest="40" WidthRequest="40" CornerRadius="6" Source="Mic_white.png" Padding="9"/>
 
             <CollectionView Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,5"
                             ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
@@ -47,7 +42,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView Padding="0" CornerRadius="7" HeightRequest="140">
+                        <pv:PancakeView Padding="0" CornerRadius="7" HeightRequest="150" WidthRequest="150" >
                             <Grid Padding="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -56,15 +51,17 @@
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
-                                <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Start" TranslationY="55" TranslationX="10" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="{Binding Name}"/>
+                                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Start" Margin="12,5"
+                                       FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="{Binding Name}"/>
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
             </CollectionView>
-
         </Grid>
+        
+
     </ScrollView>
     
 </ContentPage>
