@@ -20,7 +20,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="360"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -116,7 +116,7 @@
 
             </CollectionView>
 
-            <Label Grid.Row="10" Grid.Column ="0" Grid.ColumnSpan="2" Margin="24,10,0,16" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Lo último que viste"/>
+            <Label Grid.Row="10" Grid.Column ="0" Grid.ColumnSpan="2" Margin="24,0,0,16" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Lo último que viste"/>
 
             <Label Grid.Row="10" Grid.Column ="2" Grid.ColumnSpan="2"  Margin="0,10,24,16" FontAttributes="Bold" TextColor="#2CBFFF" HorizontalTextAlignment="End" VerticalTextAlignment="End" FontSize="Small" Text="Ver todo"/>
 

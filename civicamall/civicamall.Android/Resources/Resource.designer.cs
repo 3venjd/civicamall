@@ -8277,259 +8277,268 @@ namespace civicamall.Droid
 			public const int abc_vector_test = 2131165273;
 			
 			// aapt resource value: 0x7F07005A
-			public const int avd_hide_password = 2131165274;
+			public const int add_purple_24px = 2131165274;
 			
 			// aapt resource value: 0x7F07005B
-			public const int avd_show_password = 2131165275;
+			public const int avd_hide_password = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int Aviod_Shopping_Malls = 2131165276;
+			public const int avd_show_password = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int Banner = 2131165277;
+			public const int Aviod_Shopping_Malls = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int Banner_el_huecoImagen_1 = 2131165278;
+			public const int Banner = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int Banner_el_huecoImagen_2 = 2131165279;
+			public const int Banner_el_huecoImagen_1 = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int Banner_el_huecoMesa_de_trabajo_1 = 2131165280;
+			public const int Banner_el_huecoImagen_2 = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int Banner_el_huecoMesa_de_trabajo_2 = 2131165281;
+			public const int Banner_el_huecoMesa_de_trabajo_1 = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int Banner_el_huecoMesa_de_trabajo_3 = 2131165282;
+			public const int Banner_el_huecoMesa_de_trabajo_2 = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int Calzado = 2131165283;
-			
-			// aapt resource value: 0x7F070065
-			public const int Camisetas = 2131165285;
+			public const int Banner_el_huecoMesa_de_trabajo_3 = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int camiseta_1 = 2131165284;
+			public const int Calzado = 2131165284;
 			
 			// aapt resource value: 0x7F070066
-			public const int Carros = 2131165286;
+			public const int Camisetas = 2131165286;
+			
+			// aapt resource value: 0x7F070065
+			public const int camiseta_1 = 2131165285;
 			
 			// aapt resource value: 0x7F070067
-			public const int city_image = 2131165287;
+			public const int Carros = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int cloths = 2131165288;
+			public const int city_image = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Comidas = 2131165289;
+			public const int cloths = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int design_bottom_navigation_item_background = 2131165290;
+			public const int Comidas = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int design_fab_background = 2131165291;
+			public const int design_bottom_navigation_item_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int design_ic_visibility = 2131165292;
+			public const int design_fab_background = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int design_ic_visibility_off = 2131165293;
+			public const int design_ic_visibility = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int design_password_eye = 2131165294;
+			public const int design_ic_visibility_off = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_snackbar_background = 2131165295;
+			public const int design_password_eye = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int el_hueco_2 = 2131165296;
+			public const int design_snackbar_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int el_hueco_3 = 2131165297;
+			public const int el_hueco_2 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int el_hueco_4 = 2131165298;
+			public const int el_hueco_3 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int favorite_purple_24px = 2131165299;
+			public const int el_hueco_4 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int favorite_white_24px = 2131165300;
-			
-			// aapt resource value: 0x7F070076
-			public const int Gorras = 2131165302;
+			public const int favorite_purple_24px = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int gorra_1 = 2131165301;
+			public const int favorite_white_24px = 2131165301;
 			
 			// aapt resource value: 0x7F070077
-			public const int hadware_store = 2131165303;
+			public const int Gorras = 2131165303;
 			
-			// aapt resource value: 0x7F07007B
-			public const int ice_cream = 2131165307;
+			// aapt resource value: 0x7F070076
+			public const int gorra_1 = 2131165302;
 			
 			// aapt resource value: 0x7F070078
-			public const int ic_mtrl_chip_checked_black = 2131165304;
-			
-			// aapt resource value: 0x7F070079
-			public const int ic_mtrl_chip_checked_circle = 2131165305;
-			
-			// aapt resource value: 0x7F07007A
-			public const int ic_mtrl_chip_close_circle = 2131165306;
+			public const int hadware_store = 2131165304;
 			
 			// aapt resource value: 0x7F07007C
-			public const int local_mall_24px = 2131165308;
+			public const int ice_cream = 2131165308;
+			
+			// aapt resource value: 0x7F070079
+			public const int ic_mtrl_chip_checked_black = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int ic_mtrl_chip_checked_circle = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int ic_mtrl_chip_close_circle = 2131165307;
 			
 			// aapt resource value: 0x7F07007D
-			public const int menu_24px = 2131165309;
+			public const int local_mall_24px = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int Moda = 2131165310;
+			public const int menu_24px = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int Motos = 2131165311;
+			public const int Moda = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int mtrl_snackbar_background = 2131165312;
+			public const int Motos = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int mtrl_tabs_default_indicator = 2131165313;
+			public const int mtrl_snackbar_background = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int navigation_empty_icon = 2131165314;
+			public const int mtrl_tabs_default_indicator = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int notification_action_background = 2131165315;
+			public const int navigation_empty_icon = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int notification_bg = 2131165316;
+			public const int Nike_logo = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int notification_bg_low = 2131165317;
+			public const int notification_action_background = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int notification_bg_low_normal = 2131165318;
+			public const int notification_bg = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int notification_bg_low_pressed = 2131165319;
+			public const int notification_bg_low = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int notification_bg_normal = 2131165320;
+			public const int notification_bg_low_normal = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int notification_bg_normal_pressed = 2131165321;
+			public const int notification_bg_low_pressed = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int notification_icon_background = 2131165322;
+			public const int notification_bg_normal = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notification_template_icon_bg = 2131165323;
+			public const int notification_bg_normal_pressed = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int notification_template_icon_low_bg = 2131165324;
+			public const int notification_icon_background = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int notification_tile_bg = 2131165325;
+			public const int notification_template_icon_bg = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int notify_panel_notification_icon_bg = 2131165326;
-			
-			// aapt resource value: 0x7F070090
-			public const int Pantalones = 2131165328;
+			public const int notification_template_icon_low_bg = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int pantalon_1 = 2131165327;
+			public const int notification_tile_bg = 2131165327;
 			
-			// aapt resource value: 0x7F070091
-			public const int person_pin_circle_24px = 2131165329;
+			// aapt resource value: 0x7F070090
+			public const int notify_panel_notification_icon_bg = 2131165328;
 			
 			// aapt resource value: 0x7F070092
-			public const int price_tag = 2131165330;
+			public const int Pantalones = 2131165330;
+			
+			// aapt resource value: 0x7F070091
+			public const int pantalon_1 = 2131165329;
 			
 			// aapt resource value: 0x7F070093
-			public const int promocion_1 = 2131165331;
+			public const int person_pin_circle_24px = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int promocion_2 = 2131165332;
+			public const int price_tag = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int promocion_3 = 2131165333;
+			public const int promocion_1 = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int promocion_4 = 2131165334;
+			public const int promocion_2 = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int promocion_5 = 2131165335;
+			public const int promocion_3 = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int round_arrow_back_purple_24px = 2131165336;
+			public const int promocion_4 = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int Salud = 2131165337;
+			public const int promocion_5 = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int search_24px = 2131165338;
+			public const int remove_purple_24px = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int shopping_bag = 2131165339;
+			public const int round_arrow_back_purple_24px = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int shopping_cart_24px = 2131165340;
+			public const int Salud = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int store = 2131165341;
+			public const int search_24px = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int store_mall_directory_24px = 2131165342;
+			public const int shopping_bag = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int Tecnologia = 2131165343;
+			public const int shopping_cart_24px = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_dark = 2131165344;
+			public const int store = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_light = 2131165345;
+			public const int store_mall_directory_24px = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int user_profile = 2131165346;
-			
-			// aapt resource value: 0x7F0700A4
-			public const int Vestidos = 2131165348;
+			public const int Tecnologia = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int Vestido_1_1 = 2131165347;
+			public const int tooltip_frame_dark = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int tooltip_frame_light = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int Wsih_List = 2131165349;
-			
-			// aapt resource value: 0x7F0700A6
-			public const int zapatillas_1 = 2131165350;
+			public const int user_profile = 2131165349;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int zapatillas_1_1 = 2131165351;
+			public const int Vestidos = 2131165351;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int Vestido_1_1 = 2131165350;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int zapatillas_1_2 = 2131165352;
+			public const int Wsih_List = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int Zapatillas_2 = 2131165353;
+			public const int zapatillas_1 = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int Zapatillas_3 = 2131165354;
+			public const int zapatillas_1_1 = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int Zapatillas_4 = 2131165355;
+			public const int zapatillas_1_2 = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int Zapatillas_5 = 2131165356;
+			public const int Zapatillas_2 = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int Zapatillas_6 = 2131165357;
+			public const int Zapatillas_3 = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int Zapatillas_7 = 2131165358;
+			public const int Zapatillas_4 = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int Zapatillas_5 = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int Zapatillas_6 = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int Zapatillas_7 = 2131165361;
 			
 			static Drawable()
 			{
@@ -9488,58 +9497,64 @@ namespace civicamall.Droid
 		{
 			
 			// aapt resource value: 0x7F0C0000
-			public const int Aviod_Shopping_Malls = 2131492864;
+			public const int add_purple_24px = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int city_image = 2131492865;
+			public const int Aviod_Shopping_Malls = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int favorite_purple_24px = 2131492866;
+			public const int city_image = 2131492866;
 			
 			// aapt resource value: 0x7F0C0003
-			public const int favorite_white_24px = 2131492867;
+			public const int favorite_purple_24px = 2131492867;
 			
 			// aapt resource value: 0x7F0C0004
-			public const int icon = 2131492868;
+			public const int favorite_white_24px = 2131492868;
 			
 			// aapt resource value: 0x7F0C0005
-			public const int icon_round = 2131492869;
+			public const int icon = 2131492869;
 			
 			// aapt resource value: 0x7F0C0006
-			public const int launcher_foreground = 2131492870;
+			public const int icon_round = 2131492870;
 			
 			// aapt resource value: 0x7F0C0007
-			public const int local_mall_24px = 2131492871;
+			public const int launcher_foreground = 2131492871;
 			
 			// aapt resource value: 0x7F0C0008
-			public const int menu_24px = 2131492872;
+			public const int local_mall_24px = 2131492872;
 			
 			// aapt resource value: 0x7F0C0009
-			public const int person_pin_circle_24px = 2131492873;
+			public const int menu_24px = 2131492873;
 			
 			// aapt resource value: 0x7F0C000A
-			public const int price_tag = 2131492874;
+			public const int person_pin_circle_24px = 2131492874;
 			
 			// aapt resource value: 0x7F0C000B
-			public const int round_arrow_back_purple_24px = 2131492875;
+			public const int price_tag = 2131492875;
 			
 			// aapt resource value: 0x7F0C000C
-			public const int search_24px = 2131492876;
+			public const int remove_purple_24px = 2131492876;
 			
 			// aapt resource value: 0x7F0C000D
-			public const int shopping_bag = 2131492877;
+			public const int round_arrow_back_purple_24px = 2131492877;
 			
 			// aapt resource value: 0x7F0C000E
-			public const int shopping_cart_24px = 2131492878;
+			public const int search_24px = 2131492878;
 			
 			// aapt resource value: 0x7F0C000F
-			public const int store = 2131492879;
+			public const int shopping_bag = 2131492879;
 			
 			// aapt resource value: 0x7F0C0010
-			public const int store_mall_directory_24px = 2131492880;
+			public const int shopping_cart_24px = 2131492880;
 			
 			// aapt resource value: 0x7F0C0011
-			public const int Wsih_List = 2131492881;
+			public const int store = 2131492881;
+			
+			// aapt resource value: 0x7F0C0012
+			public const int store_mall_directory_24px = 2131492882;
+			
+			// aapt resource value: 0x7F0C0013
+			public const int Wsih_List = 2131492883;
 			
 			static Mipmap()
 			{
