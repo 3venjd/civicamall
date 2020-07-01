@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:pp="clr-namespace:civicamall.Controls"
+             mc:Ignorable="d"
+             x:Class="civicamall.Controls.HeaderButtons">
+    <ContentView.BindingContext>
+        <pp:HeaderControlViewModel/>
+    </ContentView.BindingContext>
+    <pv:PancakeView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.15*"/>
+            </Grid.ColumnDefinitions>
+            <pv:PancakeView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,0,20">
+                <Button ImageSource="round_arrow_back_24px.png" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Command="{Binding GoBackCommand}"/>
+            </pv:PancakeView>
+
+            <pv:PancakeView Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="200" HeightRequest="40" BackgroundColor="White" Padding="0" Margin="0,10">
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" ImageSource="search_24px.png" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="40" BackgroundColor="White"/>
+                    <Entry Grid.Column="1" VerticalOptions="Start" HorizontalOptions="Start" Placeholder="¿Qué necesitas?"/>
+                </Grid>
+            </pv:PancakeView>
+            
+
+            <pv:PancakeView Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="End" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,20,0">
+                <Button ImageSource="shopping_cart_24px.png" BackgroundColor="White"  Command="{Binding GoToCarCommand}"/>
+            </pv:PancakeView>
+            
+        </Grid>
+    </pv:PancakeView>
+
+</ContentView>

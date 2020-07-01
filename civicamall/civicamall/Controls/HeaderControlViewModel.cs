@@ -9,11 +9,9 @@ using Xamarin.Forms;
 
 namespace civicamall.Controls
 {
-    public class HeaderControlViewModel : BaseViewModel
+    public class HeaderControlViewModel: BaseViewModel
     {
-
         public ObservableCollection<Advertisement> Advertisements { get; set; }
-
         public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
 
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
@@ -31,6 +29,12 @@ namespace civicamall.Controls
         }
 
         public HeaderControlViewModel()
+        {
+            LoadData();
+            Slider();
+        }
+
+        private void LoadData()
         {
             Advertisements = new ObservableCollection<Advertisement>
             {
@@ -60,7 +64,7 @@ namespace civicamall.Controls
                     Image = "promocion_5.jpg"
                 },
             };
-            Slider();
+
         }
 
         private async void GoCar()

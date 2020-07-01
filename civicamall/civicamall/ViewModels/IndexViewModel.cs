@@ -12,8 +12,6 @@ namespace civicamall.ViewModels
 {
     public class IndexViewModel : BaseViewModel
     {
-        public ObservableCollection<Advertisement> Advertisements { get; set; }
-
         public ObservableCollection<Store> Stores { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
@@ -35,39 +33,11 @@ namespace civicamall.ViewModels
         public IndexViewModel()
         {
             LoadData();
-            
         }
 
         private void LoadData()
         {
-            Advertisements = new ObservableCollection<Advertisement>
-            {
-                new Advertisement
-                {
-                    Title = "Promo 1",
-                    Image = "promocion_1.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 2",
-                    Image = "promocion_2.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 3",
-                    Image = "promocion_3.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 4",
-                    Image = "promocion_4.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 5",
-                    Image = "promocion_5.jpg"
-                },
-            };
+            
             Stores = new ObservableCollection<Store>
             {
                 new Store

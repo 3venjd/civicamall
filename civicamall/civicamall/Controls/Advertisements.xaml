@@ -3,18 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:pp="clr-namespace:civicamall.Controls" 
+             xmlns:pp="clr-namespace:civicamall.Controls" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="civicamall.Controls.Advertisements">
     <ContentView.BindingContext>
         <pp:HeaderControlViewModel/>
     </ContentView.BindingContext>
 
-    <CarouselView ItemsSource="{Binding Advertisements}" Position="{Binding Position}" HorizontalScrollBarVisibility="Always">
-        <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <Image Aspect="AspectFill" Source="{Binding Image}"/>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+    <pv:PancakeView
+                BackgroundColor="White"
+                CornerRadius="0,0,20,20">
+        <CarouselView
+                    x:Name="MainCarouselView"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding Advertisements}"
+                    Position="{Binding Position, Mode=TwoWay}"
+                    HorizontalScrollBarVisibility="Always">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Aspect="AspectFill" Source="{Binding Image}" />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </pv:PancakeView>
+
 </ContentView>

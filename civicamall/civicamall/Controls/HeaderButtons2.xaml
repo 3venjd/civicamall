@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:pp="clr-namespace:civicamall.Controls"
+             mc:Ignorable="d"
+             x:Class="civicamall.Controls.HeaderButtons2">
+    <ContentView.BindingContext>
+        <pp:HeaderControlViewModel/>
+    </ContentView.BindingContext>
+    <pv:PancakeView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <pv:PancakeView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,0,20">
+                <Button ImageSource="round_arrow_back_24px.png" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Command="{Binding GoBackCommand}"/>
+            </pv:PancakeView>
+
+            <pv:PancakeView Grid.Column="2"  VerticalOptions="Start" HorizontalOptions="End" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,20,0">
+                <Button ImageSource="shopping_cart_24px.png" BackgroundColor="White"  Command="{Binding GoToCarCommand}"/>
+            </pv:PancakeView>
+
+        </Grid>
+    </pv:PancakeView>
+</ContentView>
