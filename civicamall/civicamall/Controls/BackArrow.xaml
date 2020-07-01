@@ -11,6 +11,6 @@
         <pp:HeaderControlViewModel/>
     </ContentView.BindingContext>
     <pv:PancakeView VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" CornerRadius="0,0,0,20">
-        <Button ImageSource="round_arrow_back_24px.png" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Command="{Binding GoBackCommand}"/>
+        <ImageButton Source="round_arrow_back_purple_24px.png" BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" Padding="7" Command="{Binding GoBackCommand}"/>
     </pv:PancakeView>
 </ContentView>

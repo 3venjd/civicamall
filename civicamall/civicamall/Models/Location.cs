@@ -9,6 +9,7 @@ namespace civicamall.Models
     {
         public string Name { get; set; }
 
+        public string Header { get; set; }
         public ObservableCollection<LocationImages> Images { get; set; }
     }
 }

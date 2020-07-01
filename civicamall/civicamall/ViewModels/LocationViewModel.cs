@@ -28,23 +28,28 @@ namespace civicamall.ViewModels
             LocationObject = new Location
             {
                 Name = "El Hueco",
+                Header = "city_image.png",
                 Images = new ObservableCollection<LocationImages>
                 {
                     new LocationImages
                     {
-                         Image = "city_image.png"
+                         Image = "Banner_el_huecoImagen_1.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "el_hueco_2.jpg"
+                         Image = "Banner_el_huecoImagen_2.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "el_hueco_3.jpg"
+                         Image = "Banner_el_huecoMesa_de_trabajo_1.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "el_hueco_4.jpg"
+                         Image = "Banner_el_huecoMesa_de_trabajo_2.jpg"
+                    },
+                    new LocationImages
+                    {
+                         Image = "Banner_el_huecoMesa_de_trabajo_4.jpg"
                     },
 
                 }
