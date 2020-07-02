@@ -1,6 +1,7 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xam.TabView;
@@ -28,7 +29,11 @@ namespace civicamall.ViewModels
 
         public StoreViewModel()
         {
+            LoadData();
+        }
 
+        private void LoadData()
+        {
             Products = new ObservableCollection<Product>
             {
                 new Product
@@ -150,7 +155,7 @@ namespace civicamall.ViewModels
                 },
             };
 
-            BranDetail = new Brand 
+            BranDetail = new Brand
             {
                 Name = "ADIDAS",
                 Image = "Adidas_logo.png",
@@ -218,9 +223,8 @@ namespace civicamall.ViewModels
 
                 },
             };
-
-
         }
+
         private async void GoToProductBrand()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;

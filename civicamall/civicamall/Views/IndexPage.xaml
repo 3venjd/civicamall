@@ -246,7 +246,8 @@
                 FontSize="13"
                 HorizontalTextAlignment="Center"
                 TextColor="#7E2081"
-                Text="Malls" />
+                Text="Malls" 
+            />
 
 
             <Grid Grid.Row="7"
