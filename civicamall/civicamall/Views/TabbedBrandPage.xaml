@@ -20,22 +20,21 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="0" Grid.Row="0" Source="ic_adidas.png"/>
+        <Image Grid.Column="0" Grid.Row="0" Source="Adidas_logo.png"/>
 
-            <header1:BackArrow HorizontalOptions="Start"/>
-            <header1:EntrySearch HorizontalOptions="Center"/>
+            <header1:BackArrowWhite HorizontalOptions="Start"/>
             <header1:ShoppingCart HorizontalOptions="End"/>
 
             <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" TabClicked="Tab_TabClicked"
-                    HeaderColor="#7E2081" HeaderTextColor="Black" SelectionColor="White" CornerRadius="5" HasShadow="True" SelectedIndex="0">
+                    HeaderColor="#7E2081" SelectionColor="White" CornerRadius="5" HasShadow="True" >
             <control:XFTabControl.XFTabPages >
                 <tabview:XFTabPage>
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader Padding="0">
-                            <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                <Label x:Name="Label1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="White" TextColor="#7E2081" FontAttributes="Bold"
                                    Text="Productos" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>
@@ -46,7 +45,7 @@
                 <tabview:XFTabPage>
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader>
-                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                <Label x:Name="Label2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" FontAttributes="Bold"
                                    Text="Promos" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>
@@ -57,7 +56,7 @@
                 <tabview:XFTabPage>
                     <tabview:XFTabPage.Header>
                         <tabview:XFTabHeader>
-                            <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="SofiaPro-Bold" TextColor="White" FontAttributes="Bold"
+                                <Label x:Name="Label3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" FontAttributes="Bold"
                                    Text="Información" />
                         </tabview:XFTabHeader>
                     </tabview:XFTabPage.Header>

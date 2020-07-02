@@ -28,17 +28,17 @@ namespace civicamall.ViewModels
                 new Mall
                 {
                     Name = "Mayorca",
-                    Image ="Logo_mayorca.png"
+                    Image ="Mayorca_logo.png"
                 },
                 new Mall
                 {
                     Name = "Oviedo",
-                    Image = "Logo_oviedo.png"
+                    Image = "Oviedo_logo.png"
                 },
                 new Mall
                 {
                     Name = "Santa fe",
-                    Image = "Logo_santa_fe.png"
+                    Image = "Santafe_logo.png"
 
                 }
             };

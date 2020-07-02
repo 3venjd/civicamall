@@ -13,7 +13,7 @@
         <bp:BrandProductsViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-        <Grid BackgroundColor="#7E2081" Margin="0">
+        <Grid BackgroundColor="#F2EDF8" Margin="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
@@ -24,7 +24,7 @@
             <CollectionView  Grid.Row="0" Grid.Column ="0" SelectionMode="Single" Margin="24,32,24,0"
                             ItemsSource="{Binding Products}" SelectionChangedCommand="{Binding GoToProduct}">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="5" />
+                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -43,8 +43,8 @@
                                 <Label Grid.Column="0" Grid.Row="1" Margin="6,0,0,0" FontSize="Medium" TextColor="#7E2081" Text="{Binding Name}"/>
                                 <Label Grid.Column="0" Grid.Row="2" Margin="6,0,0,6" TextColor="#3E4D4C" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
 
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png"/>
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" Padding="9" Source="favorite_purple_24px.png" />
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" Padding="9" Source="favorite_white_24px.png"/>
 
                             </Grid>
                         </Frame>

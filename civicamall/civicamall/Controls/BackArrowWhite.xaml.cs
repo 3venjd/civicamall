@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace civicamall.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HeaderButtons2 : ContentView
+    public partial class BackArrowWhite : ContentView
     {
-        public HeaderButtons2()
+        public BackArrowWhite()
         {
             InitializeComponent();
         }

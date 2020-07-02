@@ -16,18 +16,12 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="360"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <CarouselView Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Advertisements}">
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <Image Aspect="AspectFill" Source="{Binding Image}"/>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
+        <Local:Advertisements Grid.Column="0" Grid.Row="0"/>
 
         <Local:BackArrow HorizontalOptions="Start"/>
         <Local:EntrySearch HorizontalOptions="Center"/>
@@ -38,7 +32,7 @@
         <CollectionView Grid.Column ="0" Grid.Row="2" SelectionMode="Single" Margin="24,0"
                             ItemsSource="{Binding Malls}" SelectionChangedCommand="{Binding GoToMallDetail}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="10" />
+                <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -51,7 +45,7 @@
                                 <RowDefinition Height="0.7*"/>
                                 <RowDefinition Height="0.3*"/>
                             </Grid.RowDefinitions>
-                            <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
+                            <Image Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill" Source="{Binding Image}"/>
                             <Label Grid.Column="0" Grid.Row="1" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="#7E2081" Text="{Binding Name}"/>
 
                         </Grid>
