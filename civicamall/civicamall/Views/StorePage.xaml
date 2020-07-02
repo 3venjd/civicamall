@@ -69,9 +69,9 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="2"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" CornerRadius="6" Padding="0"  Margin="5">
                                     <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Source="{Binding Image}"/>
@@ -99,8 +99,9 @@
                                         <Label Grid.Column="0" FontSize="Micro" VerticalTextAlignment="Center" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" WidthRequest="100" Text="Abierto"/>
                                     </Grid>
                                 </pv:PancakeView>
-                                <BoxView Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="LightGray"/>
-                                <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="20" HeightRequest="20" Source="navigate_next_24px.png" />
+                                
+                                <BoxView Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="LightGray"/>
+                                <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="20" HeightRequest="20" Source="navigate_next_24px.png" />
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>

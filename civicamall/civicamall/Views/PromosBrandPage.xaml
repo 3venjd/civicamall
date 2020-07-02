@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:pp="clr-namespace:civicamall.ViewModels"
+             xmlns:pp="clr-namespace:civicamall.ViewModels" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="civicamall.Views.PromosBrandPage"
              Title="Promos Page">
@@ -20,46 +20,34 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CollectionView  Grid.Row="0" Grid.Column ="0" SelectionMode="Single" Margin="24,32,24,0"
+            <CollectionView SelectionMode="Single" Margin="24,0"
                             ItemsSource="{Binding Products}" SelectionChangedCommand="{Binding GoToProduct}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="0" CornerRadius="7" IsClippedToBounds="False" HeightRequest="180">
+                        <pv:PancakeView Padding="0" CornerRadius="7" BackgroundColor="White" HeightRequest="219">
                             <Grid Padding="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.6*"/>
                                     <ColumnDefinition Width="0.4*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.3*"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="0.8*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                    <RowDefinition Height="0.1*"/>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Aspect="AspectFill" Source="{Binding Image}"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Frame BackgroundColor="#00A09C" Padding="5" HorizontalOptions="End" Margin="0,10,0,0" CornerRadius="5" IsVisible="{Binding IsDiscount}">
-                                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Text="{Binding ShowDiscount}"/>
-                                    </Frame>
-                                </Grid>
-
-
+                                <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Aspect="AspectFill"  Source="{Binding Image}"/>
+                                <pv:PancakeView Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start" HeightRequest="20" WidthRequest="35" IsVisible="{Binding IsDiscount}" Margin="0,13,0,0" BackgroundColor="#00A09C" CornerRadius="6,0,6,0">
+                                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" Text="{Binding ShowDiscount}"/>
+                                </pv:PancakeView>
                                 <Label Grid.Column="0" Grid.Row="1" Margin="6,0,0,0" FontSize="Medium" TextColor="#7E2081" Text="{Binding Name}"/>
                                 <Label Grid.Column="0" Grid.Row="2" Margin="6,0,0,6" TextColor="#3E4D4C" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
-
-                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" Padding="9" Source="favorite_purple_24px.png" />
-                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,1,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" Padding="9" Source="favorite_white_24px.png"/>
-
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" Padding="10" Source="favorite_purple_24px.png" />
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" Padding="10" Source="favorite_white_24px.png"/>
                             </Grid>
-                        </Frame>
+                        </pv:PancakeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 

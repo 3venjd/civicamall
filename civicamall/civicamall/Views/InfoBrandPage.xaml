@@ -11,7 +11,7 @@
         <sp:StoreViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-        <Grid BackgroundColor="White">
+        <Grid BackgroundColor="#F2EDF8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.7*"/>
                 <ColumnDefinition Width="0.3*"/>
@@ -36,7 +36,7 @@
 
             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="36,12,0,0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Web}" />
 
-            <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="36,12" Padding="0" BorderColor="Transparent" HeightRequest="195">
+            <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="36,12" Padding="0" BorderColor="Transparent" BackgroundColor="#F2EDF8" HeightRequest="195">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.1*"/>
@@ -113,7 +113,7 @@
 
 
             <Label Grid.Column="0" Grid.Row="5" Margin="32,30,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="Sucursales" />
-            <Frame Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Padding="0" Margin="32,5" BorderColor="Transparent">
+            <Frame Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Padding="0" Margin="32,5" BorderColor="Transparent" BackgroundColor="#F2EDF8">
                 <Grid RowSpacing="20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
