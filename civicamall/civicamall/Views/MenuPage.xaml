@@ -92,7 +92,7 @@
 
                 <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Margin="40,32,40,0" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
 
-                <Image Grid.Row="7" Grid.Column="0" Source="exit_to_app_24px.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="41,0,0,0"/>
+                <Image Grid.Row="7" Grid.Column="0" Source="exit_to_app_24px.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="25" WidthRequest="25" Margin="41,0,0,0"/>
 
                 <Label Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" />
 

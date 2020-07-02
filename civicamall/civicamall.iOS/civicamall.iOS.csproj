@@ -140,9 +140,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\add_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\add_white_24px.png" />
   </ItemGroup>
   <ItemGroup>

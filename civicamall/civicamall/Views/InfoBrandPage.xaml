@@ -49,16 +49,16 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="ic_facebook.png" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="0" Source="facebook_logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
                     <Label Grid.Column="1" Grid.Row="0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Facebook}"/>
 
-                    <Image Grid.Column="0" Grid.Row="1" Source="ic_instagram.png" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="1" Source="instagram_logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
                     <Label Grid.Column="1" Grid.Row="1" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Instagram}"/>
 
-                    <Image Grid.Column="0" Grid.Row="2" Source="ic_twitter.png" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="2" Source="twitter.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
                     <Label Grid.Column="1" Grid.Row="2" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Twitter}"/>
 
-                    <Image Grid.Column="0" Grid.Row="3" Source="ic_youtube.png" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Grid.Row="3" Source="youtube.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
                     <Label Grid.Column="1" Grid.Row="3" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Youtube}"/>
 
                     <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,12,0,0" TextColor="#99AAA9" HorizontalTextAlignment="Start" Text="{Binding BranDetail.Description}"/>
@@ -86,7 +86,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="timelapse_24px.png"/>
+                    <Image Grid.Column="0" Grid.Row="0" Source="timelapse_24px.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
 
                     <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Lunes a viernes"/>
 
@@ -126,7 +126,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="room_24px.png"/>
+                    <Image Grid.Column="0" Grid.Row="0" Source="room_24px.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
 
                     <Label Grid.Column="1" Grid.Row="0" TextColor="#979797" Text="Lugar o sucursal. Direccion"/>
 

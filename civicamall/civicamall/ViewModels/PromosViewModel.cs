@@ -12,43 +12,12 @@ namespace civicamall.ViewModels
 {
     public class PromosViewModel : BaseViewModel
     {
-        public ObservableCollection<Advertisement> Advertisements { get; set; }
-
         public ObservableCollection<Category> Categories { get; set; }
 
         public ObservableCollection<Product> Products { get; set; }
 
         public PromosViewModel()
         {
-
-            Advertisements = new ObservableCollection<Advertisement>
-            {
-                new Advertisement
-                {
-                    Title = "Promo 1",
-                    Image = "promocion_1.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 2",
-                    Image = "promocion_2.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 3",
-                    Image = "promocion_3.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 4",
-                    Image = "promocion_4.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 5",
-                    Image = "promocion_5.jpg"
-                },
-            };
 
             Categories = new ObservableCollection<Category>
             {

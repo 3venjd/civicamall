@@ -11,8 +11,6 @@ namespace civicamall.ViewModels
     {
         public ObservableCollection<Mall> Malls { get; set; }
 
-        public ObservableCollection<Advertisement> Advertisements { get; set; }
-
         public Mall MallDetail { get; set; }
 
         public ICommand GoToMallDetail { get { return new RelayCommand(GoToMallDetails); } }
@@ -41,35 +39,6 @@ namespace civicamall.ViewModels
                     Image = "Santafe_logo.png"
 
                 }
-            };
-
-            Advertisements = new ObservableCollection<Advertisement>
-            {
-                new Advertisement
-                {
-                    Title = "Promo 1",
-                    Image = "promocion_1.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 2",
-                    Image = "promocion_2.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 3",
-                    Image = "promocion_3.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 4",
-                    Image = "promocion_4.jpg"
-                },
-                new Advertisement
-                {
-                    Title = "Promo 5",
-                    Image = "promocion_5.jpg"
-                },
             };
 
             MallDetail = new Mall

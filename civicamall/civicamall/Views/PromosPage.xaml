@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="360"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -26,14 +26,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <CarouselView Grid.Row="0" ItemsSource="{Binding Advertisements}" Position="{Binding ImagePosition}">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Image Aspect="AspectFill" Source="{Binding Image}"/>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-
+            <Local:Advertisements Grid.Row="0"/>
             <Local:BackArrow HorizontalOptions="Start"/>
             <Local:EntrySearch HorizontalOptions="Center"/>
             <Local:ShoppingCart HorizontalOptions="End"/>
@@ -99,8 +92,8 @@
                                 </Grid>
                                 <Label Grid.Column="0" Grid.Row="1" Margin="6,0,0,0" FontSize="Medium" TextColor="#7E2081" Text="{Binding Name}"/>
                                 <Label Grid.Column="0" Grid.Row="2" Margin="6,0,0,6" TextColor="#3E4D4C" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" ImageSource="favorite_purple_24px.png" />
-                                <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" ImageSource="favorite_white_24px.png"/>
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="White" IsVisible="True" Padding="10" Source="favorite_purple_24px.png" />
+                                <ImageButton Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" CornerRadius="60" BorderColor="#7E2081" BorderWidth="1" BackgroundColor="#7E2081" IsVisible="{Binding IsFavorite}" Padding="10" Source="favorite_white_24px.png"/>
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>
