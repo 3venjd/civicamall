@@ -12,6 +12,84 @@ namespace civicamall.ViewModels
 {
     public class StoreViewModel : BaseViewModel
     {
+        /*private Color _backgroundColor1;
+        private Color _backgroundColor2;
+        private Color _backgroundColor3;
+
+        private Color _textColor1;
+        private Color _textColor2;
+        private Color _textColor3;
+
+        private int _selectedIndex;
+
+        public Color BackgroundColor1 
+        { 
+            get => _backgroundColor1; 
+            set 
+            {
+                _backgroundColor1 = value;
+                OnPropertyChanged();
+            } 
+        }
+        public Color BackgroundColor2
+        {
+            get => _backgroundColor2;
+            set
+            {
+                _backgroundColor2 = value;
+                OnPropertyChanged();
+            }
+        }
+        public Color BackgroundColor3
+        {
+            get => _backgroundColor3;
+            set
+            {
+                _backgroundColor3 = value;
+                OnPropertyChanged();
+            }
+        }
+        public Color TextColor1
+        {
+            get => _textColor1;
+            set
+            {
+                _textColor1 = value;
+                OnPropertyChanged();
+            }
+        }
+        public Color TextColor2
+        {
+            get => _textColor2;
+            set
+            {
+                _textColor2 = value;
+                OnPropertyChanged();
+            }
+        }
+        public Color TextColor3
+        {
+            get => _textColor3;
+            set
+            {
+                _textColor3 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int ClickIndex 
+        { 
+            get => _selectedIndex;
+            set 
+            {
+                if (_selectedIndex != value)
+                {
+                    _selectedIndex = value;
+                    OnPropertyChanged();
+                }
+            }
+        }*/
+
 
         public ObservableCollection<Brand> Brands { get; set; }
 
@@ -19,17 +97,37 @@ namespace civicamall.ViewModels
 
         public ObservableCollection<ShoppingCar> ShopInCar { get; set; }
 
-        
-
         public ObservableCollection<Product> Products { get; set; }
 
-        //public XFTabControl Tabcomponent { get; set; }
-
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
+
+        /*ICommand _tapIndex1Command;
+        ICommand _tapIndex2Command;
+        ICommand _tapIndex3Command;
+
+        public ICommand TapIndex1Command  { get => _tapIndex1Command;}
+        public ICommand TapIndex2Command { get => _tapIndex2Command; }
+        public ICommand TapIndex3Command { get => _tapIndex3Command; }
+        */
 
         public StoreViewModel()
         {
             LoadData();
+
+            /*_tapIndex1Command = new Command(TapIndex1);
+            _tapIndex2Command = new Command(TapIndex2);
+            _tapIndex3Command = new Command(TapIndex3);
+
+            BackgroundColor1 = Color.FromHex("#F2EDF8");
+            TextColor1 = Color.FromHex("#7E2081");
+
+            BackgroundColor2 = Color.FromHex("#7E2081");
+            TextColor2 = Color.FromHex("#F2EDF8");
+
+            BackgroundColor3 = Color.FromHex("#7E2081");
+            TextColor3 = Color.FromHex("#F2EDF8");
+
+            ClickIndex = 1;*/
         }
 
         private void LoadData()
@@ -231,5 +329,50 @@ namespace civicamall.ViewModels
             await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
 
+       /* void TapIndex1(object sender)
+        {
+
+            BackgroundColor1 = Color.FromHex("#F2EDF8");
+            TextColor1 = Color.FromHex("#7E2081");
+
+            BackgroundColor2 = Color.FromHex("#7E2081");
+            TextColor2 = Color.FromHex("#F2EDF8");
+
+            BackgroundColor3 = Color.FromHex("#7E2081");
+            TextColor3 = Color.FromHex("#F2EDF8");
+
+            ClickIndex = 0;
+        }
+
+        void TapIndex2(object sender)
+        {
+
+            BackgroundColor1 = Color.FromHex("#7E2081");
+            TextColor1 = Color.FromHex("#F2EDF8");
+
+            BackgroundColor2 = Color.FromHex("#F2EDF8");
+            TextColor2 = Color.FromHex("#7E2081");
+
+            BackgroundColor3 = Color.FromHex("#7E2081");
+            TextColor3 = Color.FromHex("#F2EDF8");
+
+            ClickIndex = 1;
+        }
+
+        void TapIndex3(object sender)
+        {
+
+            BackgroundColor1 = Color.FromHex("#7E2081");
+            TextColor1 = Color.FromHex("#F2EDF8");
+
+            BackgroundColor2 = Color.FromHex("#7E2081");
+            TextColor2 = Color.FromHex("#F2EDF8");
+
+            BackgroundColor3 = Color.FromHex("#F2EDF8");
+            TextColor3 = Color.FromHex("#7E2081");
+
+            ClickIndex = 2;
+        }
+       */
     }
 }
