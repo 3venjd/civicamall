@@ -12,7 +12,7 @@ namespace civicamall.ViewModels
 {
     public class StoreViewModel : BaseViewModel
     {
-        /*private Color _backgroundColor1;
+        private Color _backgroundColor1;
         private Color _backgroundColor2;
         private Color _backgroundColor3;
 
@@ -88,7 +88,7 @@ namespace civicamall.ViewModels
                     OnPropertyChanged();
                 }
             }
-        }*/
+        }
 
 
         public ObservableCollection<Brand> Brands { get; set; }
@@ -101,20 +101,20 @@ namespace civicamall.ViewModels
 
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
-        /*ICommand _tapIndex1Command;
+        ICommand _tapIndex1Command;
         ICommand _tapIndex2Command;
         ICommand _tapIndex3Command;
 
         public ICommand TapIndex1Command  { get => _tapIndex1Command;}
         public ICommand TapIndex2Command { get => _tapIndex2Command; }
         public ICommand TapIndex3Command { get => _tapIndex3Command; }
-        */
+        
 
         public StoreViewModel()
         {
             LoadData();
 
-            /*_tapIndex1Command = new Command(TapIndex1);
+            _tapIndex1Command = new Command(TapIndex1);
             _tapIndex2Command = new Command(TapIndex2);
             _tapIndex3Command = new Command(TapIndex3);
 
@@ -127,7 +127,7 @@ namespace civicamall.ViewModels
             BackgroundColor3 = Color.FromHex("#7E2081");
             TextColor3 = Color.FromHex("#F2EDF8");
 
-            ClickIndex = 1;*/
+            ClickIndex = 0;
         }
 
         private void LoadData()
@@ -329,7 +329,7 @@ namespace civicamall.ViewModels
             await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
 
-       /* void TapIndex1(object sender)
+        void TapIndex1(object sender)
         {
 
             BackgroundColor1 = Color.FromHex("#F2EDF8");
@@ -373,6 +373,6 @@ namespace civicamall.ViewModels
 
             ClickIndex = 2;
         }
-       */
+       
     }
 }

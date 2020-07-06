@@ -29,15 +29,15 @@
             <header1:ShoppingCart HorizontalOptions="End"/>
 
             <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand"
-                    HeaderColor="#7E2081" SelectionColor="#F2EDF8" CornerRadius="5" HasShadow="True" >
+                    HeaderColor="#7E2081" SelectionColor="#F2EDF8" CornerRadius="5" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
                 <control:XFTabControl.XFTabPages >
                     <tabview:XFTabPage>
                         <tabview:XFTabPage.Header>
                             <tabview:XFTabHeader Padding="0">
-                                <Label x:Name="Label1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="#F2EDF8" TextColor="#7E2081" FontAttributes="Bold"
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
                                    Text="Productos">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapIndex1"/>
+                                        <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
                                     </Label.GestureRecognizers>
                                 </Label>
                             </tabview:XFTabHeader>
@@ -49,10 +49,10 @@
                     <tabview:XFTabPage>
                         <tabview:XFTabPage.Header>
                             <tabview:XFTabHeader>
-                                <Label x:Name="Label2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" FontAttributes="Bold"
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
                                    Text="Promos">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapIndex2"/>
+                                        <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
                                     </Label.GestureRecognizers>
                                 </Label>
                             </tabview:XFTabHeader>
@@ -64,10 +64,10 @@
                     <tabview:XFTabPage>
                         <tabview:XFTabPage.Header>
                             <tabview:XFTabHeader>
-                                <Label x:Name="Label3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" FontAttributes="Bold"
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" BackgroundColor="{Binding BackgroundColor3}" TextColor="{Binding TextColor3}" FontAttributes="Bold"
                                    Text="Información">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapIndex3"/>
+                                        <TapGestureRecognizer Command="{Binding TapIndex3Command}"/>
                                     </Label.GestureRecognizers>
                                 </Label>
                             </tabview:XFTabHeader>
