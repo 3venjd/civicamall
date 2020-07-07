@@ -78,8 +78,8 @@
                 BackgroundColor="White"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                HeightRequest="56"
-                WidthRequest="56"
+                HeightRequest="60"
+                WidthRequest="60"
                 Padding="13"
                 Source="Wsih_List.png"
                 CornerRadius="5" />

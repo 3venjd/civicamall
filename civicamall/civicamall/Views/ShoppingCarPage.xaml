@@ -23,7 +23,7 @@
 
             <Local:Trash Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
 
-            <pv:PancakeView Grid.Row="1" BackgroundColor="Red">
+            <pv:PancakeView Grid.Row="1">
                 <CollectionView SelectionMode="Single" Margin="24,10" ItemsSource="{Binding ShopInCar}">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Span="1" Orientation="Vertical" HorizontalItemSpacing="0" VerticalItemSpacing="0" />
