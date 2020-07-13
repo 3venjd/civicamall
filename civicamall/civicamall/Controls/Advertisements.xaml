@@ -17,6 +17,7 @@
                     x:Name="MainCarouselView"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
+                    Opacity="{Binding Opacity}"
                     ItemsSource="{Binding Advertisements}"
                     Position="{Binding Position, Mode=TwoWay}"
                     HorizontalScrollBarVisibility="Always">
