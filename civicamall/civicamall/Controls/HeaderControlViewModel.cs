@@ -92,11 +92,11 @@ namespace civicamall.Controls
         }
         private void Slider()
         {
-            Device.StartTimer(TimeSpan.FromSeconds(1), (Func<bool>)(() =>
+           /* Device.StartTimer(TimeSpan.FromSeconds(1), (Func<bool>)(() =>
             {
                 Opacity = Opacity - 0.2;
                 return true;
-            }));
+            }));*/
             Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
             {
                 Position = (Position + 1) % Advertisements.Count;

@@ -22,13 +22,16 @@
     <None Remove="Images\favorite_white_24px.svg" />
     <None Remove="Images\filter_list_24px.svg" />
     <None Remove="Images\instagram_logo.svg" />
+    <None Remove="Images\Lista_de_deseados.svg" />
     <None Remove="Images\local_activity_24px.svg" />
     <None Remove="Images\local_mall_24px.svg" />
     <None Remove="Images\menu_24px.svg" />
+    <None Remove="Images\Mesa_de_trabajo.svg" />
     <None Remove="Images\navigate_next_24px.svg" />
     <None Remove="Images\payment_24px.svg" />
     <None Remove="Images\person_pin_circle_24px.svg" />
     <None Remove="Images\price_tag.svg" />
+    <None Remove="Images\Producto_no_disponible.svg" />
     <None Remove="Images\receipt_24px.svg" />
     <None Remove="Images\remove_24px.svg" />
     <None Remove="Images\remove_purple_24px.svg" />
@@ -38,6 +41,7 @@
     <None Remove="Images\search.svg" />
     <None Remove="Images\shopping_bag.svg" />
     <None Remove="Images\shopping_cart_24px.svg" />
+    <None Remove="Images\Sin_resultados_de_busqueda.svg" />
     <None Remove="Images\store.svg" />
     <None Remove="Images\store_mall_directory_24px.svg" />
     <None Remove="Images\timelapse_24px.svg" />
@@ -66,13 +70,16 @@
     <SharedImage Include="Images\favorite_white_24px.svg" />
     <SharedImage Include="Images\filter_list_24px.svg" />
     <SharedImage Include="Images\instagram_logo.svg" />
+    <SharedImage Include="Images\Lista_de_deseados.svg" />
     <SharedImage Include="Images\local_activity_24px.svg" />
     <SharedImage Include="Images\local_mall_24px.svg" />
     <SharedImage Include="Images\menu_24px.svg" />
+    <SharedImage Include="Images\Mesa_de_trabajo.svg" />
     <SharedImage Include="Images\navigate_next_24px.svg" />
     <SharedImage Include="Images\payment_24px.svg" />
     <SharedImage Include="Images\person_pin_circle_24px.svg" />
     <SharedImage Include="Images\price_tag.svg" />
+    <SharedImage Include="Images\Producto_no_disponible.svg" />
     <SharedImage Include="Images\receipt_24px.svg" />
     <SharedImage Include="Images\remove_24px.svg" />
     <SharedImage Include="Images\remove_purple_24px.svg" />
@@ -82,6 +89,7 @@
     <SharedImage Include="Images\search.svg" />
     <SharedImage Include="Images\shopping_bag.svg" />
     <SharedImage Include="Images\shopping_cart_24px.svg" />
+    <SharedImage Include="Images\Sin_resultados_de_busqueda.svg" />
     <SharedImage Include="Images\store.svg" />
     <SharedImage Include="Images\store_mall_directory_24px.svg" />
     <SharedImage Include="Images\timelapse_24px.svg" />
@@ -127,6 +135,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NotAvailableProduct.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProductDetailPage.xaml">

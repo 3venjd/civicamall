@@ -464,7 +464,7 @@
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"
-                SelectionChangedCommand="{Binding GoToProduct}">
+                SelectionChangedCommand="{Binding GoToNotAvailableCommand}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
                 </CollectionView.ItemsLayout>

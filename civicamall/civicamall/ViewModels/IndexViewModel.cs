@@ -30,6 +30,8 @@ namespace civicamall.ViewModels
 
         public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
 
+        public ICommand GoToNotAvailableCommand { get { return new RelayCommand(GoToNotAvailable); } }
+
         public IndexViewModel()
         {
             LoadData();
@@ -180,6 +182,12 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new LocationPage());
+        }
+
+        private async void GoToNotAvailable()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new NotAvailableProduct());
         }
 
         private void ShowMaster()
