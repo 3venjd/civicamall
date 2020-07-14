@@ -59,7 +59,7 @@
                 <ImageButton Grid.Row="2" Grid.Column="0" BackgroundColor="White" Source="payment_24px.png" Margin="24,0,0,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
                 <ImageButton Grid.Row="2" Grid.Column="1" BackgroundColor="White" Source="person_pin_circle_24px.png" TranslationX="5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
                 <ImageButton Grid.Row="2" Grid.Column="2" BackgroundColor="White" Source="receipt_24px.png" TranslationX="-5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
-                <ImageButton Grid.Row="2" Grid.Column="3" BackgroundColor="White" Source="Wsih_List.png" Margin="0,0,24,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
+                <ImageButton Grid.Row="2" Grid.Column="3" BackgroundColor="White" Source="Wsih_List.png" Margin="0,0,24,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoWishesCommand}"/>
 
                 <Label Grid.Row="3" Grid.Column="0" FontSize="Micro" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0,0,0"/>
                 <Label Grid.Row="3" Grid.Column="1" FontSize="Micro" Text="Ubicaciones" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>

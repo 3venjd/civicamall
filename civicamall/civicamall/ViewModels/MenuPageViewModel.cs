@@ -14,6 +14,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoOrderHistoryCommand { get { return new RelayCommand(GoOrderHistory); } }
 
+        public ICommand GoWishesCommand { get { return new RelayCommand(GoWishes); } }
+
         public MenuPageViewModel()
         {
             LoadData();
@@ -102,6 +104,14 @@ namespace civicamall.ViewModels
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new OrderHistoryPage());
+
+        }
+
+        private async void GoWishes()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = false;
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new WishesPages());
 
         }
     }
