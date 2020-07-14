@@ -81,6 +81,9 @@
                 </pv:PancakeView>
 
                 <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,-5,24,0" Padding="10" CornerRadius="0,0,10,10">
+                    <pv:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoCouponCommand}" />
+                    </pv:PancakeView.GestureRecognizers>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width=".7*"/>
@@ -89,7 +92,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Cupones" />
+                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Cupones"/>
                         <Image Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="local_activity_24px.png" HeightRequest="25" WidthRequest="25"/>
                     </Grid>
                 </pv:PancakeView>

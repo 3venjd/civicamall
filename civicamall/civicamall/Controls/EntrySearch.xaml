@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
-            <ImageButton Grid.Column="0" Source="search.png" Padding="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="White"/>
+            <ImageButton Grid.Column="0" Source="search.png" Padding="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="White" Command="{Binding GoNotFoundCommand}"/>
             <Entry Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Placeholder="¿Qué necesitas?"/>
         </Grid>
     </pv:PancakeView>

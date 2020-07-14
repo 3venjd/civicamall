@@ -16,6 +16,8 @@ namespace civicamall.Controls
 
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 
+        public ICommand GoNotFoundCommand { get { return new RelayCommand(GoNotFound); } }
+
         private int _position;
 
         private double _opacity;
@@ -83,6 +85,12 @@ namespace civicamall.Controls
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
+        
+        private async void GoNotFound()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new NotFoundPage());
         }
 
         private async void GoBack()
