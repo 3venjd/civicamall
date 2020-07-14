@@ -82,7 +82,8 @@
                 WidthRequest="60"
                 Padding="13"
                 Source="Wsih_List.png"
-                CornerRadius="5" />
+                CornerRadius="5" 
+                Command="{Binding ErrorPageCommand}"/>
             <ImageButton
                 Grid.Row="2"
                 Grid.Column="1"
