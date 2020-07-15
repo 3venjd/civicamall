@@ -328,9 +328,6 @@
     <AndroidResource Include="Resources\drawable\search_24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\search_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\mipmap-mdpi\search_24px.png" />
   </ItemGroup>
   <ItemGroup>

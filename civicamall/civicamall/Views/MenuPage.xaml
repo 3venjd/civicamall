@@ -67,6 +67,9 @@
                 <Label Grid.Row="3" Grid.Column="3" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,24,0"/>
 
                 <pv:PancakeView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,10,24,0" Padding="10" CornerRadius="10,10,0,0">
+                    <pv:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoEmptyShoppingCartCommand}" />
+                    </pv:PancakeView.GestureRecognizers>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width=".7*"/>

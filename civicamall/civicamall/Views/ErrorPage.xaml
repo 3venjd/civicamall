@@ -24,7 +24,7 @@
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Margin="0,20" Text="¡Ops! Algo ha salido mal" HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold" FontSize="Medium" TextColor="Black"/>
                 <Image Grid.Row="1" Source="Sin_resultados_de_busqueda.png" HorizontalOptions="Center" VerticalOptions="Start"/>
-                <Label Grid.Row="2" Text="¡Ops! Algo ha salido mal" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#99AAA9"/>
+                <Label Grid.Row="2" Text="revisa tu conexión a internet" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#99AAA9"/>
                 <Button Grid.Row="3" Text="Recargar" HorizontalOptions="Center" VerticalOptions="Start" BackgroundColor="#00A09C" TextColor="White" WidthRequest="250" Margin="10"/>
             </Grid>
         </pk:PancakeView>

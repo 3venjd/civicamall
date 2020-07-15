@@ -16,6 +16,10 @@ namespace civicamall.ViewModels
 
         public ObservableCollection<Product> Products { get; set; }
 
+        public ObservableCollection<Mall> Malls { get; set; }
+
+        public ObservableCollection<Brand> Brands { get; set; }
+
         public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
 
         public ICommand GoToProducts { get { return new RelayCommand(GoToProductList); } }
@@ -33,6 +37,10 @@ namespace civicamall.ViewModels
         public ICommand GoToNotAvailableCommand { get { return new RelayCommand(GoToNotAvailable); } }
 
         public ICommand ErrorPageCommand { get { return new RelayCommand(ErrorPageLoad); } }
+
+        public ICommand GoToYourMallsCommand { get { return new RelayCommand(GoToYourMalls); } }
+
+        public ICommand GoToYourStoresCommand { get { return new RelayCommand(GoToYourStores); } }
 
         public IndexViewModel()
         {
@@ -148,6 +156,71 @@ namespace civicamall.ViewModels
                 },
 
             };
+            Malls = new ObservableCollection<Mall>
+            {
+                new Mall
+                {
+                    Name = "Mayorca",
+                    Image ="Mayorca_logo.png"
+                },
+                new Mall
+                {
+                    Name = "Oviedo",
+                    Image = "Oviedo_logo.png"
+                },
+                new Mall
+                {
+                    Name = "Santa fe",
+                    Image = "Santafe_logo.png"
+
+                }
+            };
+            Brands = new ObservableCollection<Brand>
+            {
+                new Brand
+                {
+                     Name = "ADIDAS",
+                     Image = "Adidas_logo.png",
+                     Close_Day = "Viernes",
+                     CLose_hour = "7:00 PM",
+                     Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+                     HolyDay_open = false,
+                     IsOpen = true,
+                     IsClose = false,
+                     Open_Day = "Lunes",
+                     Open_Hour = "9:00 AM",
+                     Saturday_Open = true,
+                     Url_Facebook = "www.facebook.com",
+                     Url_Instagram = "www.instagram.com",
+                     Url_Twitter = "www.twitter.com",
+                     Url_Web = "www.adidas.com",
+                     Url_Youtube = "www.youtube.com"
+                },
+                new Brand
+                {
+                     Name = "RIFLE",
+                     Image = "Rifle_logo.png",
+                     IsOpen = false,
+                     IsClose = false,
+                     Open_Hour = "7:00 AM",
+                },
+                new Brand
+                {
+                     Name = "AMERICANINO",
+                     Image = "Americanino_logo.png",
+                     IsOpen = false,
+                     IsClose = true,
+                     Open_Hour = "8:30 AM",
+                },
+                new Brand
+                {
+                     Name = "NIKE",
+                     Image = "Nike_logo.jgg",
+                     IsOpen = false,
+                     IsClose = true,
+                     Open_Hour = "8:30 AM",
+                },
+            };
         }
 
         private async void GoToPromo()
@@ -198,6 +271,19 @@ namespace civicamall.ViewModels
             await mdp.Detail.Navigation.PushAsync(new ErrorPage());
         }
 
+        private async void GoToYourMalls()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new YourMallsPage());
+        }
+
+        private async void GoToYourStores()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new YourStoresPage());
+        }
+
+        
         private void ShowMaster()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;

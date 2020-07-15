@@ -95,7 +95,8 @@
                 TranslationX="5"
                 Padding="13"
                 Source="local_mall_24px.png"
-                CornerRadius="5" />
+                CornerRadius="5" 
+                Command="{Binding GoToYourMallsCommand}"/>
             <ImageButton
                 Grid.Row="2"
                 Grid.Column="2"
@@ -107,7 +108,8 @@
                 TranslationX="-5"
                 Padding="13"
                 Source="store_mall_directory_24px.png"
-                CornerRadius="5" />
+                CornerRadius="5" 
+                Command="{Binding GoToYourStoresCommand}"/>
             <ImageButton
                 Grid.Row="2"
                 Grid.Column="3"
