@@ -60,7 +60,7 @@
                             <Pk:PancakeView Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.RowSpan="2" CornerRadius="6">
                                 <Image Source="{Binding Image}"/>
                             </Pk:PancakeView>
-                            <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" Text="{Binding Name}"/>
+                            <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding Name}"/>
                             <BoxView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="LightGray"/>
                             <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="20" HeightRequest="20" Source="navigate_next_24px.png" />
                             </Grid>

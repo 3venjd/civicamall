@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:Local="clr-namespace:civicamall.ViewModels" 
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ip="clr-namespace:civicamall.Controls"
+             mc:Ignorable="d"
+             x:Class="civicamall.Views.PaymentMethodsPage">
+    <ContentPage.BindingContext>
+        <Local:MenuPageViewModel />
+    </ContentPage.BindingContext>
+    <Grid BackgroundColor="#F2EDF8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ip:BackArrow Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start"/>
+        <ip:ShoppingCart Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
+        <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="Métodos de pago"/>
+        <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0,16,20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="Mesa_de_trabajo.png" HorizontalOptions="Center" VerticalOptions="Start" Margin="10,20"/>
+                <Label Grid.Row="1" Text="Aún no tienes metodos de pago registrado" HorizontalOptions="Center" VerticalOptions="Start" TextColor="#99AAA9" Margin="10,20"/>
+                <Button Grid.Row="2" Text="Añadir método de pago" HorizontalOptions="Center" VerticalOptions="Start" BackgroundColor="#00A09C" TextColor="White" HeightRequest="40" WidthRequest="250" Margin="10"/>
+            </Grid>
+        </Pk:PancakeView>
+
+    </Grid>
+</ContentPage>

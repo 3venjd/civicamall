@@ -42,6 +42,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoToYourStoresCommand { get { return new RelayCommand(GoToYourStores); } }
 
+        public ICommand GoToYourVisitedPlacesCommand { get { return new RelayCommand(GoToYourVisitedPlaces); } }
+
         public IndexViewModel()
         {
             LoadData();
@@ -283,7 +285,12 @@ namespace civicamall.ViewModels
             await mdp.Detail.Navigation.PushAsync(new YourStoresPage());
         }
 
-        
+        private async void GoToYourVisitedPlaces()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new YourVisitedPlacesPage());
+        }
+
         private void ShowMaster()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;

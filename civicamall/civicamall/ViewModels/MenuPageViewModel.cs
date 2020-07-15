@@ -20,6 +20,7 @@ namespace civicamall.ViewModels
 
         public ICommand GoEmptyShoppingCartCommand { get { return new RelayCommand(GoEmptyCar); } }
 
+        public ICommand GoToPaymentMethodsCommand { get { return new RelayCommand(GoToPaymentMethods); } }
 
 
         public MenuPageViewModel()
@@ -134,6 +135,13 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new EmptyCartPage());
 
+        }
+
+        private async void GoToPaymentMethods()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = false;
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new PaymentMethodsPage());
         }
     }
 }

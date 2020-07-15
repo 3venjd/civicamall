@@ -122,6 +122,7 @@
                 Padding="13"
                 Source="person_pin_circle_24px.png"
                 CornerRadius="5"
+                Command="{Binding GoToYourVisitedPlacesCommand}"
             />
             <Label
                 Grid.Row="3"
