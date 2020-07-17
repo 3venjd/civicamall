@@ -20,7 +20,7 @@
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
         <Local:BackArrow Grid.Row="0" HorizontalOptions="Start" Margin="0"/>
-        <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End" Margin="0"/>W
+        <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End" Margin="0"/>
         <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="Tus Malls" />
 
         <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
