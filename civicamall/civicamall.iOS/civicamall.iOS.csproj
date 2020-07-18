@@ -70,7 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -143,10 +142,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\add_white_24px.png" />
+    <BundleResource Include="Resources\Adidas_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Americanino_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_el_huecoImagen_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_el_huecoImagen_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Calzado.jpg" />
@@ -164,31 +181,22 @@
     <BundleResource Include="Resources\city_image.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\clear_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\close_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\cloths.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Comidas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\delete_forever_24px.png" />
+    <BundleResource Include="Resources\el_hueco_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\el_hueco_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\el_hueco_4.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\exit_to_app_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\favorite_purple_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\favorite_white_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\filter_list_24px.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\gorra_1.jpg" />
@@ -200,52 +208,13 @@
     <BundleResource Include="Resources\hadware_store.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_adidas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_americanino.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_facebook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_instagram.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_nike.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_rifle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_twitter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_youtube.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ice_cream.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\keyboard_voice_24px.png" />
+    <BundleResource Include="Resources\Mayorca_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\local_activity_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\local_mall_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Logo_mayorca.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Logo_oviedo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Logo_santa_fe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\microfono.png" />
+    <BundleResource Include="Resources\Mic_white.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Moda.jpg" />
@@ -254,7 +223,10 @@
     <BundleResource Include="Resources\Motos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\navigate_next_24px.png" />
+    <BundleResource Include="Resources\Nike_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Oviedo_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\pantalon_1.jpg" />
@@ -263,16 +235,10 @@
     <BundleResource Include="Resources\Pantalones.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\payment_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\person_pin_circle_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\price_tag.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\promocion_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\promocion_2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\promocion_2.png" />
@@ -284,52 +250,25 @@
     <BundleResource Include="Resources\promocion_4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\promocion_5.png" />
+    <BundleResource Include="Resources\promocion_5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\receipt_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\remove_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\remove_white_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\room_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_arrow_back_24px.png" />
+    <BundleResource Include="Resources\Rifle_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Salud.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Santafe_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\search_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\shopping_bag.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\shopping_cart_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Shopping_Malls.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\star_rate_24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\store.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\store_mall_directory_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Tecnologia.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\timelapse_24px.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user_profile.jpg" />
@@ -341,9 +280,6 @@
     <BundleResource Include="Resources\Vestidos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Wish_List.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\zapatillas_1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -353,13 +289,7 @@
     <BundleResource Include="Resources\zapatillas_1_2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Zapatillas_2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Zapatillas_3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Zapatillas_4.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Zapatillas_5.jpg" />
@@ -368,6 +298,12 @@
     <BundleResource Include="Resources\Zapatillas_6.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Zapatillas_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\Zapatillas_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Zapatillas_4.jpg" />
   </ItemGroup>
 </Project>

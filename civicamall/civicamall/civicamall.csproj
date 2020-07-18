@@ -33,7 +33,7 @@
     <None Remove="Images\price_tag.svg" />
     <None Remove="Images\Producto_no_disponible.svg" />
     <None Remove="Images\receipt_24px.svg" />
-    <None Remove="Images\remove_24px.svg" />
+    <None Remove="Images\remove_gray_24px.svg" />
     <None Remove="Images\remove_purple_24px.svg" />
     <None Remove="Images\room_24px.svg" />
     <None Remove="Images\round_arrow_back_purple_24px.svg" />
@@ -46,6 +46,7 @@
     <None Remove="Images\store_mall_directory_24px.svg" />
     <None Remove="Images\timelapse_24px.svg" />
     <None Remove="Images\twitter.svg" />
+    <None Remove="Images\Wsih_List.svg" />
     <None Remove="Images\youtube.svg" />
   </ItemGroup>
 
@@ -81,7 +82,7 @@
     <SharedImage Include="Images\price_tag.svg" />
     <SharedImage Include="Images\Producto_no_disponible.svg" />
     <SharedImage Include="Images\receipt_24px.svg" />
-    <SharedImage Include="Images\remove_24px.svg" />
+    <SharedImage Include="Images\remove_gray_24px.svg" />
     <SharedImage Include="Images\remove_purple_24px.svg" />
     <SharedImage Include="Images\room_24px.svg" />
     <SharedImage Include="Images\round_arrow_back_purple_24px.svg" />
@@ -94,6 +95,7 @@
     <SharedImage Include="Images\store_mall_directory_24px.svg" />
     <SharedImage Include="Images\timelapse_24px.svg" />
     <SharedImage Include="Images\twitter.svg" />
+    <SharedImage Include="Images\Wsih_List.svg" />
     <SharedImage Include="Images\youtube.svg" />
   </ItemGroup>
 

@@ -30,7 +30,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ImageButton Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="32" WidthRequest="32" Padding="5" BackgroundColor="white" Source="close_24px.png" />
+                <ImageButton Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="32" WidthRequest="32" Padding="5" BackgroundColor="white" Source="close_24px.png" Command="{Binding CloseMenuCommand}"/>
                 <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16,24,0" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
 
                 <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="Center" HeightRequest="110" Margin="24,10,24,10" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">

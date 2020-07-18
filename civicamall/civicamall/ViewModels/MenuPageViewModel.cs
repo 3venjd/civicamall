@@ -22,6 +22,7 @@ namespace civicamall.ViewModels
 
         public ICommand GoToPaymentMethodsCommand { get { return new RelayCommand(GoToPaymentMethods); } }
 
+        public ICommand CloseMenuCommand { get { return new RelayCommand(CloseMenu); } }
 
         public MenuPageViewModel()
         {
@@ -143,5 +144,14 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new PaymentMethodsPage());
         }
+
+        private void CloseMenu()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = false;
+        }
+
+
+        
+
     }
 }
