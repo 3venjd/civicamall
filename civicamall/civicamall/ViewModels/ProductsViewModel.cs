@@ -97,7 +97,7 @@ namespace civicamall.ViewModels
             {
                 new ProductColor
                 {
-                    Color="#FFFFFF"
+                    Color="#000000"
                 },
                 new ProductColor
                 {
@@ -113,7 +113,7 @@ namespace civicamall.ViewModels
                 },
                 new ProductColor
                 {
-                    Color="#000000"
+                    Color="#FFFFFF"
                 },
                 new ProductColor
                 {

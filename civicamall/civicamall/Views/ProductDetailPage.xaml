@@ -107,7 +107,7 @@
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button WidthRequest="40" BackgroundColor="{Binding Color}" BorderColor="#00A09C" BorderWidth="1" />
+                                    <Button WidthRequest="40" BackgroundColor="{Binding Color}" BorderColor="{Binding Color}" BorderWidth="1" />
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>

@@ -12,7 +12,7 @@
 
     <pv:PancakeView
                 BackgroundColor="White"
-                CornerRadius="0,0,20,20">
+                CornerRadius="10">
         <CarouselView
                     x:Name="MainCarouselView"
                     VerticalOptions="FillAndExpand"

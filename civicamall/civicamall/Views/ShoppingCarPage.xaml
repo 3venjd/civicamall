@@ -23,14 +23,14 @@
 
             <Local:Trash Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
 
-            <pv:PancakeView Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="750">
-                <CollectionView SelectionMode="Single" Margin="24,10" ItemsSource="{Binding ShopInCar}">
+            <pv:PancakeView Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="750" CornerRadius="6" Padding="0" Margin="10">
+                <CollectionView SelectionMode="Single" ItemsSource="{Binding ShopInCar}">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Span="1" Orientation="Vertical" HorizontalItemSpacing="0" VerticalItemSpacing="0" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <pv:PancakeView Padding="0" HeightRequest="100" BackgroundColor="White">
+                            <pv:PancakeView Padding="0" HeightRequest="100" BackgroundColor="White" CornerRadius="6">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="0.3*"/>
