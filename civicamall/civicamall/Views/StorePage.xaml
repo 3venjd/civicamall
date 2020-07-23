@@ -22,37 +22,37 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="360"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Local:Advertisements Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+            <Local:BackArrow Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+            <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+            <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
 
-            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
-            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
+            <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="180" Margin="16,0"/>
 
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,24,0,0" TranslationY="5" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
 
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="24,37,0,0" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
-
-            <pv:PancakeView Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,37,34,0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="25" WidthRequest="120"
-                            BackgroundColor="White" BorderColor="Black" BorderDrawingStyle="Outside">
-                <Grid>
+            <pv:PancakeView Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="16,15" VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="34" WidthRequest="130"
+                            BackgroundColor="White" BorderColor="Black" HasShadow="True" CornerRadius="5" Padding="0">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                </pv:PancakeView.Shadow>
+                <Grid ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*"/>
-                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.7*"/>
+                        <ColumnDefinition Width="0.3*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Column="0" TextColor="#7E2081" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" Text="Filtrar por"/>
-                    <ImageButton Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White" Source="filter_list_24px.png"/>
+                    <Label Grid.Column="0" Grid.RowSpan="2" TextColor="#7E2081" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" Text="Filtrar por"/>
+                    <ImageButton Grid.Column="1" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White" Source="filter_list_24px.png"/>
                 </Grid>
             </pv:PancakeView>
-            
-            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="24,34,124,5" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="La más visitada"/>
 
             <CollectionView Grid.Column ="0" Grid.Row="3" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,0"
                             ItemsSource="{Binding Brands}" SelectionChangedCommand="{Binding GoToBrand}">
@@ -64,49 +64,24 @@
                         <pv:PancakeView Padding="0" HeightRequest="90" BackgroundColor="White">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.4*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="0.2*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1"/>
                                 </Grid.RowDefinitions>
-                                <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" CornerRadius="6" Padding="0"  Margin="5">
-                                    <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Source="{Binding Image}"/>
+                                <pv:PancakeView Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.RowSpan="2" CornerRadius="6">
+                                    <Image Source="{Binding Image}"/>
                                 </pv:PancakeView>
-
-                                <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,10,0,0" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="20" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="{Binding Name}"/>
-
-                                <pv:PancakeView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="1,15,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"
-                                                HeightRequest="15" BackgroundColor="#FF7D27" CornerRadius="4" Padding="0">
-                                    <Grid>
-                                        <Label Grid.Column="0" FontSize="Micro" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="End" WidthRequest="45" Text="Abre a las"/>
-                                        <Label Grid.Column="1" FontSize="Micro" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" WidthRequest="45" Text="{Binding Open_Hour}"/>
-                                    </Grid>
-                                </pv:PancakeView>
-                                <pv:PancakeView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="1,15,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"
-                                                HeightRequest="15" BackgroundColor="#FF2727" CornerRadius="4" Padding="0" >
-                                    <Grid>
-                                        <Label Grid.Column="0" FontSize="Micro" VerticalTextAlignment="Center" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"
-                                               WidthRequest="100" Text="Cerrado" IsVisible="{Binding IsClose}"/>
-                                    </Grid>
-                                </pv:PancakeView>
-                                <pv:PancakeView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="1,15,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"
-                                                HeightRequest="15" BackgroundColor="#3DAA35" CornerRadius="4" IsVisible="{Binding IsOpen}" Padding="0">
-                                    <Grid>
-                                        <Label Grid.Column="0" FontSize="Micro" VerticalTextAlignment="Center" TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" WidthRequest="100" Text="Abierto"/>
-                                    </Grid>
-                                </pv:PancakeView>
-                                
-                                <BoxView Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="LightGray"/>
-                                <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="20" HeightRequest="20" Source="navigate_next_24px.png" />
+                                <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding Name}"/>
+                                <BoxView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="1" BackgroundColor="LightGray"/>
+                                <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="30" HeightRequest="30" Source="navigate_next_24px.png" />
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-
             </CollectionView>
         </Grid>
     </ScrollView>
