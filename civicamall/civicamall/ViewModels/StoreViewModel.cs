@@ -14,11 +14,9 @@ namespace civicamall.ViewModels
     {
         private Color _backgroundColor1;
         private Color _backgroundColor2;
-        private Color _backgroundColor3;
 
         private Color _textColor1;
         private Color _textColor2;
-        private Color _textColor3;
 
         private int _selectedIndex;
 
@@ -40,15 +38,6 @@ namespace civicamall.ViewModels
                 OnPropertyChanged();
             }
         }
-        public Color BackgroundColor3
-        {
-            get => _backgroundColor3;
-            set
-            {
-                _backgroundColor3 = value;
-                OnPropertyChanged();
-            }
-        }
         public Color TextColor1
         {
             get => _textColor1;
@@ -67,16 +56,6 @@ namespace civicamall.ViewModels
                 OnPropertyChanged();
             }
         }
-        public Color TextColor3
-        {
-            get => _textColor3;
-            set
-            {
-                _textColor3 = value;
-                OnPropertyChanged();
-            }
-        }
-
         public int ClickIndex 
         { 
             get => _selectedIndex;
@@ -103,11 +82,9 @@ namespace civicamall.ViewModels
 
         ICommand _tapIndex1Command;
         ICommand _tapIndex2Command;
-        ICommand _tapIndex3Command;
 
         public ICommand TapIndex1Command  { get => _tapIndex1Command;}
         public ICommand TapIndex2Command { get => _tapIndex2Command; }
-        public ICommand TapIndex3Command { get => _tapIndex3Command; }
         
 
         public StoreViewModel()
@@ -116,16 +93,12 @@ namespace civicamall.ViewModels
 
             _tapIndex1Command = new Command(TapIndex1);
             _tapIndex2Command = new Command(TapIndex2);
-            _tapIndex3Command = new Command(TapIndex3);
 
             BackgroundColor1 = Color.FromHex("#F2EDF8");
             TextColor1 = Color.FromHex("#7E2081");
 
             BackgroundColor2 = Color.FromHex("#7E2081");
             TextColor2 = Color.FromHex("#F2EDF8");
-
-            BackgroundColor3 = Color.FromHex("#7E2081");
-            TextColor3 = Color.FromHex("#F2EDF8");
 
             ClickIndex = 0;
         }
@@ -246,7 +219,7 @@ namespace civicamall.ViewModels
                 new Brand
                 {
                      Name = "NIKE",
-                     Image = "Nike_logo.jgg",
+                     Image = "Nike_logo.jpg",
                      IsOpen = false,
                      IsClose = true,
                      Open_Hour = "8:30 AM",
@@ -338,9 +311,6 @@ namespace civicamall.ViewModels
             BackgroundColor2 = Color.FromHex("#7E2081");
             TextColor2 = Color.FromHex("#F2EDF8");
 
-            BackgroundColor3 = Color.FromHex("#7E2081");
-            TextColor3 = Color.FromHex("#F2EDF8");
-
             ClickIndex = 0;
         }
 
@@ -353,26 +323,8 @@ namespace civicamall.ViewModels
             BackgroundColor2 = Color.FromHex("#F2EDF8");
             TextColor2 = Color.FromHex("#7E2081");
 
-            BackgroundColor3 = Color.FromHex("#7E2081");
-            TextColor3 = Color.FromHex("#F2EDF8");
-
             ClickIndex = 1;
         }
 
-        void TapIndex3(object sender)
-        {
-
-            BackgroundColor1 = Color.FromHex("#7E2081");
-            TextColor1 = Color.FromHex("#F2EDF8");
-
-            BackgroundColor2 = Color.FromHex("#7E2081");
-            TextColor2 = Color.FromHex("#F2EDF8");
-
-            BackgroundColor3 = Color.FromHex("#F2EDF8");
-            TextColor3 = Color.FromHex("#7E2081");
-
-            ClickIndex = 2;
-        }
-       
     }
 }

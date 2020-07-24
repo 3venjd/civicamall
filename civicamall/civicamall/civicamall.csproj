@@ -44,6 +44,7 @@
     <None Remove="Images\Sin_resultados_de_busqueda.svg" />
     <None Remove="Images\store.svg" />
     <None Remove="Images\store_mall_directory_24px.svg" />
+    <None Remove="Images\Tachado.svg" />
     <None Remove="Images\timelapse_24px.svg" />
     <None Remove="Images\twitter.svg" />
     <None Remove="Images\Wsih_List.svg" />
@@ -93,6 +94,7 @@
     <SharedImage Include="Images\Sin_resultados_de_busqueda.svg" />
     <SharedImage Include="Images\store.svg" />
     <SharedImage Include="Images\store_mall_directory_24px.svg" />
+    <SharedImage Include="Images\Tachado.svg" />
     <SharedImage Include="Images\timelapse_24px.svg" />
     <SharedImage Include="Images\twitter.svg" />
     <SharedImage Include="Images\Wsih_List.svg" />
