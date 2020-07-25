@@ -80,6 +80,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
+        public ICommand GoToInfoPageCommand { get { return new RelayCommand(GoToInfoPage); } }
+
         ICommand _tapIndex1Command;
         ICommand _tapIndex2Command;
 
@@ -301,6 +303,14 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
         }
+
+        private async void GoToInfoPage()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
+        }
+
+        
 
         void TapIndex1(object sender)
         {
