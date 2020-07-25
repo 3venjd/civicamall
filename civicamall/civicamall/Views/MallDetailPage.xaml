@@ -4,7 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:mv="clr-namespace:civicamall.ViewModels" 
-             xmlns:Local="clr-namespace:civicamall.Controls"
+             xmlns:Local="clr-namespace:civicamall.Controls" 
+             xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView" 
+             xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView" 
+             xmlns:Local1="clr-namespace:civicamall.Views"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.MallDetailPage">
@@ -12,72 +15,58 @@
         <mv:MallsViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-        <Grid BackgroundColor="#F2EDF8" Margin="0">
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition Height="0.6*"/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Aspect="AspectFill" Source="{Binding MallDetail.Image}"/>
+            <Image Grid.Column="0" Grid.Row="0" Source="{Binding MallDetail.Image}"/>
 
-            <Local:BackArrow Grid.Column="0" HorizontalOptions="Start"/>
-            <Local:EntrySearch Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
-            <Local:ShoppingCart Grid.Column="3" HorizontalOptions="End"/>
-            
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalTextAlignment="Center" Margin="0,12,0,16" FontSize="Medium" TextColor="#4C4456" Text="{Binding MallDetail.Name}"/>
+            <Local:BackArrowWhite HorizontalOptions="Start"/>
+            <Local:ShoppingCart HorizontalOptions="End"/>
 
-            <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" Margin="24,0,24,0">
-                <Grid Padding="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="0.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Source="price_tag.png" TranslationX="5"/>
-                    <Button Grid.Column="1" TextColor="#7E2081" Text="Promos" BackgroundColor="White" Command="{Binding GoToPromos}"/>
-                </Grid>
-            </Frame>
-            <Frame Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Padding="0" Margin="24,0,24,0">
-                <Grid Padding="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="0.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Source="store.png" TranslationX="5"/>
-                    <Button Grid.Column="1" TextColor="#7E2081" Text="Tiendas" BackgroundColor="White" Command="{Binding GoToStores}"/>
-                </Grid>
-            </Frame>
+            <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" HeaderHeight="40" BackgroundColor="#F2EDF8"
+                    HeaderColor="#7E2081" SelectionColor="#F2EDF8" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
+                <control:XFTabControl.XFTabPages >
+                    <tabview:XFTabPage>
+                        <tabview:XFTabPage.Header>
+                            <tabview:XFTabHeader Padding="0">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="Medium" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
+                                   Text="Te ofrecemos">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </tabview:XFTabHeader>
+                        </tabview:XFTabPage.Header>
+                        <tabview:XFTabPage.CustomContentPage>
+                            <Local1:BrandProductsPage/>
+                        </tabview:XFTabPage.CustomContentPage>
+                    </tabview:XFTabPage>
+                    <tabview:XFTabPage>
+                        <tabview:XFTabPage.Header>
+                            <tabview:XFTabHeader>
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" TranslationX="5" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
+                                   Text="Promociones">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </tabview:XFTabHeader>
+                        </tabview:XFTabPage.Header>
+                        <tabview:XFTabPage.CustomContentPage>
+                            <Local1:PromosBrandPage />
+                        </tabview:XFTabPage.CustomContentPage>
+                    </tabview:XFTabPage>
 
-            <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,20" HeightRequest="400" Padding="0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Row="0" FontAttributes="Bold" Margin="24,12" FontSize="Medium" TextColor="#7E2081" Text="Novedades"/>
-                    <Image Grid.Row="1" HeightRequest="300" Aspect="AspectFill" Margin="24,0" Source="city_image.png"/>
-                </Grid>
-            </Frame>
+                </control:XFTabControl.XFTabPages>
+            </control:XFTabControl>
 
-            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Margin="24,0" HeightRequest="34" Padding="0" FontAttributes="Bold" FontSize="Medium" BackgroundColor="#7E2081" TextColor="White" Text="Nuestra Información"/>
+            <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding MallDetail.Image}" Command="{Binding GoToInfoPageCommand}" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-20" BackgroundColor="White" HeightRequest="80" WidthRequest="80" CornerRadius="40" Padding="2"/>
 
-            <Label Grid.Row="5" Grid.Column="0"/>
         </Grid>
     </ScrollView>
 </ContentPage>

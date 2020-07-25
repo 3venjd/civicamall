@@ -507,6 +507,17 @@
                                     Source="{Binding Image}" />
                             </pv:PancakeView>
 
+                            <pv:PancakeView BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0" IsVisible="{Binding IsFavorite}">
+                                <Button
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="40"
+                                    WidthRequest="40"
+                                    BackgroundColor="White"
+                                    ImageSource="favorite_purple_24px.png" 
+                                />
+                            </pv:PancakeView>
+
                             <pv:PancakeView 
                                 Grid.Row="1"
                                 Grid.Column="0"
@@ -541,35 +552,7 @@
                                     Text="{Binding Final_cost, StringFormat='{0:C}'}" 
                                 />
 
-                                <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="#7E2081"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="White"
-                                    ImageSource="favorite_purple_24px.png" 
-                                />
-                                <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="White"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="#7E2081"
-                                    IsVisible="{Binding IsFavorite}"
-                                    ImageSource="favorite_white_24px.png" 
-                                />
+                                
                                 </Grid>
                         </pv:PancakeView>
                         </Grid>
@@ -614,7 +597,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" RowSpacing="0" Padding="0">
+                        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" RowSpacing="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
@@ -631,6 +614,17 @@
                                 <Image
                                     Aspect="AspectFill"
                                     Source="{Binding Image}" />
+                            </pv:PancakeView>
+
+                            <pv:PancakeView BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0" IsVisible="{Binding IsFavorite}">
+                                <Button
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="40"
+                                    WidthRequest="40"
+                                    BackgroundColor="White"
+                                    ImageSource="favorite_purple_24px.png" 
+                                />
                             </pv:PancakeView>
 
                             <pv:PancakeView 
@@ -667,35 +661,7 @@
                                     Text="{Binding Final_cost, StringFormat='{0:C}'}" 
                                 />
 
-                                    <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="#7E2081"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="White"
-                                    ImageSource="favorite_purple_24px.png" 
-                                />
-                                    <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="White"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="#7E2081"
-                                    IsVisible="{Binding IsFavorite}"
-                                    ImageSource="favorite_white_24px.png" 
-                                />
+
                                 </Grid>
                             </pv:PancakeView>
                         </Grid>

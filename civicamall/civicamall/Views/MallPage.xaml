@@ -16,20 +16,27 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="360"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
+        <Local:EntrySearch Grid.Row="0" HorizontalOptions="Center"/>
+        <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End"/>
 
-        <Local:Advertisements Grid.Column="0" Grid.Row="0"/>
+        <Local:Advertisements 
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="180"
+                Margin="16,0"
+            />
 
-        <Local:BackArrow HorizontalOptions="Start"/>
-        <Local:EntrySearch HorizontalOptions="Center"/>
-        <Local:ShoppingCart HorizontalOptions="End"/>
+        <Label Grid.Column="0" Grid.Row="2" Margin="5" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
 
-        <Label Grid.Column="0" Grid.Row="1" Margin="20" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
-
-        <CollectionView Grid.Column ="0" Grid.Row="2" SelectionMode="Single" Margin="24,0"
+        <CollectionView Grid.Column ="0" Grid.Row="3" SelectionMode="Single" Margin="24,0"
                             ItemsSource="{Binding Malls}" SelectionChangedCommand="{Binding GoToMallDetail}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
