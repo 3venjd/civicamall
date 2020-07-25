@@ -74,10 +74,11 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="33,0,0,5"
+                Margin="33,0,0,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
+                FontFamily="Roboto_Thin.ttf"
                 Text="Categorías" 
             />
 
@@ -85,12 +86,13 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Margin="24,10"
+                Margin="24,0"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="End"
                 FontSize="Small"
+                FontFamily="Roboto_Thin.ttf"
                 Text="Ver todo"
               />
             
@@ -146,6 +148,7 @@
                                     Grid.Column="0"
                                     HorizontalTextAlignment="Center"
                                     TextColor="#4C4456"
+                                    FontFamily="Roboto_Thin.ttf"
                                     Text="{Binding Title}" />
                             </Grid>
                         </Frame>
@@ -160,6 +163,7 @@
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
+                FontFamily="Roboto_Thin.ttf"
                 Text="Tus favoritos" 
             />
             
@@ -411,7 +415,7 @@
             />
             <Frame Grid.Row="10" Grid.ColumnSpan="4" Margin="0,15" HasShadow="False">
                 <StackLayout>
-                    <Label Margin="24,0" Text="El Centro" TextColor="#7E2081" FontSize="Medium"/>
+                    <Label Margin="24,0" Text="El Centro" TextColor="#7E2081" FontSize="Medium" FontFamily="Roboto_Thin.ttf"/>
                     <CollectionView
                         Margin="24,5"
                         VerticalOptions="Center"
@@ -445,18 +449,11 @@
                 </StackLayout>
             </Frame>
 
-
-
-
-
-
-
-
             <Label
                 Grid.Row="11"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="24,0,0,16"
+                Margin="24,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
@@ -466,11 +463,11 @@
                 Grid.Row="11"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Margin="24,10"
                 FontAttributes="Bold"
+                Margin="24,0"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
-                VerticalTextAlignment="End"
+                VerticalTextAlignment="Center"
                 FontSize="Small"
                 Text="Ver todo" />
 
@@ -565,7 +562,7 @@
                 Grid.Row="13"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="24,24,0,16"
+                Margin="24,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
@@ -575,11 +572,11 @@
                 Grid.Row="13"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Margin="24,10"
+                Margin="24,0"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
-                VerticalTextAlignment="End"
+                VerticalTextAlignment="Center"
                 FontSize="Small"
                 Text="Ver todo" />
 

@@ -7,7 +7,7 @@
              xmlns:Local="clr-namespace:civicamall.Controls" 
              xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView" 
              xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView" 
-             xmlns:Local1="clr-namespace:civicamall.Views"
+             xmlns:Local1="clr-namespace:civicamall.Views" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.MallDetailPage">
@@ -43,7 +43,7 @@
                             </tabview:XFTabHeader>
                         </tabview:XFTabPage.Header>
                         <tabview:XFTabPage.CustomContentPage>
-                            <Local1:BrandProductsPage/>
+                            <Local1:MallOffers/>
                         </tabview:XFTabPage.CustomContentPage>
                     </tabview:XFTabPage>
                     <tabview:XFTabPage>
@@ -65,7 +65,14 @@
                 </control:XFTabControl.XFTabPages>
             </control:XFTabControl>
 
-            <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding MallDetail.Image}" Command="{Binding GoToInfoPageCommand}" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-20" BackgroundColor="White" HeightRequest="80" WidthRequest="80" CornerRadius="40" Padding="2"/>
+            <pv:PancakeView Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-20" BackgroundColor="White" HeightRequest="80" WidthRequest="80" CornerRadius="40">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                </pv:PancakeView.Shadow>
+                <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding MallDetail.Image}" Command="{Binding GoToInfoPageCommand}" BackgroundColor="White" Padding="5"/>
+            </pv:PancakeView>
+
+            
 
         </Grid>
     </ScrollView>

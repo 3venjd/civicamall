@@ -59,6 +59,17 @@
                                     Source="{Binding Image}" />
                             </pv:PancakeView>
 
+                            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="End" IsVisible="{Binding IsFavorite}" CornerRadius="0,0,8,0">
+                                <Button
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="40"
+                                    WidthRequest="40"
+                                    BackgroundColor="White"
+                                    ImageSource="favorite_purple_24px.png" 
+                                />
+                            </pv:PancakeView>
+
                             <pv:PancakeView 
                                 Grid.Row="1"
                                 Grid.Column="0"
@@ -71,11 +82,6 @@
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.7*"/>
-                                        <ColumnDefinition Width="0.3*"/>
-                                    </Grid.ColumnDefinitions>
-
                                     <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
@@ -91,36 +97,6 @@
                                     Grid.Column="0"
                                     Margin="6"
                                     Text="{Binding Final_cost, StringFormat='{0:C}'}" 
-                                />
-
-                                    <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="#7E2081"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="White"
-                                    ImageSource="favorite_purple_24px.png" 
-                                />
-                                    <Button
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Grid.RowSpan="2"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BorderColor="White"
-                                    BorderWidth="1"
-                                    CornerRadius="20"
-                                    BackgroundColor="#7E2081"
-                                    IsVisible="{Binding IsFavorite}"
-                                    ImageSource="favorite_white_24px.png" 
                                 />
                                 </Grid>
                             </pv:PancakeView>
