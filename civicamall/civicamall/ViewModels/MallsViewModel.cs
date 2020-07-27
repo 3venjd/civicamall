@@ -204,7 +204,7 @@ namespace civicamall.ViewModels
             MallDetail = new Mall
             {
                 Name = "Mayorca",
-                Image = "Logo_mayorca.png"
+                Image = "Mayorca_logo.png"
             };
 
         }

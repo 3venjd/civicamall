@@ -8,6 +8,7 @@
              xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView"
              xmlns:Local="clr-namespace:civicamall.Views" 
              xmlns:header1="clr-namespace:civicamall.Controls"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
              x:Class="civicamall.Views.TabbedBrandPage">
@@ -17,60 +18,64 @@
     <ScrollView>
         <StackLayout>
             <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.8*"/>
-        </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.8*"/>
+                </Grid.RowDefinitions>
                 <Image Grid.Column="0" Grid.Row="0" Source="Adidas_logo.png"/>
 
                 <header1:BackArrowWhite HorizontalOptions="Start"/>
                 <Label Text="{Binding BranDetail.Name}" HorizontalOptions="Start" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Start" Margin="50,10"/>
                 <header1:ShoppingCart HorizontalOptions="End"/>
-                <Button HorizontalOptions="End" VerticalOptions="Start" Margin="50,0" HeightRequest="40" WidthRequest="40" CornerRadius="20" ImageSource="favorite_purple_24px.png"/>
+                <Button HorizontalOptions="End" VerticalOptions="Start" Margin="50,0" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" ImageSource="favorite_purple_24px.png"/>
 
                 <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" HeaderHeight="40" BackgroundColor="#F2EDF8"
                     HeaderColor="#7E2081" SelectionColor="#F2EDF8" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
-                <control:XFTabControl.XFTabPages >
-                    <tabview:XFTabPage>
-                        <tabview:XFTabPage.Header>
-                            <tabview:XFTabHeader Padding="0">
-                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="Medium" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
+                    <control:XFTabControl.XFTabPages >
+                        <tabview:XFTabPage>
+                            <tabview:XFTabPage.Header>
+                                <tabview:XFTabHeader Padding="0">
+                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="Medium" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
                                    Text="Productos">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </tabview:XFTabHeader>
-                        </tabview:XFTabPage.Header>
-                        <tabview:XFTabPage.CustomContentPage>
-                            <Local:BrandProductsPage/>
-                        </tabview:XFTabPage.CustomContentPage>
-                    </tabview:XFTabPage>
-                    <tabview:XFTabPage>
-                        <tabview:XFTabPage.Header>
-                            <tabview:XFTabHeader>
-                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" TranslationX="5" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </tabview:XFTabHeader>
+                            </tabview:XFTabPage.Header>
+                            <tabview:XFTabPage.CustomContentPage>
+                                <Local:BrandProductsPage/>
+                            </tabview:XFTabPage.CustomContentPage>
+                        </tabview:XFTabPage>
+                        <tabview:XFTabPage>
+                            <tabview:XFTabPage.Header>
+                                <tabview:XFTabHeader>
+                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" TranslationX="5" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
                                    Text="Promociones">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </tabview:XFTabHeader>
-                        </tabview:XFTabPage.Header>
-                        <tabview:XFTabPage.CustomContentPage>
-                            <Local:PromosBrandPage />
-                        </tabview:XFTabPage.CustomContentPage>
-                    </tabview:XFTabPage>
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </tabview:XFTabHeader>
+                            </tabview:XFTabPage.Header>
+                            <tabview:XFTabPage.CustomContentPage>
+                                <Local:PromosBrandPage />
+                            </tabview:XFTabPage.CustomContentPage>
+                        </tabview:XFTabPage>
 
-                </control:XFTabControl.XFTabPages>
-            </control:XFTabControl>
+                    </control:XFTabControl.XFTabPages>
+                </control:XFTabControl>
 
-            <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding BranDetail.Image}" Command="{Binding GoToInfoPageCommand}" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-20" BackgroundColor="White" HeightRequest="80" WidthRequest="80" CornerRadius="40" Padding="5"/>
-
-        </Grid>
+                <pv:PancakeView Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-20" BackgroundColor="White" HeightRequest="80" WidthRequest="80" CornerRadius="40">
+                    <pv:PancakeView.Shadow>
+                        <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                    </pv:PancakeView.Shadow>
+                    <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding BranDetail.Image}" Command="{Binding GoToInfoPageCommand}" BackgroundColor="White"  Padding="5"/>
+                </pv:PancakeView>
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

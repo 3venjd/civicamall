@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:Local="clr-namespace:civicamall.Controls"
+             mc:Ignorable="d"
+             x:Class="civicamall.Views.MallOffers">
+    <ContentPage.Content>
+        <Grid
+            Margin="0,30"
+            BackgroundColor="#F2EDF8"
+            RowSpacing="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <pv:PancakeView Grid.Column="0" Grid.Row="0" CornerRadius="5" Margin="24,0" Padding="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                </pv:PancakeView.Shadow>
+                <pv:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToPromos}"/>
+                </pv:PancakeView.GestureRecognizers>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="price_tag.png"/>
+                    <Label Grid.Column="1" Text="Promos" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </pv:PancakeView>
+
+
+            <pv:PancakeView Grid.Column="1" Grid.Row="0" CornerRadius="5" Margin="24,0" Padding="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                </pv:PancakeView.Shadow>
+                <pv:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToStores}"/>
+                </pv:PancakeView.GestureRecognizers>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="store.png"/>
+                    <Label Grid.Column="1" Text="Tiendas" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </pv:PancakeView>
+
+            <pv:PancakeView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="11" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="300">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                </pv:PancakeView.Shadow>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.8*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Novedades" TextColor="#7E2081" TranslationX="24" TranslationY="10" FontSize="Medium" FontAttributes="Bold"/>
+                    <Local:Advertisements Grid.Row="1" Margin="24,10"/>
+                </Grid>
+            </pv:PancakeView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
