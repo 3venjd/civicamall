@@ -34,9 +34,6 @@
     <string>civicamall</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
-    <key>UIAppFonts</key>
-    <Array>
-      <string>Roboto_Thin.ttf</string>
-    </Array>
+    
 </dict>
 </plist>

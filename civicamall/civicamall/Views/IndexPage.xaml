@@ -8,11 +8,19 @@
     xmlns:ip="clr-namespace:civicamall.ViewModels"
     xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:Local="clr-namespace:civicamall.Controls"
-    NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasNavigationBar="True"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
         <ip:IndexViewModel />
     </ContentPage.BindingContext>
+
+    <NavigationPage.TitleView>
+        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png"/>
+    </ContentPage.ToolbarItems>
+    
     <ScrollView>
         <Grid
             Margin="0"
@@ -42,10 +50,10 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            
+            <!--
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End" />
             <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center"/>
-
+            
             <pv:PancakeView
                 VerticalOptions="Start"
                 HorizontalOptions="Start"
@@ -60,7 +68,7 @@
                     Command="{Binding ShowMasterCommand}"
                 />
             </pv:PancakeView>
-
+            -->
             <Local:Advertisements 
                 Grid.Row="1"
                 Grid.Column="0"
@@ -103,9 +111,10 @@
                 HorizontalOptions="Center"
                 HeightRequest="140"
                 SelectionMode="Single"
-                ItemsSource="{Binding Stores}">
+                ItemsSource="{Binding Stores}"
+                >
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
             </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -455,7 +464,7 @@
             <Label
                 Grid.Row="11"
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="3"
                 Margin="24,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
@@ -464,9 +473,7 @@
 
             <Label
                 Grid.Row="11"
-                Grid.Column="2"
-                Grid.ColumnSpan="2"
-                Margin="24,0"
+                Grid.Column="3"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
