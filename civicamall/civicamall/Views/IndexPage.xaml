@@ -8,18 +8,8 @@
     xmlns:ip="clr-namespace:civicamall.ViewModels"
     xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:Local="clr-namespace:civicamall.Controls"
-    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
-    <NavigationPage.TitleView>
-        <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center"/>
-    </NavigationPage.TitleView>
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="shopping_cart_24px.png">
-            
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-    
     <ContentPage.BindingContext>
         <ip:IndexViewModel />
     </ContentPage.BindingContext>
@@ -52,7 +42,7 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            <!-- 
+            
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End" />
             <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center"/>
 
@@ -69,7 +59,7 @@
                     BackgroundColor="White"
                     Command="{Binding ShowMasterCommand}"
                 />
-            </pv:PancakeView>-->
+            </pv:PancakeView>
 
             <Local:Advertisements 
                 Grid.Row="1"

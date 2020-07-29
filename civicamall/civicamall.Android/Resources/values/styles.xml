@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
-   <!-- 1) Add change color Hamburger menu -->
   <style name="MainTheme" parent="MainTheme.Base">
-    <item name="drawerArrowStyle">@style/DrawerArrowStylePrimary</item>
-  </style>
-
-  <style name="MainThemePrimary" parent="MainTheme.Base">
-    <item name="drawerArrowStyle">@style/DrawerArrowStyleWhite</item>
   </style>
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -17,7 +11,7 @@
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from https://aka.ms/material-colors -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#FFFFFF</item>
+    <item name="colorPrimary">#2196F3</item>
     <!-- colorPrimaryDark is used for the status bar -->
     <item name="colorPrimaryDark">#1976D2</item>
     <!-- colorAccent is used as the default value for colorControlActivated
@@ -32,16 +26,5 @@
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
-  </style>
-  
-  <!-- 2) Change Hamburger menu -->
-  <style name="DrawerArrowStylePrimary" parent="@style/Widget.AppCompat.DrawerArrowToggle">
-    <item name="spinBars">true</item>
-    <item name="color">#7E2081</item>
-  </style>
-
-<style name="DrawerArrowStyleWhite" parent="@style/Widget.AppCompat.DrawerArrowToggle">
-    <item name="spinBars">true</item>
-    <item name="color">#000000</item>
   </style>
 </resources>
