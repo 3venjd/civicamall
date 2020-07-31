@@ -28,11 +28,11 @@ namespace civicamall.ViewModels
                 },
                 new ProductImages
                 {
-                    Image ="zapatillas_1_1.png"
+                    Image ="zapatillas_1_1.jpg"
                 },
                 new ProductImages
                 {
-                    Image ="zapatillas_1_2.png"
+                    Image ="zapatillas_1_2.jpg"
                 },
             };
 

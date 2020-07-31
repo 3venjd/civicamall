@@ -7,11 +7,17 @@
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              x:Class="civicamall.Views.PromosPage">
     <ContentPage.BindingContext>
         <pp:PromosViewModel/>
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png"/>
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <Grid BackgroundColor="#F2EDF8">
             <Grid.ColumnDefinitions>
@@ -26,10 +32,10 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
+           <!-- <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
             <Local:EntrySearch Grid.Row="0" HorizontalOptions="Center"/>
             <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End"/>
-
+-->
             <Local:Advertisements 
                 Grid.Row="1"
                 HorizontalOptions="CenterAndExpand"
@@ -131,7 +137,7 @@
                                         TranslationY="10"
                                         Text="{Binding Name}" 
                                     />
-                                    <Image Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" Source="Tachado.png"/>
+                                    <Image Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" Source="Tachado.png"/>
                                     <Label
                                         Grid.Row="1"
                                         Margin="6,0,0,0"

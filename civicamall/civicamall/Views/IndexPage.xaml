@@ -18,7 +18,7 @@
         <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="shopping_cart_24px.png"/>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToYourMallsCommand}"/>
     </ContentPage.ToolbarItems>
     
     <ScrollView>
@@ -465,7 +465,7 @@
                 Grid.Row="11"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Margin="24,0"
+                Margin="24,0,0,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
@@ -476,6 +476,7 @@
                 Grid.Column="3"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
+                Margin="0,0,24,0"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="Center"
                 FontSize="Small"
@@ -571,8 +572,8 @@
             <Label
                 Grid.Row="13"
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Margin="24,0"
+                Grid.ColumnSpan="3"
+                Margin="24,0,0,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
@@ -580,9 +581,8 @@
 
             <Label
                 Grid.Row="13"
-                Grid.Column="2"
-                Grid.ColumnSpan="2"
-                Margin="24,0"
+                Grid.Column="3"
+                Margin="0,0,24,0"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"

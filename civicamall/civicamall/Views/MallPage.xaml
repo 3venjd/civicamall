@@ -6,11 +6,17 @@
              xmlns:mv="clr-namespace:civicamall.ViewModels" 
              xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              x:Class="civicamall.Views.MallPage">
     <ContentPage.BindingContext>
         <mv:MallsViewModel/>
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToYourMallsCommand}"/>
+    </ContentPage.ToolbarItems>
     <Grid BackgroundColor="#F2EDF8" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -22,10 +28,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
+        <!--
         <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
         <Local:EntrySearch Grid.Row="0" HorizontalOptions="Center"/>
         <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End"/>
-
+        -->
+        
         <Local:Advertisements 
                 Grid.Row="1"
                 HorizontalOptions="CenterAndExpand"

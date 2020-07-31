@@ -18,6 +18,7 @@
     <None Remove="Images\close_24px.svg" />
     <None Remove="Images\delete_forever_24px.svg" />
     <None Remove="Images\facebook_logo.svg" />
+    <None Remove="Images\favorite_24px.svg" />
     <None Remove="Images\favorite_purple_24px.svg" />
     <None Remove="Images\favorite_white_24px.svg" />
     <None Remove="Images\filter_list_24px.svg" />
@@ -39,6 +40,7 @@
     <None Remove="Images\round_arrow_back_purple_24px.svg" />
     <None Remove="Images\round_arrow_back_white_24px.svg" />
     <None Remove="Images\search.svg" />
+    <None Remove="Images\share_24px.svg" />
     <None Remove="Images\shopping_bag.svg" />
     <None Remove="Images\shopping_cart_24px.svg" />
     <None Remove="Images\Sin_resultados_de_busqueda.svg" />
@@ -55,9 +57,9 @@
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Resizetizer.NT" Version="0.1.0" />
     <PackageReference Include="Xam.TabView" Version="1.0.5" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1179" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.4.2" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.0.1.698" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,6 +70,7 @@
     <SharedImage Include="Images\close_24px.svg" />
     <SharedImage Include="Images\delete_forever_24px.svg" />
     <SharedImage Include="Images\facebook_logo.svg" />
+    <SharedImage Include="Images\favorite_24px.svg" />
     <SharedImage Include="Images\favorite_purple_24px.svg" />
     <SharedImage Include="Images\favorite_white_24px.svg" />
     <SharedImage Include="Images\filter_list_24px.svg" />
@@ -89,6 +92,7 @@
     <SharedImage Include="Images\round_arrow_back_purple_24px.svg" />
     <SharedImage Include="Images\round_arrow_back_white_24px.svg" />
     <SharedImage Include="Images\search.svg" />
+    <SharedImage Include="Images\share_24px.svg" />
     <SharedImage Include="Images\shopping_bag.svg" />
     <SharedImage Include="Images\shopping_cart_24px.svg" />
     <SharedImage Include="Images\Sin_resultados_de_busqueda.svg" />
