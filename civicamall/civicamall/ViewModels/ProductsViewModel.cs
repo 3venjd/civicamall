@@ -18,6 +18,8 @@ namespace civicamall.ViewModels
 
         public Product Productdetail { get; set; }
 
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
         public ProductsViewModel()
         {
             ProductImages = new ObservableCollection<ProductImages>
@@ -141,5 +143,10 @@ namespace civicamall.ViewModels
             };
         }
 
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
     }
 }

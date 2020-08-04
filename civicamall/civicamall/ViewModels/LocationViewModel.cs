@@ -23,7 +23,14 @@ namespace civicamall.ViewModels
 
         public ICommand GoToProductDetail { get { return new RelayCommand(GoToProductDetails); } }
 
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
         public LocationViewModel()
+        {
+            LoadData();
+        }
+
+        private void LoadData()
         {
             LocationObject = new Location
             {
@@ -54,13 +61,12 @@ namespace civicamall.ViewModels
 
                 }
             };
-
             Products = new ObservableCollection<Product>
             {
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_1",
+                     Image = "zapatillas_1.png",
                      Brand = "Nike",
                      Icon_brand = "ic_nike.jpg",
                      Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -79,7 +85,7 @@ namespace civicamall.ViewModels
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_2",
+                     Image = "Zapatillas_2.jpg",
                      Base_cost = 90000,
                      Discount = 0,
                      IsFavorite = false,
@@ -89,7 +95,7 @@ namespace civicamall.ViewModels
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_3",
+                     Image = "Zapatillas_3.jpg",
                      Base_cost = 40000,
                      Discount = 30,
                      IsFavorite = false,
@@ -99,7 +105,7 @@ namespace civicamall.ViewModels
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_4",
+                     Image = "Zapatillas_7.jpg",
                      Base_cost = 90000,
                      Discount = 40,
                      IsFavorite = false,
@@ -109,7 +115,7 @@ namespace civicamall.ViewModels
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_5",
+                     Image = "Zapatillas_5.jpg",
                      Base_cost = 110000,
                      Discount = 20,
                      IsFavorite = true,
@@ -119,7 +125,7 @@ namespace civicamall.ViewModels
                 new Product
                 {
                      Name = "Zapatillas",
-                     Image = "zapatillas_6",
+                     Image = "Zapatillas_6.jpg",
                      Base_cost = 150000,
                      Discount = 0,
                      IsFavorite = true,
@@ -128,8 +134,8 @@ namespace civicamall.ViewModels
                 },
 
             };
-        }
 
+        }
         private async void GoToPromo()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
@@ -159,6 +165,12 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new ProductDetailPage());
+        }
+
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
         }
     }
 }

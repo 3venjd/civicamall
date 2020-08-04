@@ -18,7 +18,7 @@
         <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToYourMallsCommand}"/>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
     
     <ScrollView>
@@ -106,7 +106,7 @@
                 Grid.Row="3"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="24,5"
+                Margin="24,0"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 HeightRequest="140"
@@ -421,8 +421,15 @@
             <Frame Grid.Row="10" Grid.ColumnSpan="4" Margin="0,15" HasShadow="False">
                 <StackLayout>
                     <Label Margin="24,0" Text="El Centro" TextColor="#7E2081" FontSize="Medium"/>
+                    <pv:PancakeView>
+                        <Image Source="city_image.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToLocation}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </pv:PancakeView>
                     <CollectionView
-                        Margin="24,5"
+                        Margin="0,5"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         HeightRequest="140"
@@ -453,13 +460,6 @@
                     </CollectionView>
                 </StackLayout>
             </Frame>
-
-
-
-
-
-
-
 
             <Label
                 Grid.Row="11"

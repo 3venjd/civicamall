@@ -44,6 +44,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoToYourVisitedPlacesCommand { get { return new RelayCommand(GoToYourVisitedPlaces); } }
 
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
         public IndexViewModel()
         {
             LoadData();
@@ -289,6 +291,12 @@ namespace civicamall.ViewModels
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new YourVisitedPlacesPage());
+        }
+
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
         }
 
         private void ShowMaster()

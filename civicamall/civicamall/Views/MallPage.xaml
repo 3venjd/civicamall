@@ -15,16 +15,16 @@
         <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToYourMallsCommand}"/>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCartCommand}"/>
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="#F2EDF8" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.6*"/>
             <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.4*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
@@ -35,23 +35,23 @@
         -->
         
         <Local:Advertisements 
-                Grid.Row="1"
+                Grid.Row="0"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 HeightRequest="180"
-                Margin="16,0"
+                Margin="16,20"
             />
 
-        <Label Grid.Column="0" Grid.Row="2" Margin="5" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
+        <Label Grid.Column="0" Grid.Row="1" Margin="5" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Malls"/>
 
-        <CollectionView Grid.Column ="0" Grid.Row="3" SelectionMode="Single" Margin="24,0"
+        <CollectionView Grid.Column ="0" Grid.Row="2" SelectionMode="Single" Margin="24,0"
                             ItemsSource="{Binding Malls}" SelectionChangedCommand="{Binding GoToMallDetail}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="0" CornerRadius="7" HeightRequest="129">
+                    <Frame Padding="0" CornerRadius="7" HeightRequest="130">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

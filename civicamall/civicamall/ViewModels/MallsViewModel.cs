@@ -9,6 +9,8 @@ namespace civicamall.ViewModels
 {
     public class MallsViewModel : BaseViewModel
     {
+        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+
         private Color _backgroundColor1;
         private Color _backgroundColor2;
 
@@ -233,6 +235,11 @@ namespace civicamall.ViewModels
             await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
         }
 
+        private async void GoCar()
+        {
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
 
 
         void TapIndex1(object sender)

@@ -15,7 +15,7 @@
         <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToYourMallsCommand}"/>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
     <ScrollView>
         
