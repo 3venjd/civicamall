@@ -8504,154 +8504,157 @@ namespace civicamall.Droid
 			public const int notify_panel_notification_icon_bg = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int Oviedo_logo = 2131165350;
-			
-			// aapt resource value: 0x7F0700A8
-			public const int Pantalones = 2131165352;
+			public const int NotImage = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int pantalon_1 = 2131165351;
+			public const int Oviedo_logo = 2131165351;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int payment_24px = 2131165353;
+			public const int Pantalones = 2131165353;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int pantalon_1 = 2131165352;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int person_pin_circle_24px = 2131165354;
+			public const int payment_24px = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int price_tag = 2131165355;
+			public const int person_pin_circle_24px = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int price_tag = 2131165356;
 			
 			// aapt resource value: 0x7F070009
 			public const int Producto_no_disponible = 2131165193;
 			
-			// aapt resource value: 0x7F0700AC
-			public const int promocion_1 = 2131165356;
-			
 			// aapt resource value: 0x7F0700AD
-			public const int promocion_2 = 2131165357;
+			public const int promocion_1 = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int promocion_3 = 2131165358;
+			public const int promocion_2 = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int promocion_4 = 2131165359;
+			public const int promocion_3 = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int promocion_5 = 2131165360;
+			public const int promocion_4 = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int receipt_24px = 2131165361;
+			public const int promocion_5 = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int remove_gray_24px = 2131165362;
+			public const int receipt_24px = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int remove_purple_24px = 2131165363;
+			public const int remove_gray_24px = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int Rifle_logo = 2131165364;
+			public const int remove_purple_24px = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int room_24px = 2131165365;
+			public const int Rifle_logo = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int round_arrow_back_purple_24px = 2131165366;
+			public const int room_24px = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int round_arrow_back_white_24px = 2131165367;
+			public const int round_arrow_back_purple_24px = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int Salud = 2131165368;
+			public const int round_arrow_back_white_24px = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int Santafe_logo = 2131165369;
+			public const int Salud = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int search = 2131165370;
+			public const int Santafe_logo = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int search_24px = 2131165371;
+			public const int search = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int share_24px = 2131165372;
+			public const int search_24px = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int shopping_bag = 2131165373;
+			public const int share_24px = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int shopping_cart_24px = 2131165374;
+			public const int shopping_bag = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int shopping_cart_24px = 2131165375;
 			
 			// aapt resource value: 0x7F07000A
 			public const int Sin_resultados_de_busqueda = 2131165194;
 			
-			// aapt resource value: 0x7F0700BF
-			public const int star_rate_24px = 2131165375;
-			
 			// aapt resource value: 0x7F0700C0
-			public const int store = 2131165376;
+			public const int star_rate_24px = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int store_mall_directory_24px = 2131165377;
+			public const int store = 2131165377;
+			
+			// aapt resource value: 0x7F0700C2
+			public const int store_mall_directory_24px = 2131165378;
 			
 			// aapt resource value: 0x7F07000B
 			public const int Tachado = 2131165195;
 			
-			// aapt resource value: 0x7F0700C2
-			public const int Tecnologia = 2131165378;
-			
 			// aapt resource value: 0x7F0700C3
-			public const int timelapse_24px = 2131165379;
+			public const int Tecnologia = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int tooltip_frame_dark = 2131165380;
+			public const int timelapse_24px = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int tooltip_frame_light = 2131165381;
+			public const int tooltip_frame_dark = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int twitter = 2131165382;
+			public const int tooltip_frame_light = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int user_profile = 2131165383;
-			
-			// aapt resource value: 0x7F0700C9
-			public const int Vestidos = 2131165385;
+			public const int twitter = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int Vestido_1_1 = 2131165384;
+			public const int user_profile = 2131165384;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int Vestidos = 2131165386;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int Vestido_1_1 = 2131165385;
 			
 			// aapt resource value: 0x7F07000C
 			public const int Wsih_List = 2131165196;
 			
-			// aapt resource value: 0x7F0700CA
-			public const int youtube = 2131165386;
-			
 			// aapt resource value: 0x7F0700CB
-			public const int zapatillas_1 = 2131165387;
+			public const int youtube = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int zapatillas_1_1 = 2131165388;
+			public const int zapatillas_1 = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int zapatillas_1_2 = 2131165389;
+			public const int zapatillas_1_1 = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int Zapatillas_2 = 2131165390;
+			public const int zapatillas_1_2 = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int Zapatillas_3 = 2131165391;
+			public const int Zapatillas_2 = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int Zapatillas_4 = 2131165392;
+			public const int Zapatillas_3 = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int Zapatillas_5 = 2131165393;
+			public const int Zapatillas_4 = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int Zapatillas_6 = 2131165394;
+			public const int Zapatillas_5 = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int Zapatillas_7 = 2131165395;
+			public const int Zapatillas_6 = 2131165395;
+			
+			// aapt resource value: 0x7F0700D4
+			public const int Zapatillas_7 = 2131165396;
 			
 			static Drawable()
 			{

@@ -13,8 +13,16 @@ namespace civicamall.Controls
     {
         public ObservableCollection<Advertisement> Advertisements { get; set; }
 
-        public ObservableCollection<Product> Products { get; set; }
-
+        private ObservableCollection<Product> _products;
+        public ObservableCollection<Product> Products
+        {
+            get => _products;
+            set 
+            {
+                _products = value;
+                OnPropertyChanged();
+            }
+        }
         public ObservableCollection<Mall> Malls { get; set; }
 
         public ICommand GoBackCommand { get { return new RelayCommand(GoBack); } }
@@ -23,7 +31,8 @@ namespace civicamall.Controls
 
         public ICommand GoNotFoundCommand { get { return new RelayCommand(GoNotFound); } }
 
-        
+
+
 
         private int _position;
 
@@ -85,7 +94,7 @@ namespace civicamall.Controls
                     Image = "promocion_5.jpg"
                 },
             };
-            Products = new ObservableCollection<Product>
+            /*Products = new ObservableCollection<Product>
             {
                 new Product
                 {
@@ -157,7 +166,7 @@ namespace civicamall.Controls
 
                 },
 
-            };
+            }; */
             Malls = new ObservableCollection<Mall>
             {
                 new Mall

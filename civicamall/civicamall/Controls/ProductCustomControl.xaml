@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:pp="clr-namespace:civicamall.Controls"
+             mc:Ignorable="d"
+             x:Class="civicamall.Controls.ProductCustomControl">
+    <ContentView.BindingContext>
+        <pp:HeaderControlViewModel/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="0.3*" />
+            </Grid.RowDefinitions>
+            <pv:PancakeView 
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="White"
+                Padding="0"
+                CornerRadius="8,8,0,0">
+                <Image
+                    x:Name="ProductImageField"
+                    Aspect="AspectFill"
+                 />
+            </pv:PancakeView>
+
+            <pv:PancakeView x:Name="IsFavorite" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0">
+                <Button
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    BackgroundColor="White"
+                    ImageSource="favorite_purple_24px.png" 
+                 />
+            </pv:PancakeView>
+
+            <pv:PancakeView 
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                TranslationY="-10"
+             >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        x:Name="ProductNameLabel"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        TextColor="#7E2081"
+                        Padding="0"
+                        TranslationX="6"
+                        TranslationY="10"
+                    />
+
+                    <Label
+                        x:Name="ProductFinalCostLabel"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="6"
+                    />
+                </Grid>
+            </pv:PancakeView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

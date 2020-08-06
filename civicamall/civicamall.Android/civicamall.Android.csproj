@@ -337,5 +337,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Zapatillas_4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\NotImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

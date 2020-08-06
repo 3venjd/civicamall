@@ -594,7 +594,7 @@
                 Grid.Row="14"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="24,0,24,0"
+                Margin="24,0"
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"
@@ -604,79 +604,17 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.7*" />
-                                <RowDefinition Height="0.3*" />
-                            </Grid.RowDefinitions>
-                            <pv:PancakeView 
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                BackgroundColor="White"
-                                Padding="0"
-                                CornerRadius="8,8,0,0">
-                                <Image
-                                    Aspect="AspectFill"
-                                    Source="{Binding Image}" />
-                            </pv:PancakeView>
-
-                            <pv:PancakeView BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0" IsVisible="{Binding IsFavorite}">
-                                <Button
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BackgroundColor="White"
-                                    ImageSource="favorite_purple_24px.png" 
-                                />
-                            </pv:PancakeView>
-
-                            <pv:PancakeView 
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                BackgroundColor="White"
-                                CornerRadius="10"
-                                TranslationY="-10"
-                                >
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.7*"/>
-                                        <ColumnDefinition Width="0.3*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    TextColor="#7E2081"
-                                    Padding="0"
-                                    TranslationX="6"
-                                    TranslationY="10"
-                                    Text="{Binding Name}" 
-                                />
-
-                                    <Label
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    Margin="6"
-                                    Text="{Binding Final_cost, StringFormat='{0:C}'}" 
-                                />
-
-
-                                </Grid>
-                            </pv:PancakeView>
-                        </Grid>
+                        <Local:ProductCustomControl
+                            ProductImage="{Binding Image}"
+                            ProductName="{Binding Name}"
+                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                        />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
             </CollectionView>
-
+            
+            
         </Grid>
     </ScrollView>
 </ContentPage>
