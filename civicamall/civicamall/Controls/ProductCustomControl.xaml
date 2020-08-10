@@ -31,7 +31,7 @@
                  />
             </pv:PancakeView>
 
-            <pv:PancakeView x:Name="IsFavorite" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0">
+            <pv:PancakeView x:Name="PancakeViewFavorite" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0" IsVisible="false">
                 <Button
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
