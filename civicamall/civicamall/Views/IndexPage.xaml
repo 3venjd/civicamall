@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ip="clr-namespace:civicamall.ViewModels"
     xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:Local="clr-namespace:civicamall.Controls"
+    xmlns:CustomControl="clr-namespace:civicamall.Controls"
     NavigationPage.HasNavigationBar="True"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
@@ -15,7 +15,7 @@
     </ContentPage.BindingContext>
 
     <NavigationPage.TitleView>
-        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+        <CustomControl:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
@@ -69,7 +69,7 @@
                 />
             </pv:PancakeView>
             -->
-            <Local:Advertisements 
+            <CustomControl:Advertisements 
                 Grid.Row="1"
                 Grid.Column="0"
                 HorizontalOptions="CenterAndExpand"
@@ -496,7 +496,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Local:ProductCustomControl
+                        <CustomControl:ProductCustomControl
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
                             ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
@@ -542,7 +542,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Local:ProductCustomControl
+                        <CustomControl:ProductCustomControl
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
                             ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"

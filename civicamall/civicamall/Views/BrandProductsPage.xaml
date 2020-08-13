@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:bp="clr-namespace:civicamall.ViewModels" 
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:CustomControl="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              x:Class="civicamall.Views.BrandProductsPage"
              BackgroundColor="#CAC4D5">
@@ -40,67 +41,15 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="200" RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.7*" />
-                                <RowDefinition Height="0.3*" />
-                            </Grid.RowDefinitions>
-                            <pv:PancakeView 
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                BackgroundColor="White"
-                                Padding="0"
-                                CornerRadius="8,8,0,0">
-                                <Image
-                                    Aspect="AspectFill"
-                                    Source="{Binding Image}" />
-                            </pv:PancakeView>
-
-                            <pv:PancakeView VerticalOptions="Start" HorizontalOptions="End" IsVisible="{Binding IsFavorite}" CornerRadius="0,0,8,0">
-                                <Button
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    BackgroundColor="White"
-                                    ImageSource="favorite_purple_24px.png" 
-                                />
-                            </pv:PancakeView>
-
-                            <pv:PancakeView 
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                BackgroundColor="White"
-                                CornerRadius="10"
-                                TranslationY="-10"
-                                >
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Label
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    TextColor="#7E2081"
-                                    Padding="0"
-                                    TranslationX="6"
-                                    TranslationY="10"
-                                    Text="{Binding Name}" 
-                                />
-
-                                    <Label
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    Margin="6"
-                                    Text="{Binding Final_cost, StringFormat='{0:C}'}" 
-                                />
-                                </Grid>
-                            </pv:PancakeView>
-                        </Grid>
+                        <CustomControl:ProductCustomControl
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            HeightRequest="200"
+                            ProductImage="{Binding Image}"
+                            ProductName="{Binding Name}"
+                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                            IsFavorite="{Binding IsFavorite}"
+                        />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
