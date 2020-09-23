@@ -5,6 +5,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -292,11 +293,28 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new YourVisitedPlacesPage());
         }
-
+        
         private async void GoCar()
         {
+
+
             var mdp = Application.Current.MainPage as MasterDetailPage;
+
+            await Task.WhenAll(
+                //mdp.ScaleTo(0, 1000),
+                mdp.FadeTo(0,600)
+            );
+             
+
             await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+
+            await Task.WhenAll(
+                //mdp.ScaleTo(1, 1000, Easing.CubicIn),
+                mdp.FadeTo(1,600, Easing.CubicIn)
+                );
+
+            
+
         }
 
         private void ShowMaster()
@@ -305,6 +323,8 @@ namespace civicamall.ViewModels
         }
 
         
+
+
 
 
     }

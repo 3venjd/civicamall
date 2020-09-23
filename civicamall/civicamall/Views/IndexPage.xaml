@@ -9,6 +9,7 @@
     xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:CustomControl="clr-namespace:civicamall.Controls"
     NavigationPage.HasNavigationBar="True"
+    BackgroundColor="AliceBlue"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
         <ip:IndexViewModel />
@@ -21,8 +22,9 @@
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
     
-    <ScrollView>
+    <ScrollView >
         <Grid
+            x:Name="MainGrid"
             Margin="0"
             BackgroundColor="#F2EDF8"
             ColumnSpacing="0">
@@ -497,6 +499,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <CustomControl:ProductCustomControl
+                            x:Name="CollectionProduct1"
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
                             ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
