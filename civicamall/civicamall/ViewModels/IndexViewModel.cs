@@ -3,8 +3,6 @@ using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -54,7 +52,7 @@ namespace civicamall.ViewModels
 
         private void LoadData()
         {
-            
+
             Stores = new ObservableCollection<Store>
             {
                 new Store
@@ -230,34 +228,87 @@ namespace civicamall.ViewModels
 
         private async void GoToPromo()
         {
-           var mdp = Application.Current.MainPage as MasterDetailPage;
-           await mdp.Detail.Navigation.PushAsync(new PromosPage());
+            var mdp = Application.Current.MainPage as MasterDetailPage;
 
-           // Application.Current.MainPage = new NavigationPage(new PromosPage());
-           // await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
+            await Task.WhenAll(
+                mdp.RotateXTo(100, 600, Easing.SinOut),
+                mdp.FadeTo(0, 600)
+                );
+
+            await mdp.Detail.Navigation.PushAsync(new PromosPage());
+
+            await Task.WhenAll(
+               mdp.RotateXTo(0, 600),
+               mdp.FadeTo(1, 600, Easing.SinIn)
+               );
+
+            // Application.Current.MainPage = new NavigationPage(new PromosPage());
+            // await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
 
         }
         private async void GoToProductList()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
+            await Task.WhenAll(
+               mdp.RotateTo(360, 600, Easing.SinOut),
+               mdp.FadeTo(0, 600)
+               );
             await mdp.Detail.Navigation.PushAsync(new ProductsPage());
+
+            await Task.WhenAll(
+               mdp.RotateTo(-360, 600, Easing.SinIn),
+               mdp.FadeTo(1, 600, Easing.SinIn)
+               );
+
         }
         private async void GoToStoreList()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
+            var initial_width = mdp.Bounds.Width;
+            var initial_height = mdp.Bounds.Height;
+            await Task.WhenAll(
+               mdp.LayoutTo(Rectangle.FromLTRB(0, 0, 0, 0), 600, Easing.SinOut)
+               );
             await mdp.Detail.Navigation.PushAsync(new StorePage());
+            await Task.WhenAll(
+               mdp.LayoutTo(Rectangle.FromLTRB(0, 0, initial_width, initial_height), 600, Easing.SinOut)
+               );
+
         }
         private async void GoToMallList()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
+
+            await Task.WhenAll(
+                mdp.FadeTo(0, 600, Easing.SinOut),
+                mdp.TranslateTo(mdp.Bounds.Center.X,0, 600)
+                );
             await mdp.Detail.Navigation.PushAsync(new MallPage());
+
+            await Task.WhenAll(
+               mdp.TranslateTo(0,0, 600),
+               mdp.FadeTo(1, 600, Easing.SinIn)
+               );
         }
 
         private async void GoToProductDetails()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
+
+            await Task.WhenAll(
+                mdp.FadeTo(0, 600, Easing.SinOut),
+                mdp.ScaleTo(0, 600)
+                );
+
             await mdp.Detail.Navigation.PushAsync(new ProductDetailPage());
+
+            await Task.WhenAll(
+               mdp.ScaleTo(1, 600),
+               mdp.FadeTo(1, 600, Easing.SinIn)
+               );
         }
+
+
         private async void GoToLocations()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
@@ -293,7 +344,7 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new YourVisitedPlacesPage());
         }
-        
+
         private async void GoCar()
         {
 
@@ -301,20 +352,14 @@ namespace civicamall.ViewModels
             var mdp = Application.Current.MainPage as MasterDetailPage;
 
             await Task.WhenAll(
-                //mdp.ScaleTo(0, 1000),
-                mdp.FadeTo(0,600)
+                mdp.FadeTo(0, 600, Easing.SinOut)
             );
-             
 
             await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
 
             await Task.WhenAll(
-                //mdp.ScaleTo(1, 1000, Easing.CubicIn),
-                mdp.FadeTo(1,600, Easing.CubicIn)
+                mdp.FadeTo(1, 600, Easing.SinIn)
                 );
-
-            
-
         }
 
         private void ShowMaster()
@@ -322,7 +367,7 @@ namespace civicamall.ViewModels
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
 
-        
+
 
 
 

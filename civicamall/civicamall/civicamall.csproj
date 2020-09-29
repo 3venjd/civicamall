@@ -14,6 +14,7 @@
     <None Remove="Images\add_gray_24px.svg" />
     <None Remove="Images\add_purple_24px.svg" />
     <None Remove="Images\Aviod_Shopping_Malls.svg" />
+    <None Remove="Images\Civicamall.svg" />
     <None Remove="Images\clear_24px.svg" />
     <None Remove="Images\close_24px.svg" />
     <None Remove="Images\delete_forever_24px.svg" />
@@ -39,6 +40,7 @@
     <None Remove="Images\room_24px.svg" />
     <None Remove="Images\round_arrow_back_purple_24px.svg" />
     <None Remove="Images\round_arrow_back_white_24px.svg" />
+    <None Remove="Images\round_arrow_white_24px.svg" />
     <None Remove="Images\search.svg" />
     <None Remove="Images\share_24px.svg" />
     <None Remove="Images\shopping_bag.svg" />
@@ -66,6 +68,7 @@
     <SharedImage Include="Images\add_gray_24px.svg" />
     <SharedImage Include="Images\add_purple_24px.svg" />
     <SharedImage Include="Images\Aviod_Shopping_Malls.svg" />
+    <SharedImage Include="Images\Civicamall.svg" />
     <SharedImage Include="Images\clear_24px.svg" />
     <SharedImage Include="Images\close_24px.svg" />
     <SharedImage Include="Images\delete_forever_24px.svg" />
@@ -91,6 +94,7 @@
     <SharedImage Include="Images\room_24px.svg" />
     <SharedImage Include="Images\round_arrow_back_purple_24px.svg" />
     <SharedImage Include="Images\round_arrow_back_white_24px.svg" />
+    <SharedImage Include="Images\round_arrow_white_24px.svg" />
     <SharedImage Include="Images\search.svg" />
     <SharedImage Include="Images\share_24px.svg" />
     <SharedImage Include="Images\shopping_bag.svg" />
@@ -148,6 +152,9 @@
     <EmbeddedResource Update="Views\LocationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\MallDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -169,7 +176,13 @@
     <EmbeddedResource Update="Views\NotFoundPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\OnBoardingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\OrderHistoryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PaymentMethodsPage.xaml">
@@ -185,6 +198,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PromosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SelectionModePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ShoppingCarPage.xaml">

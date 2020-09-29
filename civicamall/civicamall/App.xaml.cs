@@ -12,8 +12,17 @@ namespace civicamall
         public App()
         {
             InitializeComponent();
+            bool firts_tiem = true;
 
-            MainPage = new MasterPage();
+            if (firts_tiem)
+            {
+                MainPage = new OnBoardingPage();
+            }
+            else
+            {
+                MainPage = new MasterPage();
+            }
+            
         }
 
         protected override void OnStart()

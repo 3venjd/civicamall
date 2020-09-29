@@ -19,8 +19,8 @@
         </Grid.RowDefinitions>
         <ip:BackArrow Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start"/>
         <ip:ShoppingCart Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
-        <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="Métodos de pago"/>
-        <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0,16,20">
+        <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"  TextColor="#4C4456" Text="Métodos de pago"/>
+        <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0,16,20" CornerRadius="8">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>

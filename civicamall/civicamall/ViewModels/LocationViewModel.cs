@@ -35,7 +35,7 @@ namespace civicamall.ViewModels
             LocationObject = new Location
             {
                 Name = "El Hueco",
-                Header = "city_image.png",
+                Header = "BannersCvicaMallCuarta.png",
                 Images = new ObservableCollection<LocationImages>
                 {
                     new LocationImages

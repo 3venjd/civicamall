@@ -12,7 +12,7 @@
         <ip:StoreViewModel/>
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
-        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+        <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
@@ -22,10 +22,10 @@
         <Grid BackgroundColor="#F2EDF8" Margin="0">
             
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.15*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -33,12 +33,11 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-
-            <!--
+<!--
             <Local:BackArrow Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
-            <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+            <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
-            -->
+       -->
             <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="180" Margin="16,0"/>
 
             <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,24,0,0" TranslationY="5" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />

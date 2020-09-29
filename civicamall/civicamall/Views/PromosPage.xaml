@@ -13,7 +13,7 @@
         <pp:PromosViewModel/>
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
-        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+        <Local:EntrySearch/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
@@ -22,7 +22,10 @@
 
         <Grid BackgroundColor="#F2EDF8">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.15*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -32,21 +35,34 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-
-           <!-- <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
-            <Local:EntrySearch Grid.Row="0" HorizontalOptions="Center"/>
-            <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End"/>
--->
+            <!--
+            <Local:BackArrow Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+            <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
+            <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
+            -->
             <Local:Advertisements 
                 Grid.Row="1"
+                Grid.ColumnSpan="4"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 HeightRequest="180"
                 Margin="16,0"
             />
-            <Label Grid.Row="2" Margin="0,20,0,5" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Promociones"/>
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TranslationX="20" Margin="0,20,0,0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Promociones"/>
+            <Label
+                Grid.Row="2"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Margin="24,20,24,0"
+                FontAttributes="Bold"
+                TextColor="#2CBFFF"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                FontSize="Small"
+                Text="Ver todo"
+              />
 
-            <CollectionView Grid.Row="3" HeightRequest="140" Margin="24,0,24,0" SelectionMode="Single" ItemsSource="{Binding Categories}">
+            <CollectionView Grid.Row="3" Grid.ColumnSpan="4" HeightRequest="140" Margin="24,0,24,0" SelectionMode="Single" ItemsSource="{Binding Categories}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
                 </CollectionView.ItemsLayout>
@@ -69,10 +85,12 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+            <!--
             <Button Grid.Row="4" CornerRadius="5" Margin="24,26" Padding="0" HeightRequest="34" BackgroundColor="White" TextColor="Purple" Text="Ver todas las categorias" />
-
+            -->
             <CollectionView
             Grid.Column="0"
+            Grid.ColumnSpan="4"
             Grid.Row="5"
             Margin="24,0"
             HeightRequest="270"
@@ -101,7 +119,7 @@
 
             </CollectionView>
 
-            <Image Grid.Row="6" Source="Banner.png" Aspect="AspectFill" />
+            <Image Grid.Row="6" Grid.ColumnSpan="4" Source="Banner.png" Aspect="AspectFill" />
 
         </Grid>
     </ScrollView>

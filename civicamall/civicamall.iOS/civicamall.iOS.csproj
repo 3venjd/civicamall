@@ -314,4 +314,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Zapatillas_4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BannersCvicaMallCuarta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Splash.png" />
+  </ItemGroup>
 </Project>

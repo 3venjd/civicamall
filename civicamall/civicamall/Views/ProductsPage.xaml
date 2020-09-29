@@ -12,9 +12,6 @@
     <ContentPage.BindingContext>
         <sp:ProductsViewModel/>
     </ContentPage.BindingContext>
-    <NavigationPage.TitleView>
-        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
-    </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
@@ -32,16 +29,17 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
+            
             <!--
             <Local:BackArrow Grid.Column="0" Grid.Row="0"/>
            
             <Local:ShoppingCart Grid.Column="3" Grid.Row="0" />
+            
+-->
             <Local:EntrySearch Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="EndAndExpand" 
                                WidthRequest="220" Padding="0"/>
-            
             <ImageButton Grid.Column="3" Grid.Row="1" BackgroundColor="#7E2081" VerticalOptions="Center" HorizontalOptions="Start"
                     HeightRequest="40" WidthRequest="40" CornerRadius="6" Source="Mic_white.png" Padding="9"/>
--->
             <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="Large"
                    HorizontalOptions="Center" VerticalOptions="Center"
                    TextColor="#4C4456" Text="¡Explora!"/>

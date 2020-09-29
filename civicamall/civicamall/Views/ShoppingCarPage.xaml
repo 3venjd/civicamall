@@ -19,7 +19,7 @@
 
             <Local:BackArrow Grid.Row="0" HorizontalOptions="Start"/>
 
-            <Label Grid.Row="0" Text="Tus artículos" HorizontalOptions="Center" Margin="0,10,0,5" FontSize="Large" />
+            <Label Grid.Row="0" Text="Tus artículos" HorizontalOptions="Center" Margin="0,10,0,5" FontSize="Large" FontAttributes="Bold" TextColor="#4C4456" />
 
             <Local:Trash Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
 
@@ -55,6 +55,7 @@
 
                                     <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" TranslationY="10" TextColor="#3E4D4C" Padding="0" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
 
+                                    <!--
                                     <pv:PancakeView Grid.Row="2" Grid.Column="1" VerticalOptions="EndAndExpand" HeightRequest="20" CornerRadius="5" BackgroundColor="#00A09C" IsVisible="{Binding IsDiscount}">
                                         <Grid ColumnSpacing="0">
                                             <Grid.ColumnDefinitions>
@@ -65,7 +66,7 @@
                                             <Label Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Small" TextColor="White" Text="Descuento"/>
                                         </Grid>
                                     </pv:PancakeView>
-
+                                    -->
                                     <pv:PancakeView Grid.Row="2" Grid.Column="2" BackgroundColor="White" Padding="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                         <pv:PancakeView.Shadow>
                                             <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>

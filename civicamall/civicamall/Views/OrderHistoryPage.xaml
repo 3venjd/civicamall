@@ -21,9 +21,9 @@
         </Grid.RowDefinitions>
         <Local:BackArrow Grid.Row="0" HorizontalOptions="Start" Margin="0"/>
         <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End" Margin="0"/>
-        <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="Historial de pedidos" />
+        <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Historial de pedidos" />
 
-        <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Pk:PancakeView Grid.Row="1" Margin="16,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>

@@ -33,18 +33,6 @@ namespace civicamall.Controls
 
         private int _position;
 
-        private double _opacity;
-
-        public double Opacity
-        {
-            get => _opacity;
-            set
-            {
-                _opacity = value;
-                OnPropertyChanged();
-            }
-        }
-
         public int Position
         {
             get => _position;
@@ -135,15 +123,9 @@ namespace civicamall.Controls
         }
         private void Slider()
         {
-           /* Device.StartTimer(TimeSpan.FromSeconds(1), (Func<bool>)(() =>
-            {
-                Opacity = Opacity - 0.2;
-                return true;
-            }));*/
             Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
             {
                 Position = (Position + 1) % Advertisements.Count;
-                Opacity = 1;
                 return true;
             }));
         }

@@ -7,14 +7,20 @@
              xmlns:ip="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
              x:Class="civicamall.Views.MenuPage"
-             Title="Menu">
+             Title="Menu"
+             BackgroundColor="#F2EDF8"
+             >
     <ContentPage.BindingContext>
         <ip:MenuPageViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0,20">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -27,13 +33,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <ImageButton Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="32" WidthRequest="32" Padding="5" BackgroundColor="white" Source="close_24px.png" Command="{Binding CloseMenuCommand}"/>
-                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16,24,0" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
+                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
 
-                <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="Center" HeightRequest="110" Margin="24,10,24,10" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">
+                <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HeightRequest="110" Margin="24,5" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">
                     <Grid Padding="0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
@@ -56,34 +61,16 @@
                 </pv:PancakeView>
 
 
-                <ImageButton Grid.Row="2" Grid.Column="0" BackgroundColor="White" Source="payment_24px.png" Margin="24,0,0,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToPaymentMethodsCommand}"/>
-                <ImageButton Grid.Row="2" Grid.Column="1" BackgroundColor="White" Source="person_pin_circle_24px.png" TranslationX="5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
-                <ImageButton Grid.Row="2" Grid.Column="2" BackgroundColor="White" Source="receipt_24px.png" TranslationX="-5" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
-                <ImageButton Grid.Row="2" Grid.Column="3" BackgroundColor="White" Source="Wsih_List.png" Margin="0,0,24,0" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoWishesCommand}"/>
+                <ImageButton Grid.Row="2" Grid.Column="0" BackgroundColor="White" Source="payment_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToPaymentMethodsCommand}"/>
+                <ImageButton Grid.Row="2" Grid.Column="1" BackgroundColor="White" Source="person_pin_circle_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
+                <ImageButton Grid.Row="2" Grid.Column="2" BackgroundColor="White" Source="receipt_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
 
-                <Label Grid.Row="3" Grid.Column="0" FontSize="Micro" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0,0,0"/>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="Micro" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0"/>
                 <Label Grid.Row="3" Grid.Column="1" FontSize="Micro" Text="Ubicaciones" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Label Grid.Row="3" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Label Grid.Row="3" Grid.Column="3" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,24,0"/>
+                <Label Grid.Row="3" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="24,0"/>
+                
 
-                <pv:PancakeView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,10,24,0" Padding="10" CornerRadius="10,10,0,0">
-                    <pv:PancakeView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GoEmptyShoppingCartCommand}" />
-                    </pv:PancakeView.GestureRecognizers>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width=".7*"/>
-                            <ColumnDefinition Width=".3*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Favoritos"/>
-                        <Image Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="star_rate_24px.png" HeightRequest="25" WidthRequest="25"/>
-                    </Grid>
-                </pv:PancakeView>
-
-                <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" Margin="24,-5,24,0" Padding="10" CornerRadius="0,0,10,10">
+                <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" Margin="24,0" Padding="10" CornerRadius="0,0,10,10">
                     <pv:PancakeView.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GoCouponCommand}" />
                     </pv:PancakeView.GestureRecognizers>
@@ -100,11 +87,21 @@
                     </Grid>
                 </pv:PancakeView>
 
-                <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Margin="40,32,40,0" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
+                <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,5" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Tus favoritos"/>
 
-                <Image Grid.Row="7" Grid.Column="0" Source="exit_to_app_24px.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="25" WidthRequest="25" Margin="41,0,0,0"/>
+                <ImageButton Grid.Row="7" Grid.Column="0" BackgroundColor="White" Source="Wsih_List.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToPaymentMethodsCommand}"/>
+                <ImageButton Grid.Row="7" Grid.Column="1" BackgroundColor="White" Source="local_mall_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
+                <ImageButton Grid.Row="7" Grid.Column="2" BackgroundColor="White" Source="store_mall_directory_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
 
-                <Label Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" />
+                <Label Grid.Row="8" Grid.Column="0" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="1" FontSize="Micro" Text="Malls" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="2" FontSize="Micro" Text="Tiendas" HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,32" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
+
+                <Image Grid.Row="10" Grid.Column="0" Source="exit_to_app_24px.png" Margin="24,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="25" WidthRequest="25"/>
+
+                <Label Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" />
 
             </Grid>
         </ScrollView>

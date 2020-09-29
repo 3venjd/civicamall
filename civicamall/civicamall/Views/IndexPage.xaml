@@ -15,12 +15,13 @@
         <ip:IndexViewModel />
     </ContentPage.BindingContext>
 
-    <NavigationPage.TitleView>
-        <CustomControl:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+    <NavigationPage.TitleView >
+        <CustomControl:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
+
     
     <ScrollView >
         <Grid
@@ -29,10 +30,10 @@
             BackgroundColor="#F2EDF8"
             ColumnSpacing="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.325*" />
+                <ColumnDefinition Width="0.15*" />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -51,12 +52,13 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-
-            <!--
-            <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End" />
-            <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center"/>
+<!--
+            <CustomControl:ShoppingCart Grid.Row="0" Grid.Column="3"/>
+            <CustomControl:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
             
             <pv:PancakeView
+                Grid.Row="0"
+                Grid.Column="0"
                 VerticalOptions="Start"
                 HorizontalOptions="Start"
                 HeightRequest="40"
@@ -69,8 +71,10 @@
                     BackgroundColor="White"
                     Command="{Binding ShowMasterCommand}"
                 />
+            
             </pv:PancakeView>
-            -->
+-->
+        
             <CustomControl:Advertisements 
                 Grid.Row="1"
                 Grid.Column="0"
@@ -163,142 +167,12 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
             <Label
                 Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="33,5,0,5"
-                FontAttributes="Bold"
-                TextColor="#4C4456"
-                FontSize="Medium"
-                Text="Tus favoritos" 
-            />
-            
-            <pv:PancakeView
-                Grid.Row="5"
-                Grid.Column="0"
-                Margin="32,0,0,0"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="60"
-                WidthRequest="60"
-                Padding="0"
-                CornerRadius="5">
-                <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
-                </pv:PancakeView.Shadow>
-                <Button
-                    BackgroundColor="White"
-                    ImageSource="Wsih_List.png"                
-                    Command="{Binding ErrorPageCommand}"/>
-            </pv:PancakeView>
-
-            <pv:PancakeView
-                Grid.Row="5"
-                Grid.Column="1"
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="60"
-                WidthRequest="60"
-                TranslationX="5"
-                Padding="0"
-                CornerRadius="5" 
-                >
-                <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
-                </pv:PancakeView.Shadow>
-                <Button
-                    BackgroundColor="White"
-                    ImageSource="local_mall_24px.png"
-                    Command="{Binding GoToYourMallsCommand}"/>
-            </pv:PancakeView>
-
-
-
-            <pv:PancakeView  
-                Grid.Row="5"
-                Grid.Column="2"
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="60"
-                WidthRequest="60"
-                TranslationX="-5"
-                Padding="0"
-                CornerRadius="5">
-                <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
-                </pv:PancakeView.Shadow>
-                <Button
-                BackgroundColor="White"
-                ImageSource="store_mall_directory_24px.png"
-                Command="{Binding GoToYourStoresCommand}"/>
-            </pv:PancakeView>
-
-            <pv:PancakeView
-                Grid.Row="5"
-                Grid.Column="3"
-                Margin="0,0,32,0"
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="60"
-                WidthRequest="60"
-                Padding="0"
-                CornerRadius="5"
-                >
-                <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
-                </pv:PancakeView.Shadow>
-                <Button
-                    BackgroundColor="White"
-                ImageSource="person_pin_circle_24px.png"
-                Command="{Binding GoToYourVisitedPlacesCommand}"
-            />
-            </pv:PancakeView>
-            
-            <Label
-                Grid.Row="6"
-                Grid.Column="0"
-                Margin="32,0,0,0"
-                FontSize="13"
-                HorizontalTextAlignment="Center"
-                TextColor="#4C4456"
-                Text="Deseados" />
-            <Label
-                Grid.Row="6"
-                Grid.Column="1"
-                FontSize="13"
-                HorizontalTextAlignment="Center"
-                TextColor="#4C4456"
-                TranslationX="5"
-                Text="Malls" />
-            <Label
-                Grid.Row="6"
-                Grid.Column="2"
-                FontSize="13"
-                HorizontalTextAlignment="Center"
-                TextColor="#4C4456"
-                TranslationX="-5"
-                Text="Tiendas" />
-            <Label
-                Grid.Row="6"
-                Grid.Column="3"
-                Margin="0,0,32,0"
-                FontSize="13"
-                HorizontalTextAlignment="Center"
-                TextColor="#4C4456"
-                Text="Visitados" />
-            
-            
-            
-
-            <Label
-                Grid.Row="7"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                Margin="33,20,0,5"
+                Margin="33,0,0,0"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="Medium"
@@ -306,16 +180,17 @@
 
 
             <pv:PancakeView
-                Grid.Row="8"
+                Grid.Row="5"
                 Grid.Column="0"
-                Margin="32,0,0,0"
                 BackgroundColor="White"
                 Padding="0"
                 CornerRadius="5"
-                HorizontalOptions="Center"
+                HorizontalOptions="End"
                 VerticalOptions="Center"
+                TranslationX="33"
                 HeightRequest="60"
-                WidthRequest="60">
+                WidthRequest="60"
+               >
                 <pv:PancakeView.Shadow>
                     <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
@@ -326,11 +201,11 @@
             </pv:PancakeView>
 
             <pv:PancakeView
-                Grid.Row="8"
+                Grid.Row="5"
                 Grid.Column="1"
                 BackgroundColor="White"
-                TranslationX="5"
                 Padding="0"
+                TranslationX="25"
                 CornerRadius="5"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
@@ -347,16 +222,16 @@
 
 
             <pv:PancakeView
-                Grid.Row="8"
+                Grid.Row="5"
                 Grid.Column="2"
                 BackgroundColor="White"
-                TranslationX="-5"
                 Padding="0"
                 CornerRadius="5"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 HeightRequest="60"
-                WidthRequest="60">
+                WidthRequest="60"
+                TranslationX="-15">
                 <pv:PancakeView.Shadow>
                     <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
@@ -367,14 +242,14 @@
             </pv:PancakeView>
 
             <pv:PancakeView
-                Grid.Row="8"
+                Grid.Row="5"
                 Grid.Column="3"
-                Margin="0,0,32,0"
                 BackgroundColor="White"
                 Padding="0"
                 CornerRadius="5"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
+                TranslationX="-26"
                 HeightRequest="60"
                 WidthRequest="60">
                 <pv:PancakeView.Shadow>
@@ -388,43 +263,44 @@
 
 
             <Label
-                Grid.Row="9"
+                Grid.Row="6"
                 Grid.Column="0"
-                Margin="32,0,0,0"
                 FontSize="13"
-                HorizontalTextAlignment="Center"
+               HorizontalOptions="End"
+                VerticalOptions="Center"
+                TranslationX="25"
                 TextColor="#7E2081"
                 Text="Promos" />
             <Label
-                Grid.Row="9"
+                Grid.Row="6"
                 Grid.Column="1"
                 FontSize="13"
                 HorizontalTextAlignment="Center"
                 TextColor="#7E2081"
-                TranslationX="5"
+                TranslationX="25"
                 Text="Productos" />
             <Label
-                Grid.Row="9"
+                Grid.Row="6"
                 Grid.Column="2"
                 FontSize="13"
                 HorizontalTextAlignment="Center"
                 TextColor="#7E2081"
-                TranslationX="-5"
+                TranslationX="-15"
                 Text="Tiendas" />
             <Label
-                Grid.Row="9"
+                Grid.Row="6"
                 Grid.Column="3"
-                Margin="0,0,32,0"
                 FontSize="13"
+                TranslationX="-26"
                 HorizontalTextAlignment="Center"
                 TextColor="#7E2081"
                 Text="Malls" 
             />
-            <Frame Grid.Row="10" Grid.ColumnSpan="4" Margin="0,15" HasShadow="False">
+            <Frame Grid.Row="7" Grid.ColumnSpan="4" Margin="0,15" HasShadow="False">
                 <StackLayout>
-                    <Label Margin="24,0" Text="El Centro" TextColor="#7E2081" FontSize="Medium"/>
+                    <Label Margin="0,5" Text="El Hueco" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold"/>
                     <pv:PancakeView>
-                        <Image Source="city_image.png">
+                        <Image Source="BannersCvicaMallCuarta.png">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding GoToLocation}"/>
                             </Image.GestureRecognizers>
@@ -464,7 +340,7 @@
             </Frame>
 
             <Label
-                Grid.Row="11"
+                Grid.Row="8"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Margin="24,0,0,0"
@@ -474,18 +350,18 @@
                 Text="Lo último que viste" />
 
             <Label
-                Grid.Row="11"
+                Grid.Row="8"
                 Grid.Column="3"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
-                Margin="0,0,24,0"
+                TranslationX="-30"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="Center"
                 FontSize="Small"
                 Text="Ver todo" />
 
             <CollectionView
-                Grid.Row="12"
+                Grid.Row="9"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Margin="24,0,24,0"
@@ -511,7 +387,7 @@
             </CollectionView>
 
             <Label
-                Grid.Row="13"
+                Grid.Row="10"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Margin="24,0,0,0"
@@ -521,9 +397,9 @@
                 Text="Te recomendamos" />
 
             <Label
-                Grid.Row="13"
+                Grid.Row="10"
                 Grid.Column="3"
-                Margin="0,0,24,0"
+                TranslationX="-30"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
@@ -532,7 +408,7 @@
                 Text="Ver todo" />
 
             <CollectionView
-                Grid.Row="14"
+                Grid.Row="11"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
                 Margin="24,0"

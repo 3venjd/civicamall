@@ -42,7 +42,7 @@
 
             
             
-            <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Aspect="AspectFill" Source="{Binding LocationObject.Header}"/>
+            <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Aspect="AspectFit" Source="{Binding LocationObject.Header}"/>
 
             <Label Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="0,5" HorizontalOptions="Center" VerticalOptions="End" TranslationY="10" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="{Binding LocationObject.Name}"/>
 
