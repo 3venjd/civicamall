@@ -2,14 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ip="clr-namespace:civicamall.ViewModels"
+             NavigationPage.HasBackButton="False"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.LoginPage">
+             x:Class="civicamall.Views.LoginPage"
+             BackgroundColor="#F2EDF8">
+    <ContentPage.BindingContext>
+        <ip:LoginViewModel />
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView >
+        <Label Text="Ingresar" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold" Margin="80,0"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout
+                Margin="10">
+                <Image Source="Civicamall.png" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Margin="0,20,0,0">
+                <Label Text="Correo" TextColor="#85808D" Margin="45,0"/>
+            </StackLayout>
+            <Frame BackgroundColor="White" Margin="44,0,44,24" BorderColor="#7E2081" HasShadow="True" Padding="1" CornerRadius="4">
+                <Entry Placeholder="Correo@ejemplo.com" PlaceholderColor="#4C4456" FontSize="Small" Margin="5,-10" BackgroundColor="Transparent"/>
+            </Frame>
+
+            <StackLayout>
+                <Label Text="Contraseña" TextColor="#85808D" Margin="45,0"/>
+            </StackLayout>
+            <Frame BackgroundColor="White" Margin="44,0,44,10" BorderColor="#7E2081" HasShadow="True" Padding="1" CornerRadius="4">
+                <Entry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" Margin="5,-10" BackgroundColor="Transparent"/>
+            </Frame>
+            <StackLayout Margin="0,0,0,20">
+                <Label Margin="44,0,44,10" Text="Olvidé mi contraseña" TextColor="#7E2081" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout>
+                    <Button Text="Ingresar" TextColor="White" BackgroundColor="#7E2081" HorizontalOptions="CenterAndExpand" FontSize="Small" FontAttributes="Bold" TextTransform="None" WidthRequest="150" HeightRequest="30" Padding="0" CornerRadius="4" Command="{Binding GoToIndexCommand}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ingresar con" TextColor="#4C4456" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,30,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Grid WidthRequest="250" HeightRequest="30" HorizontalOptions="Center">
+                    <Image Grid.Column="0" Source="facebook_purple_logo_button.png"/>
+                    <Image Grid.Column="1" Source="facebook_purple_logo_button.png"/>
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Politicas de uso" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,20,0,5"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Privacidad de la información" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,0,0,5"/>
+            </StackLayout>
+            
+
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

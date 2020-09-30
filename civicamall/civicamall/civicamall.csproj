@@ -19,6 +19,7 @@
     <None Remove="Images\close_24px.svg" />
     <None Remove="Images\delete_forever_24px.svg" />
     <None Remove="Images\facebook_logo.svg" />
+    <None Remove="Images\facebook_purple_logo_button.svg" />
     <None Remove="Images\favorite_24px.svg" />
     <None Remove="Images\favorite_purple_24px.svg" />
     <None Remove="Images\favorite_white_24px.svg" />
@@ -73,6 +74,7 @@
     <SharedImage Include="Images\close_24px.svg" />
     <SharedImage Include="Images\delete_forever_24px.svg" />
     <SharedImage Include="Images\facebook_logo.svg" />
+    <SharedImage Include="Images\facebook_purple_logo_button.svg" />
     <SharedImage Include="Images\favorite_24px.svg" />
     <SharedImage Include="Images\favorite_purple_24px.svg" />
     <SharedImage Include="Images\favorite_white_24px.svg" />
@@ -180,18 +182,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\OrderHistoryPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Page1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Page2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Page3.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Page4.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PaymentMethodsPage.xaml">
