@@ -35,7 +35,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <ImageButton Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="32" WidthRequest="32" Padding="5" BackgroundColor="white" Source="close_24px.png" Command="{Binding CloseMenuCommand}"/>
+                <ImageButton Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="32" WidthRequest="32" Padding="5" BackgroundColor="white" Source="close_24px.png" TranslationX="-10" Command="{Binding CloseMenuCommand}"/>
                 <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="32" WidthRequest="32" Padding="0" Margin="0,16" FontSize="24" FontFamily="Roboto" FontAttributes="Bold" TextColor="#4C4456" Text="Bienvenido"/>
 
                 <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HeightRequest="110" Margin="24,5" CornerRadius="6" Padding="0" BackgroundColor="white" HasShadow="True">
@@ -70,7 +70,7 @@
                 <Label Grid.Row="3" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="24,0"/>
                 
 
-                <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" Margin="24,0" Padding="10" CornerRadius="0,0,10,10">
+                <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" Margin="24,0" Padding="10" CornerRadius="10">
                     <pv:PancakeView.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GoCouponCommand}" />
                     </pv:PancakeView.GestureRecognizers>

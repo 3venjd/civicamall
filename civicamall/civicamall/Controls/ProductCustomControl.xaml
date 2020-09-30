@@ -31,7 +31,7 @@
                  />
             </pv:PancakeView>
 
-            <pv:PancakeView x:Name="PancakeViewFavorite" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,0,8,0" IsVisible="false">
+            <pv:PancakeView x:Name="PancakeViewFavorite" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Start" CornerRadius="0,8,8,0" IsVisible="false">
                 <Button
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
@@ -65,15 +65,16 @@
                         Grid.Column="0"
                         TextColor="#7E2081"
                         Padding="0"
-                        TranslationX="6"
-                        TranslationY="10"
+                        TranslationX="10"
+                        TranslationY="5"
                     />
 
                     <Label
                         x:Name="ProductFinalCostLabel"
                         Grid.Row="1"
                         Grid.Column="0"
-                        Margin="6"
+                        Margin="10,6,6,6"
+                        TranslationY="-5"
                     />
                 </Grid>
             </pv:PancakeView>
