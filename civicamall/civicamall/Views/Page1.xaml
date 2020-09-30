@@ -9,27 +9,16 @@
              Background="#F2EDF8">
     <ContentPage.Content>
         <ScrollView>
-            <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-                <PV:PancakeView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5" Margin="16,26,16,5" CornerRadius="10">
-                    <StackLayout>
+            <StackLayout>
+                <PV:PancakeView>
+                    <StackLayout BackgroundColor="White" Margin="16,26,16,0">
                         <Label Text="Bienvenido a" TextColor="#7E2081" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,32,0,0"/>
                         <Image Source="Civicamall.png"/>
                         <Label Text="Para mejorar tu experiencia de usuario,elige mínimo 3 preferencias" TextColor="#707070" FontSize="Small" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="16,23"/>
                     </StackLayout>
                 </PV:PancakeView>
-                <PV:PancakeView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="16,5">
-                    <Grid>
+                <PV:PancakeView>
+                    <Grid Margin="16,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -57,18 +46,15 @@
 
                     </Grid>
                 </PV:PancakeView>
-                <StackLayout  Grid.Column="2" Grid.Row="2" HorizontalOptions="Center" HeightRequest="10" WidthRequest="40" Padding="5" Margin="0,0,20,0">
-                    <Grid ColumnSpacing="1">
-                        <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="Start" Margin="0"/>
-                        <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="Center" Opacity="0.5"/>
-                        <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="End" Opacity="0.5"/>
-                    </Grid>
-
-                </StackLayout>
-                <PV:PancakeView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
+                <PV:PancakeView VerticalOptions="EndAndExpand" Margin="10">
                     <Grid>
-                        <Label Grid.Column="0" HorizontalOptions="Start" Margin="36,0,0,39" Text="Omitir" TextColor="#7E2081" FontSize="Small"/>
-                        <PV:PancakeView Grid.Column="2" BackgroundColor="#00A09C" Margin="0,0,16,39" CornerRadius="4" HorizontalOptions="Start">
+                        <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="EndAndExpand" WidthRequest="50" Margin="59,0">
+                            <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="Start" Margin="0"/>
+                            <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="Center" Opacity="0.5"/>
+                            <PV:PancakeView HeightRequest="10" WidthRequest="10" CornerRadius="5" BackgroundColor="#7E2081" HorizontalOptions="End" Opacity="0.5"/>
+                        </Grid>
+                        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="End" Margin="36,0,0,0" Text="Omitir" TextColor="#7E2081" FontSize="Small"/>
+                        <PV:PancakeView Grid.Row="1" Grid.Column="1" BackgroundColor="#00A09C" Margin="15,0,0,0" CornerRadius="4" HorizontalOptions="Center" VerticalOptions="End">
                             <Grid ColumnSpacing="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.75*"/>
@@ -81,7 +67,7 @@
                     </Grid>
                 </PV:PancakeView>
                 
-            </Grid>
+            </StackLayout>
         </ScrollView>
         
     </ContentPage.Content>
