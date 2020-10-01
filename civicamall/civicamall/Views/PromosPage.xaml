@@ -45,7 +45,7 @@
                 Grid.ColumnSpan="4"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
-                HeightRequest="180"
+                HeightRequest="220"
                 Margin="16,0"
             />
             <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TranslationX="20" Margin="0,20,0,0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Promociones"/>

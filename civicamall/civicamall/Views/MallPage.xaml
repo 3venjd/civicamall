@@ -41,7 +41,7 @@
             Grid.ColumnSpan="4"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand"
-            HeightRequest="180"
+            HeightRequest="220"
             Margin="16,20"
           />
 

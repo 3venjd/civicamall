@@ -38,7 +38,7 @@
             <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
        -->
-            <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="180" Margin="16,0"/>
+            <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="220" Margin="16,0"/>
 
             <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,24,0,0" TranslationY="5" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
 
