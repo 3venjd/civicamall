@@ -80,9 +80,10 @@
                 Grid.Column="0"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
-                HeightRequest="180"
+                HeightRequest="200"
                 Margin="16,0,16,24"
                 Grid.ColumnSpan="4"
+                
             />
             <Label
                 Grid.Row="2"

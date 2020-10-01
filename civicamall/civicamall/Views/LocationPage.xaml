@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:ip="clr-namespace:civicamall.ViewModels" 
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:Local="clr-namespace:civicamall.Controls"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:Local="clr-namespace:civicamall.Controls"
              NavigationPage.HasNavigationBar="True"
              mc:Ignorable="d"
              x:Class="civicamall.Views.LocationPage">
@@ -12,7 +13,7 @@
         <ip:LocationViewModel/>
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
-        <Local:EntrySearch VerticalOptions="Start" HorizontalOptions="Center"/>
+        <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,40,0"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
@@ -44,7 +45,7 @@
             
             <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Aspect="AspectFit" Source="{Binding LocationObject.Header}"/>
 
-            <Label Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="0,5" HorizontalOptions="Center" VerticalOptions="End" TranslationY="10" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="{Binding LocationObject.Name}"/>
+            <Label Grid.Column ="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="0,5" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="{Binding LocationObject.Name}"/>
 
             <ImageButton Grid.Row="5" Grid.Column="0" BackgroundColor="White" Padding="10" Margin="32,0,0,0" Source="price_tag.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="56" WidthRequest="56" Command="{Binding GoToPromos}"/>
             <ImageButton Grid.Row="5" Grid.Column="1" BackgroundColor="White" Padding="10" TranslationX="5" Source="shopping_bag.png"  CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="56" WidthRequest="56" Command="{Binding GoToProducts}"/>
@@ -57,7 +58,7 @@
             <Label Grid.Row="6" Grid.Column="2" FontSize="13" HorizontalTextAlignment="Center" TextColor="#7E2081" TranslationX="-5" Text="Tiendas"/>
             <Label Grid.Row="6" Grid.Column="3" FontSize="13" HorizontalTextAlignment="Center" TextColor="#7E2081" Margin="0,0,32,0" Text="Malls"/>
 
-            <Frame Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,20" BorderColor="Transparent" HeightRequest="300">
+            <Frame Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,20" BorderColor="Transparent" HeightRequest="250">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -68,15 +69,15 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontSize="Medium" FontAttributes="Bold" TextColor="#7E2081" Text="Las promos"/>
-                    <CollectionView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
-                                    ItemsSource="{Binding LocationObject.Images}"
-                                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <CollectionView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                                    HorizontalOptions="CenterAndExpand"
+                                    ItemsSource="{Binding LocationObject.Images}">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Image Aspect="AspectFill" Source="{Binding Image}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Image Aspect="AspectFit" Source="{Binding Image}"/>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>

@@ -12,7 +12,7 @@
         <ip:StoreViewModel/>
     </ContentPage.BindingContext>
     <NavigationPage.TitleView>
-        <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,40,0"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>

@@ -12,7 +12,7 @@
         <ip:LoginViewModel />
     </ContentPage.BindingContext>
     <NavigationPage.TitleView >
-        <Label Text="Ingresar" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold" Margin="80,0"/>
+        <Label Text="Ingresar" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold" />
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
@@ -24,15 +24,15 @@
             <StackLayout Margin="0,20,0,0">
                 <Label Text="Correo" TextColor="#85808D" Margin="45,0"/>
             </StackLayout>
-            <Frame BackgroundColor="White" Margin="44,0,44,24" BorderColor="#7E2081" HasShadow="True" Padding="1" CornerRadius="4">
-                <Entry Placeholder="Correo@ejemplo.com" PlaceholderColor="#4C4456" FontSize="Small" Margin="5,-10" BackgroundColor="Transparent"/>
+            <Frame BackgroundColor="White" Margin="44,0,44,24" BorderColor="#7E2081" HasShadow="False" Padding="1" CornerRadius="4">
+                <Entry Placeholder="Correo@ejemplo.com" PlaceholderColor="#4C4456" FontSize="Small" BackgroundColor="Transparent"/>
             </Frame>
 
             <StackLayout>
                 <Label Text="Contraseña" TextColor="#85808D" Margin="45,0"/>
             </StackLayout>
-            <Frame BackgroundColor="White" Margin="44,0,44,10" BorderColor="#7E2081" HasShadow="True" Padding="1" CornerRadius="4">
-                <Entry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" Margin="5,-10" BackgroundColor="Transparent"/>
+            <Frame BackgroundColor="White" Margin="44,0,44,10" BorderColor="#7E2081" HasShadow="False" Padding="0" CornerRadius="4">
+                <Entry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" BackgroundColor="Transparent" />
             </Frame>
             <StackLayout Margin="0,0,0,20">
                 <Label Margin="44,0,44,10" Text="Olvidé mi contraseña" TextColor="#7E2081" FontAttributes="Bold"/>

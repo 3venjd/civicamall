@@ -40,23 +40,23 @@ namespace civicamall.ViewModels
                 {
                     new LocationImages
                     {
-                         Image = "Banner_el_huecoImagen_1.jpg"
+                         Image = "RedimensionadosHueco_1.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "Banner_el_huecoImagen_2.jpg"
+                         Image = "RedimensionadosHueco_2.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "Banner_el_huecoMesa_de_trabajo_1.jpg"
+                         Image = "RedimensionadosHueco_3.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "Banner_el_huecoMesa_de_trabajo_2.jpg"
+                         Image = "RedimensionadosHueco_4.jpg"
                     },
                     new LocationImages
                     {
-                         Image = "Banner_el_huecoMesa_de_trabajo_4.jpg"
+                         Image = "RedimensionadosHueco_5.jpg"
                     },
 
                 }

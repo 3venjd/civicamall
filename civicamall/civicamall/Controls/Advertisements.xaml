@@ -13,17 +13,15 @@
     <pv:PancakeView
                 BackgroundColor="White"
                 CornerRadius="10">
-        <CarouselView
-                    x:Name="MainCarouselView"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Opacity="{Binding Opacity}"
-                    ItemsSource="{Binding Advertisements}"
-                    Position="{Binding Position, Mode=TwoWay}"
-                    HorizontalScrollBarVisibility="Always">
+        <CarouselView  
+            x:Name="MainCarouselView"
+            Opacity="{Binding Opacity}"
+            ItemsSource="{Binding Advertisements}"
+            Position="{Binding Position, Mode=TwoWay}"
+            HorizontalScrollBarVisibility="Always">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Image Aspect="AspectFill" Source="{Binding Image}" />
+                    <Image Aspect="Fill" Source="{Binding Image}" />
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

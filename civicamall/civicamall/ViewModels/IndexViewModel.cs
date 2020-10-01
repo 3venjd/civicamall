@@ -349,13 +349,14 @@ namespace civicamall.ViewModels
         {
 
 
+
             var mdp = Application.Current.MainPage as MasterDetailPage;
 
             await Task.WhenAll(
                 mdp.FadeTo(0, 600, Easing.SinOut)
             );
 
-            await mdp.Detail.Navigation.PushAsync(new MasterDetailPage());
+            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
 
             await Task.WhenAll(
                 mdp.FadeTo(1, 600, Easing.SinIn)
