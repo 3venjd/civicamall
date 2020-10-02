@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:pp="clr-namespace:civicamall.Controls" 
-             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:renders="clr-namespace:civicamall.Renders"
              mc:Ignorable="d"
              x:Class="civicamall.Controls.EntrySearch">
     <ContentView.BindingContext>
@@ -16,8 +17,22 @@
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
+            
             <ImageButton Grid.Column="0" Source="search.png" Padding="5" BackgroundColor="White"  Command="{Binding GoNotFoundCommand}"/>
-            <Entry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="¿Qué necesitas?"/>
+
+            <OnPlatform x:TypeArguments="Entry">
+                <On Platform="Android">
+                    <renders:CustomEntry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="¿Qué necesitas?" PlaceholderColor="#4C4456"/>
+                </On>
+                <On Platform="iOS">
+                    <Entry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="¿Qué necesitas?" PlaceholderColor="#4C4456"/>
+
+                </On>
+            </OnPlatform>
+
+            
+            
         </Grid>
     </pv:PancakeView>
+
 </ContentView>

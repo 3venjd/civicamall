@@ -6,123 +6,67 @@
              xmlns:ip="clr-namespace:civicamall.ViewModels" 
              xmlns:Local="clr-namespace:civicamall.Controls" 
              xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              mc:Ignorable="d"
              x:Class="civicamall.Views.OrderHistoryPage">
     <ContentPage.BindingContext>
         <ip:MenuPageViewModel />
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView >
+        <Label Margin="0,0,25,0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Historial de pedidos" />
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
+    </ContentPage.ToolbarItems>
     <Grid BackgroundColor="#F2EDF8">
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.6*"/>
-            <RowDefinition Height="0.05*"/>
-            <RowDefinition Height="0.35*"/>
+            <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
+        
+        <!--
         <Local:BackArrow Grid.Row="0" HorizontalOptions="Start" Margin="0"/>
         <Local:ShoppingCart Grid.Row="0" HorizontalOptions="End" Margin="0"/>
         <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Historial de pedidos" />
-
-        <Pk:PancakeView Grid.Row="1" Margin="16,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+-->
+        <Pk:PancakeView Grid.Row="0" Margin="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="0">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.7*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Text="Aún no tienes pedidos" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium" Margin="0,10" TextColor="Black"/>
-                <Label Grid.Row="1" Text="" HorizontalOptions="Center"/>
-                <Image Grid.Row="2" Source="Historial.png"/>
+                <Image Grid.Row="1" Source="ToT3.png" Margin="0,0,0,30"/>
             </Grid>
 
         </Pk:PancakeView>
-        <Label Grid.Row="2" FontAttributes="Bold" FontSize="Medium" Margin="24,0" TextColor="Black" Text="Quizá te interese ..." HorizontalOptions="Start" VerticalOptions="Center" />
+        <Label Grid.Row="1" FontAttributes="Bold" FontSize="Medium" Margin="24,0" TextColor="Black" Text="Quizá te interese ..." HorizontalOptions="Start" VerticalOptions="Center" />
 
         <CollectionView
-                Grid.Row="3"
-                Margin="24,0,24,10"
+               Grid.Row="2"
+                Margin="24,0,24,0"
+            VerticalOptions="StartAndExpand"
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"
-                SelectionChangedCommand="{Binding GoToNotAvailableCommand}">
+                SelectionChangedCommand="{Binding GoToProductDetail}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Pk:PancakeView
-                            Padding="0"
-                            BackgroundColor="White"
-                            CornerRadius="0,0,6,6"
-                            IsClippedToBounds="False"
-                            WidthRequest="150">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.7*" />
-                                <ColumnDefinition Width="0.3*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.7*" />
-                                <RowDefinition Height="0.15*" />
-                                <RowDefinition Height="0.15*" />
-                            </Grid.RowDefinitions>
-                            <Image
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    Grid.ColumnSpan="2"
-                                    Aspect="AspectFill"
-                                    Source="{Binding Image}" />
-                            <Label
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    Margin="6,0,0,0"
-                                    FontSize="Medium"
-                                    TextColor="#7E2081"
-                                    Text="{Binding Name}" />
-                            <Label
-                                    Grid.Row="2"
-                                    Grid.Column="0"
-                                    Margin="6,0,0,0"
-                                    Text="{Binding Final_cost, StringFormat='{0:C}'}" />
-
-                            <ImageButton
-                                    Grid.Row="1"
-                                    Grid.RowSpan="2"
-                                    Grid.Column="1"
-                                    Margin="0,0,1,0"
-                                    HorizontalOptions="Center"
-                                    VerticalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    CornerRadius="60"
-                                    BorderColor="#7E2081"
-                                    BorderWidth="1"
-                                    BackgroundColor="White"
-                                    IsVisible="True"
-                                    Padding="11"
-                                    Source="favorite_purple_24px.png" />
-                            <ImageButton
-                                    Grid.Row="1"
-                                    Grid.RowSpan="2"
-                                    Grid.Column="1"
-                                    Margin="0,0,1,0"
-                                    HorizontalOptions="Center"
-                                    VerticalOptions="Center"
-                                    HeightRequest="40"
-                                    WidthRequest="40"
-                                    CornerRadius="60"
-                                    BorderColor="#7E2081"
-                                    BorderWidth="1"
-                                    BackgroundColor="#7E2081"
-                                    IsVisible="{Binding IsFavorite}"
-                                    Padding="11"
-                                    Source="favorite_white_24px.png" />
-                        </Grid>
-                    </Pk:PancakeView>
+                    <Local:ProductCustomControl
+                            ProductImage="{Binding Image}"
+                            ProductName="{Binding Name}"
+                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                            IsFavorite="{Binding IsFavorite}"
+                        />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
         </CollectionView>
+
 
     </Grid>
 </ContentPage>

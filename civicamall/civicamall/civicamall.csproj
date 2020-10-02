@@ -24,6 +24,7 @@
     <None Remove="Images\favorite_purple_24px.svg" />
     <None Remove="Images\favorite_white_24px.svg" />
     <None Remove="Images\filter_list_24px.svg" />
+    <None Remove="Images\Historial.svg" />
     <None Remove="Images\instagram_logo.svg" />
     <None Remove="Images\Lista_de_deseados.svg" />
     <None Remove="Images\local_activity_24px.svg" />
@@ -51,6 +52,15 @@
     <None Remove="Images\store_mall_directory_24px.svg" />
     <None Remove="Images\Tachado.svg" />
     <None Remove="Images\timelapse_24px.svg" />
+    <None Remove="Images\ToT1.svg" />
+    <None Remove="Images\ToT2.svg" />
+    <None Remove="Images\ToT3.svg" />
+    <None Remove="Images\ToT4.svg" />
+    <None Remove="Images\ToT5.svg" />
+    <None Remove="Images\ToT6.svg" />
+    <None Remove="Images\ToT7.svg" />
+    <None Remove="Images\ToT8.svg" />
+    <None Remove="Images\ToT9.svg" />
     <None Remove="Images\twitter.svg" />
     <None Remove="Images\Wsih_List.svg" />
     <None Remove="Images\youtube.svg" />
@@ -79,6 +89,7 @@
     <SharedImage Include="Images\favorite_purple_24px.svg" />
     <SharedImage Include="Images\favorite_white_24px.svg" />
     <SharedImage Include="Images\filter_list_24px.svg" />
+    <SharedImage Include="Images\Historial.svg" />
     <SharedImage Include="Images\instagram_logo.svg" />
     <SharedImage Include="Images\Lista_de_deseados.svg" />
     <SharedImage Include="Images\local_activity_24px.svg" />
@@ -106,6 +117,15 @@
     <SharedImage Include="Images\store_mall_directory_24px.svg" />
     <SharedImage Include="Images\Tachado.svg" />
     <SharedImage Include="Images\timelapse_24px.svg" />
+    <SharedImage Include="Images\ToT1.svg" />
+    <SharedImage Include="Images\ToT2.svg" />
+    <SharedImage Include="Images\ToT3.svg" />
+    <SharedImage Include="Images\ToT4.svg" />
+    <SharedImage Include="Images\ToT5.svg" />
+    <SharedImage Include="Images\ToT6.svg" />
+    <SharedImage Include="Images\ToT7.svg" />
+    <SharedImage Include="Images\ToT8.svg" />
+    <SharedImage Include="Images\ToT9.svg" />
     <SharedImage Include="Images\twitter.svg" />
     <SharedImage Include="Images\Wsih_List.svg" />
     <SharedImage Include="Images\youtube.svg" />

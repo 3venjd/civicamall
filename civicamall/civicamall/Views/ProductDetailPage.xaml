@@ -4,10 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:sp="clr-namespace:civicamall.ViewModels" 
-             xmlns:Local="clr-namespace:civicamall.Controls"
              xmlns:Pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
+             NavigationPage.BackButtonTitle="CivicaMall"
              x:Class="civicamall.Views.ProductDetailPage">
     <ContentPage.BindingContext>
         <sp:ProductsViewModel/>
@@ -15,57 +15,62 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png"/>
     </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView >
+        <Label Text="Civicamall" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ScrollView>
-        <Grid Grid.Row="0" RowSpacing="25" BackgroundColor="#F2EDF8">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="7*"/>
-            </Grid.RowDefinitions>
-            <Pv:PancakeView Grid.Row="0" VerticalOptions="FillAndExpand" HeightRequest="300" Padding="0" >
-                <CarouselView ItemsSource="{Binding ProductImages}">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding Image}" Aspect="AspectFill" />
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-            </Pv:PancakeView>
-            <Pv:PancakeView VerticalOptions="End" HorizontalOptions="End" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0,0,20,0" TranslationY="30" CornerRadius="0,8,8,0" BackgroundColor="White">
-                <Button Margin="0" ImageSource="share_24px.png" BackgroundColor="White"/>
-            </Pv:PancakeView>
-            <Pv:PancakeView VerticalOptions="End" HorizontalOptions="End" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0,0,80,0" TranslationY="30" CornerRadius="0,8,8,0" BackgroundColor="White">
+
+
+        <ScrollView Grid.Row="0">
+            <Grid Grid.Row="0" RowSpacing="25" BackgroundColor="#F2EDF8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+                <Pv:PancakeView Grid.Row="0" VerticalOptions="FillAndExpand" HeightRequest="300" Padding="0" >
+                    <CarouselView ItemsSource="{Binding ProductImages}" Position="{Binding Position, Mode=TwoWay}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Image}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Pv:PancakeView>
+                <Pv:PancakeView VerticalOptions="End" HorizontalOptions="End" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0,0,20,0" TranslationY="30" CornerRadius="0,8,8,0" BackgroundColor="White">
+                    <Button Margin="0" ImageSource="share_24px.png" BackgroundColor="White"/>
+                </Pv:PancakeView>
+                <Pv:PancakeView VerticalOptions="End" HorizontalOptions="End" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0,0,80,0" TranslationY="30" CornerRadius="0,8,8,0" BackgroundColor="White">
                     <Button Margin="0" ImageSource="favorite_24px.png" BackgroundColor="White"/>
-            </Pv:PancakeView>
-            <Frame Grid.Row="1" Padding="0" Margin="16" HeightRequest="200">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.06*"/>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition Height="0.07*"/>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition Height="0.07*"/>
-                        <RowDefinition Height="0.6*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="0.3*"/>
-                        <ColumnDefinition Width="0.5*"/>
-                    </Grid.ColumnDefinitions>
+                </Pv:PancakeView>
+                <Frame Grid.Row="1" Padding="0" Margin="16" HeightRequest="200" HasShadow="False" CornerRadius="8">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.06*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.07*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.07*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.5*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" Margin="16,3" FontSize="Medium" TextColor="#4C4456" Text="{Binding Productdetail.Name}"/>
+                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" Margin="16,3" FontSize="Medium" TextColor="#4C4456" Text="{Binding Productdetail.Name}"/>
 
-                    <Label Grid.Column="2" Grid.Row="0" VerticalOptions="End" HorizontalOptions="End" Margin="0,0,17,0" FontSize="Small" TextColor="#3E4D4C" Text="{Binding Productdetail.Final_cost, StringFormat='{0:C}'}"/>
+                        <Label Grid.Column="2" Grid.Row="0" VerticalOptions="End" HorizontalOptions="End" Margin="0,0,17,0" FontSize="Small" TextColor="#3E4D4C" Text="{Binding Productdetail.Final_cost, StringFormat='{0:C}'}"/>
 
-                    <Image Grid.Column="0" Grid.Row="1" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="16,0,0,0" Source="{Binding Productdetail.Icon_brand}"/>
+                        <Image Grid.Column="0" Grid.Row="1" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Center" Margin="16,0,0,0" Source="{Binding Productdetail.Icon_brand}"/>
 
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Text="{Binding Productdetail.Brand}"/>
+                        <Label Grid.Column="1" Grid.Row="1" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Text="{Binding Productdetail.Brand}"/>
 
+                        <!--
                     <Pv:PancakeView Grid.Column="2" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="End">
                         <Grid>
                             <Frame  BackgroundColor="Gray" Padding="0" CornerRadius="5" Margin="15,0" HasShadow="False">
@@ -76,40 +81,43 @@
                             </Frame>
                         </Grid>
                     </Pv:PancakeView>
+                    -->
+                        <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="16,0" VerticalOptions="End" FontAttributes="Bold" TextColor="MediumAquamarine" Text="Tallas"/>
 
-                    <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="16,0" VerticalOptions="End" FontAttributes="Bold" TextColor="MediumAquamarine" Text="Tallas"/>
-
-                    <CollectionView Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="2" Margin="16,0" SelectionMode="Single" ItemsSource="{Binding Sizes}">
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="3"/>
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Button WidthRequest="40" BackgroundColor="White" BorderColor="#00A09C" BorderWidth="1" Text="{Binding Size}"/>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                        <CollectionView Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="3" Margin="16,0" SelectionMode="Single" ItemsSource="{Binding Sizes}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="3"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button WidthRequest="40" BackgroundColor="White" BorderColor="#00A09C" BorderWidth="1" Text="{Binding Size}"/>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
 
 
-                    <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Margin="16,0" VerticalOptions="End" FontAttributes="Bold" TextColor="MediumAquamarine" Text="Colores"/>
+                        <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Margin="16,0" VerticalOptions="End" FontAttributes="Bold" TextColor="MediumAquamarine" Text="Colores"/>
 
-                    <CollectionView Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" SelectionMode="Single" Margin="16,0" ItemsSource="{Binding Colors}">
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="3"/>
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Button WidthRequest="40" BackgroundColor="{Binding Color}" BorderColor="{Binding Color}" BorderWidth="1" />
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                        <CollectionView Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" SelectionMode="Single" Margin="16,0" ItemsSource="{Binding Colors}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="3"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button WidthRequest="40" BackgroundColor="{Binding Color}" BorderColor="{Binding Color}" BorderWidth="1" />
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
 
-                    <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" Margin="16" HorizontalTextAlignment="Start" TextColor="#99AAA9" Text="{Binding Productdetail.Description}"/>
-                </Grid>
-            </Frame>
-        </Grid>
+                        <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" Margin="16" HorizontalTextAlignment="Start" TextColor="#99AAA9" Text="{Binding Productdetail.Description}"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
         </ScrollView>
-        <Frame Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" CornerRadius="15" BackgroundColor="#7E2081" Padding="0">
+
+        
+        <Frame Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" CornerRadius="15" BackgroundColor="#7E2081" Padding="0" TranslationY="-40">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*"/>
@@ -126,6 +134,6 @@
                 <Button Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White" TextColor="#7E2081" HeightRequest="32" WidthRequest="100" Text="Agregar" Padding="0" Margin="5" CornerRadius="5"/>
             </Grid>
         </Frame>
-
     </Grid>
+
 </ContentPage>

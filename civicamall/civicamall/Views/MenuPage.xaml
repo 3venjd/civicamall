@@ -89,9 +89,9 @@
 
                 <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,5" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Tus favoritos"/>
 
-                <ImageButton Grid.Row="7" Grid.Column="0" BackgroundColor="White" Source="Wsih_List.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToPaymentMethodsCommand}"/>
-                <ImageButton Grid.Row="7" Grid.Column="1" BackgroundColor="White" Source="local_mall_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
-                <ImageButton Grid.Row="7" Grid.Column="2" BackgroundColor="White" Source="store_mall_directory_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
+                <ImageButton Grid.Row="7" Grid.Column="0" BackgroundColor="White" Source="Wsih_List.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoWishesCommand}"/>
+                <ImageButton Grid.Row="7" Grid.Column="1" BackgroundColor="White" Source="local_mall_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToYourMallsCommand}"/>
+                <ImageButton Grid.Row="7" Grid.Column="2" BackgroundColor="White" Source="store_mall_directory_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToYourStoresCommand}"/>
 
                 <Label Grid.Row="8" Grid.Column="0" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center"/>
                 <Label Grid.Row="8" Grid.Column="1" FontSize="Micro" Text="Malls" HorizontalTextAlignment="Center"/>
@@ -101,7 +101,7 @@
 
                 <Image Grid.Row="10" Grid.Column="0" Source="exit_to_app_24px.png" Margin="24,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="25" WidthRequest="25"/>
 
-                <Label Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" />
+                <Label Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" FontSize="Medium" TextColor="#7E2081" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="Cerrar sesión" TranslationX="-10" />
 
             </Grid>
         </ScrollView>

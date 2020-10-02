@@ -1,6 +1,7 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -20,8 +21,21 @@ namespace civicamall.ViewModels
 
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 
+        private int _position;
+
+        public int Position
+        {
+            get => _position;
+            set
+            {
+                _position = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ProductsViewModel()
         {
+
             ProductImages = new ObservableCollection<ProductImages>
             {
                 new ProductImages
@@ -141,12 +155,23 @@ namespace civicamall.ViewModels
                 IsFavorite = true,
                 IsDiscount = false
             };
+
+            Slider();
         }
 
         private async void GoCar()
         {
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+        }
+
+        private void Slider()
+        {
+            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
+            {
+                Position = (Position + 1) % ProductImages.Count;
+                return true;
+            }));
         }
     }
 }

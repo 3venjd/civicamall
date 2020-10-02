@@ -15,6 +15,11 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <Label FontAttributes="Bold" FontSize="Large"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,0,30,0"
+                   TextColor="#4C4456" Text="¡Explora!"/>
+    </NavigationPage.TitleView>
     <ScrollView>
         <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
             <Grid.ColumnDefinitions>
@@ -37,12 +42,9 @@
             
 -->
             <Local:EntrySearch Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="EndAndExpand" 
-                               WidthRequest="220" Padding="0"/>
+                               WidthRequest="220" Padding="0" Margin="0,0,10,0"/>
             <ImageButton Grid.Column="3" Grid.Row="1" BackgroundColor="#7E2081" VerticalOptions="Center" HorizontalOptions="Start"
                     HeightRequest="40" WidthRequest="40" CornerRadius="6" Source="Mic_white.png" Padding="9"/>
-            <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="Large"
-                   HorizontalOptions="Center" VerticalOptions="Center"
-                   TextColor="#4C4456" Text="¡Explora!"/>
             <CollectionView Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,5"
                             ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
                 <CollectionView.ItemsLayout>

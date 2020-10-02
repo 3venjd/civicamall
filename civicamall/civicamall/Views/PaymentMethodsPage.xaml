@@ -5,21 +5,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:Local="clr-namespace:civicamall.ViewModels" 
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              xmlns:ip="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              x:Class="civicamall.Views.PaymentMethodsPage">
     <ContentPage.BindingContext>
         <Local:MenuPageViewModel />
     </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Label Text="Métodos de pago" HorizontalOptions="Center" Margin="0,0,25,0" FontSize="Large" FontAttributes="Bold" TextColor="#4C4456" />
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCart}"/>
+    </ContentPage.ToolbarItems>
+    
     <Grid BackgroundColor="#F2EDF8">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <!--
         <ip:BackArrow Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start"/>
         <ip:ShoppingCart Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End"/>
         <Label Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"  TextColor="#4C4456" Text="Métodos de pago"/>
+        -->
+        
+        
         <Pk:PancakeView Grid.Row="1" BackgroundColor="White" Margin="16,0,16,20" CornerRadius="8">
             <Grid>
                 <Grid.RowDefinitions>

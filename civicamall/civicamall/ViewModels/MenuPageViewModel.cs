@@ -24,6 +24,10 @@ namespace civicamall.ViewModels
 
         public ICommand CloseMenuCommand { get { return new RelayCommand(CloseMenu); } }
 
+        public ICommand GoToYourMallsCommand { get { return new RelayCommand(GoToYourMalls); } }
+
+        public ICommand GoToYourStoresCommand { get { return new RelayCommand(GoToYourStores); } }
+
         public MenuPageViewModel()
         {
             LoadData();
@@ -143,6 +147,20 @@ namespace civicamall.ViewModels
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
             var mdp = Application.Current.MainPage as MasterDetailPage;
             await mdp.Detail.Navigation.PushAsync(new PaymentMethodsPage());
+        }
+
+        private async void GoToYourMalls()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = false;
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new YourMallsPage());
+        }
+
+        private async void GoToYourStores()
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = false;
+            var mdp = Application.Current.MainPage as MasterDetailPage;
+            await mdp.Detail.Navigation.PushAsync(new YourStoresPage());
         }
 
         private void CloseMenu()
