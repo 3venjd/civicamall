@@ -20,7 +20,7 @@ namespace civicamall
             }
             else
             {
-                MainPage = new MasterPage();
+                MainPage = new LoginPage();
             }
             
         }

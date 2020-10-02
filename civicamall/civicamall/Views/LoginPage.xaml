@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:ip="clr-namespace:civicamall.ViewModels"
+             xmlns:ip="clr-namespace:civicamall.ViewModels" xmlns:renders="clr-namespace:civicamall.Renders"
              NavigationPage.HasBackButton="False"
              mc:Ignorable="d"
              x:Class="civicamall.Views.LoginPage"
@@ -16,48 +16,62 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
-            <StackLayout
-                Margin="10">
-                <Image Source="Civicamall.png" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
-            </StackLayout>
-            <StackLayout Margin="0,20,0,0">
-                <Label Text="Correo" TextColor="#85808D" Margin="45,0"/>
-            </StackLayout>
-            <Frame BackgroundColor="White" Margin="44,0,44,24" BorderColor="#7E2081" HasShadow="False" Padding="1" CornerRadius="4">
-                <Entry Placeholder="Correo@ejemplo.com" PlaceholderColor="#4C4456" FontSize="Small" BackgroundColor="Transparent"/>
-            </Frame>
+            <StackLayout>
+                <StackLayout
+                    Margin="0,50">
+                    <Image Source="Civicamall.png" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Correo" TextColor="#85808D" Margin="45,0"/>
+                </StackLayout>
+                <Frame BackgroundColor="{OnPlatform White, Android = White, iOS = White}" BorderColor="{OnPlatform White, Android = White, iOS= #7E2081}" CornerRadius="{OnPlatform 0, Android = 0, iOS= 4}" Margin="44,0,44,10" Padding="0" HasShadow="False">
+                    <OnPlatform x:TypeArguments="Entry">
+                        <On Platform="Android">
+                            <renders:CustomEntry Placeholder="Correo@ejemplo.com" FontSize="Small" PlaceholderColor="#4C4456" BackgroundColor="White" BorderColor="#7E2081"/>
+                        </On>
+                        <On Platform="iOS">
+                            <Entry Placeholder="Correo@ejemplo.com" PlaceholderColor="#4C4456" FontSize="Small" BackgroundColor="Transparent"/>
+                        </On>
+                    </OnPlatform>
+                </Frame>
 
-            <StackLayout>
-                <Label Text="Contraseña" TextColor="#85808D" Margin="45,0"/>
-            </StackLayout>
-            <Frame BackgroundColor="White" Margin="44,0,44,10" BorderColor="#7E2081" HasShadow="False" Padding="0" CornerRadius="4">
-                <Entry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" BackgroundColor="Transparent" />
-            </Frame>
-            <StackLayout Margin="0,0,0,20">
-                <Label Margin="44,0,44,10" Text="Olvidé mi contraseña" TextColor="#7E2081" FontAttributes="Bold"/>
-            </StackLayout>
-            <StackLayout>
+                <StackLayout>
+                    <Label Text="Contraseña" TextColor="#85808D" Margin="45,0"/>
+                </StackLayout>
+                <Frame BackgroundColor="{OnPlatform White, Android = White, iOS = White}" BorderColor="{OnPlatform White, Android = White, iOS= #7E2081}" CornerRadius="{OnPlatform 0, Android = 0, iOS= 4}" Margin="44,0,44,10" Padding="0" HasShadow="False">
+                    <OnPlatform x:TypeArguments="Entry">
+                        <On Platform="Android">
+                            <renders:CustomEntry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" BackgroundColor="White" BorderColor="#7E2081"/>
+                        </On>
+                        <On Platform="iOS">
+                            <Entry Placeholder="Escribe tu contraseña" FontSize="Small" IsPassword="True" PlaceholderColor="#4C4456" BackgroundColor="Transparent" />
+                        </On>
+                    </OnPlatform>
+                </Frame>
+                <StackLayout Margin="0,0,0,20">
+                    <Label Margin="44,0,44,10" Text="Olvidé mi contraseña" TextColor="#7E2081" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
                     <Button Text="Ingresar" TextColor="White" BackgroundColor="#7E2081" HorizontalOptions="CenterAndExpand" FontSize="Small" FontAttributes="Bold" TextTransform="None" WidthRequest="150" HeightRequest="30" Padding="0" CornerRadius="4" Command="{Binding GoToIndexCommand}"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Ingresar con" TextColor="#4C4456" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,30,0,10"/>
-            </StackLayout>
-            <StackLayout>
-                <Grid WidthRequest="250" HeightRequest="30" HorizontalOptions="Center">
-                    <Image Grid.Column="0" Source="facebook_purple_logo_button.png"/>
-                    <Image Grid.Column="1" Source="facebook_purple_logo_button.png"/>
-                </Grid>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Politicas de uso" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,20,0,5"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Privacidad de la información" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,0,0,5"/>
-            </StackLayout>
-            
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" TranslationY="{OnPlatform 0, Android = 0, iOS = 40}">
+                    <Label Text="Ingresar con" TextColor="#4C4456" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,30,0,10"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Grid WidthRequest="250" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                        <ImageButton Grid.Column="0" Source="facebook_purple_logo_button.png" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Column="1" Source="facebook_purple_logo_button.png" BackgroundColor="Transparent"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" Margin="5" TranslationY="80">
+                    <Label Text="Politicas de uso" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,20,0,5"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" Margin="20">
+                    <Label Text="Privacidad de la información" TextColor="#7E2081" HorizontalOptions="Center" Margin="0,0,0,5"/>
+                </StackLayout>
 
-        </StackLayout>
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
