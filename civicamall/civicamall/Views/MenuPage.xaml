@@ -47,16 +47,16 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.6*"/>
                         </Grid.ColumnDefinitions>
-                        <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Center" VerticalOptions="Center" Padding="0" CornerRadius="44" Margin="0,10,0,0">
+                        <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Center" VerticalOptions="Center" Padding="0" CornerRadius="44" Margin="8,10,0,0">
                             <Image Source="user_profile.jpg" Aspect="AspectFill" HeightRequest="90"/>
                         </pv:PancakeView>
-                        <Label Grid.Column="1" Grid.Row="0" Margin="0,16,5,0" FontAttributes="Bold" FontSize="Large" TextColor="#4C4456" Text="Carolina T."/>
+                        <Label Grid.Column="1" Grid.Row="0" Margin="0,16,5,0" FontAttributes="Bold" FontSize="24" TextColor="#4C4456" Text="Carolina T."/>
                         <Label Grid.Column="1" Grid.Row="1" Margin="0" BackgroundColor="#D0C7D6"/>
-                        <Label Grid.Column="1" Grid.Row="2" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="Grafico@dobleplus.com"/>
-                        <Label Grid.Column="1" Grid.Row="3" Margin="0,0,11,0" FontSize="Micro" TextColor="#9A9A9A" Text="+57 123 456 78 09"/>
+                        <Label Grid.Column="1" Grid.Row="2" Margin="0,0,11,0" FontSize="12" TextColor="#9A9A9A" Text="Grafico@dobleplus.com"/>
+                        <Label Grid.Column="1" Grid.Row="3" Margin="0,0,11,0" FontSize="12" TextColor="#9A9A9A" Text="+57 123 456 78 09"/>
                     </Grid>
                 </pv:PancakeView>
 
@@ -65,9 +65,9 @@
                 <ImageButton Grid.Row="2" Grid.Column="1" BackgroundColor="White" Source="person_pin_circle_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10"/>
                 <ImageButton Grid.Row="2" Grid.Column="2" BackgroundColor="White" Source="receipt_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoOrderHistoryCommand}"/>
 
-                <Label Grid.Row="3" Grid.Column="0" FontSize="Micro" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0"/>
-                <Label Grid.Row="3" Grid.Column="1" FontSize="Micro" Text="Ubicaciones" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Label Grid.Row="3" Grid.Column="2" FontSize="Micro" Text="Historial de pedidos" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="24,0"/>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="12" Text="Métodos de pago" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" Margin="24,0"/>
+                <Label Grid.Row="3" Grid.Column="1" FontSize="12" Text="Ubicaciones" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Row="3" Grid.Column="2" FontSize="12" Text="Historial de pedidos" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="20,0"/>
                 
 
                 <pv:PancakeView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" Margin="24,0" Padding="10" CornerRadius="10">
@@ -82,22 +82,22 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Label Grid.Column="0" FontSize="Medium" TextColor="#4C4456" Text="Cupones"/>
+                        <Label Grid.Column="0" FontSize="18" TextColor="#4C4456" Text="Cupones"/>
                         <Image Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="local_activity_24px.png" HeightRequest="25" WidthRequest="25"/>
                     </Grid>
                 </pv:PancakeView>
 
-                <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,5" FontAttributes="Bold" TextColor="#4C4456" FontSize="Medium" Text="Tus favoritos"/>
+                <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,5" FontAttributes="Bold" TextColor="#4C4456" FontSize="18" Text="Tus favoritos"/>
 
                 <ImageButton Grid.Row="7" Grid.Column="0" BackgroundColor="White" Source="Wsih_List.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoWishesCommand}"/>
                 <ImageButton Grid.Row="7" Grid.Column="1" BackgroundColor="White" Source="local_mall_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToYourMallsCommand}"/>
                 <ImageButton Grid.Row="7" Grid.Column="2" BackgroundColor="White" Source="store_mall_directory_24px.png" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" WidthRequest="50" Padding="10" Command="{Binding GoToYourStoresCommand}"/>
 
-                <Label Grid.Row="8" Grid.Column="0" FontSize="Micro" Text="Deseados" HorizontalTextAlignment="Center"/>
-                <Label Grid.Row="8" Grid.Column="1" FontSize="Micro" Text="Malls" HorizontalTextAlignment="Center"/>
-                <Label Grid.Row="8" Grid.Column="2" FontSize="Micro" Text="Tiendas" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="0" FontSize="12" Text="Deseados" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="1" FontSize="12" Text="Malls" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="2" FontSize="12" Text="Tiendas" HorizontalTextAlignment="Center"/>
 
-                <Label Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,32" FontSize="Medium" TextColor="#2CBFFF" Text="Términos y condiciones" />
+                <Label Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Margin="24,32" FontSize="16" TextColor="#2CBFFF" Text="Términos y condiciones" />
 
                 <Image Grid.Row="10" Grid.Column="0" Source="exit_to_app_24px.png" Margin="24,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="25" WidthRequest="25"/>
 

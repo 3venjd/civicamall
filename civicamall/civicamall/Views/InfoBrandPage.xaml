@@ -6,12 +6,14 @@
              xmlns:sp="clr-namespace:civicamall.ViewModels"
              mc:Ignorable="d"
              x:Class="civicamall.Views.InfoBrandPage"
-             Title="Información">
+             Title="Información"
+             BackgroundColor="#F2EDF8"
+             >
     <ContentPage.BindingContext>
         <sp:StoreViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
-        <Grid BackgroundColor="#F2EDF8">
+        <Grid BackgroundColor="White" Margin="16,38,16,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.7*"/>
                 <ColumnDefinition Width="0.3*"/>
@@ -26,55 +28,28 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Margin="32,30,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="{Binding BranDetail.Name}" />
+            <Label Grid.Column="0" Grid.Row="0" Margin="16,24,0,0" FontAttributes="Bold" FontSize="24" TextColor="#2E2E2E" Text="{Binding BranDetail.Name}" />
+            
             <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#3DAA35" HasShadow="False">
-                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="Abierto"/>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="16" Text="Abierto"/>
             </Frame>
             <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#FF2727" HasShadow="False" IsVisible="{Binding BranDetail.IsClose}">
-                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Text="Cerrado"/>
-            </Frame>
-
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="36,12,0,0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Web}" />
-
-            <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="36,12" Padding="0" BorderColor="Transparent" BackgroundColor="#F2EDF8" HeightRequest="200" HasShadow="False">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.1*"/>
-                        <ColumnDefinition Width="0.9*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="facebook_logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-                    <Label Grid.Column="1" Grid.Row="0" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Facebook}"/>
-
-                    <Image Grid.Column="0" Grid.Row="1" Source="instagram_logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Instagram}"/>
-
-                    <Image Grid.Column="0" Grid.Row="2" Source="twitter.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-                    <Label Grid.Column="1" Grid.Row="2" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Twitter}"/>
-
-                    <Image Grid.Column="0" Grid.Row="3" Source="youtube.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-                    <Label Grid.Column="1" Grid.Row="3" TextColor="#41CBFF" Text="{Binding BranDetail.Url_Youtube}"/>
-
-                    <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,12,0,0" MaxLines="4" TextColor="#99AAA9" HorizontalTextAlignment="Start" Text="{Binding BranDetail.Description}"/>
-                </Grid>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="16" Text="Cerrado"/>
             </Frame>
             
-            <Label Grid.Column="1" Grid.Row="2" Margin="0,10,25,0" HorizontalOptions="End" TranslationY="10" VerticalOptions="End" TextColor="#41CBFF" Text="Ver más"/>
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" MaxLines="4" Margin="20,0" FontSize="12" TextColor="#99AAA9" HorizontalTextAlignment="Start" 
+                       Text="{Binding BranDetail.Description}" LineHeight="1" LineBreakMode="TailTruncation" />
+            
+            <Label Grid.Column="1" Grid.Row="2" Margin="0,0,25,0" HorizontalOptions="End" TranslationY="10" VerticalOptions="End" FontSize="16" TextColor="#41CBFF" Text="Ver más"/>
 
-            <Label Grid.Column="0" Grid.Row="3" Margin="32,5" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="Horarios" />
+            <Label Grid.Column="0" Grid.Row="3" Margin="32,5" FontAttributes="Bold" FontSize="20" TextColor="#2E2E2E" Text="Horarios" />
             
             <Frame Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="32,5" Padding="0" BackgroundColor="Transparent" HasShadow="False">
                 <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="0.05*"/>
                     <ColumnDefinition Width="0.5*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -88,57 +63,43 @@
                     </Grid.RowDefinitions>
                     <Image Grid.Column="0" Grid.Row="0" Source="timelapse_24px.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
 
-                    <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Lunes a viernes"/>
+                    <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" FontAttributes="Bold" FontSize="15" TextColor="#898D8F" Text="Lunes a viernes"/>
 
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
-                    <Label Grid.Column="2" Grid.Row="1" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="1" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
-                
-                
-                    <Label Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Sábados"/>
+                    <Label Grid.Column="1" Grid.Row="1" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.Open_Hour}"/>
+                    <Label Grid.Column="2" Grid.Row="1" TextColor="#979797" FontSize="12" Text="-"/>
+                    <Label Grid.Column="3" Grid.Row="1" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.CLose_hour}"/>
 
-                    <Label Grid.Column="1" Grid.Row="3" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
-                    <Label Grid.Column="2" Grid.Row="3" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="3" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
 
-                    <Label Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" FontAttributes="Bold" TextColor="#898D8F" Text="Domingos y festivos"/>
+                    <Label Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" FontAttributes="Bold" FontSize="15" TextColor="#898D8F" Text="Sábados"/>
 
-                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" Text="{Binding BranDetail.Open_Hour}"/>
-                    <Label Grid.Column="2" Grid.Row="5" TextColor="#979797" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" Text="{Binding BranDetail.CLose_hour}"/>
+                    <Label Grid.Column="1" Grid.Row="3" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.Open_Hour}"/>
+                    <Label Grid.Column="2" Grid.Row="3" TextColor="#979797" HorizontalOptions="Center" FontSize="12" Text="-"/>
+                    <Label Grid.Column="3" Grid.Row="3" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.CLose_hour}"/>
+
+                    <Label Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" FontAttributes="Bold" FontSize="15" TextColor="#898D8F" Text="Domingos y festivos"/>
+
+                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.Open_Hour}"/>
+                    <Label Grid.Column="2" Grid.Row="5" TextColor="#979797" FontSize="12" Text="-"/>
+                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.CLose_hour}"/>
 
                     <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="5" BackgroundColor="#B6C1C8" HeightRequest="2"/>
                 </Grid>
             </Frame>
 
+            <Grid Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0" Margin="20,0,0,0" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="facebook_purple_logo.png"/>
+                <ImageButton Grid.Column="1" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="instagram_purple_logo.png"/>
+                <ImageButton Grid.Column="2" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="twitter_purple_logo.png"/>
+                <ImageButton Grid.Column="3" Margin="0,0,16,0" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="youtube_purple_logo.png"/>
+            </Grid>
 
-            <Label Grid.Column="0" Grid.Row="5" Margin="32,30,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="#2E2E2E" Text="Sucursales" />
-            <Frame Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Padding="0" Margin="32,5" BorderColor="Transparent" BackgroundColor="#F2EDF8" HasShadow="False">
-                <Grid RowSpacing="20">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0" Source="room_24px.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-
-                    <Label Grid.Column="1" Grid.Row="0" TextColor="#979797" Text="Lugar o sucursal. Direccion"/>
-
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="#979797" Text="Lugar o sucursal. Direccion"/>
-
-                    <Label Grid.Column="1" Grid.Row="2" TextColor="#979797" Text="Lugar o sucursal. Direccion"/>
-
-                    <Label Grid.Column="0" Grid.Row="3" TextColor="#979797" Grid.ColumnSpan="2" BackgroundColor="#B6C1C8" HeightRequest="2"/>
-
-
-                </Grid>
-            </Frame>
+            
         </Grid>
     </ScrollView>
 </ContentPage>

@@ -11,7 +11,7 @@
         <pp:HeaderControlViewModel/>
     </ContentView.BindingContext>
     <ContentView.Content>
-        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="150" RowSpacing="0">
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="150" RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
@@ -63,7 +63,9 @@
                         x:Name="ProductNameLabel"
                         Grid.Row="0"
                         Grid.Column="0"
+                        Grid.ColumnSpan="2"
                         TextColor="#7E2081"
+                        FontSize="18"
                         Padding="0"
                         TranslationX="10"
                         TranslationY="5"
@@ -73,7 +75,9 @@
                         x:Name="ProductFinalCostLabel"
                         Grid.Row="1"
                         Grid.Column="0"
-                        Margin="10,6,6,6"
+                        Grid.ColumnSpan="2"
+                        Margin="10,6,6,0"
+                        FontSize="16"
                         TranslationY="-5"
                     />
                 </Grid>

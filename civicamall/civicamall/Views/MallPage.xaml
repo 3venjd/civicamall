@@ -50,11 +50,11 @@
         <CollectionView Grid.Column ="0" Grid.Row="2" SelectionMode="Single" Margin="24,0" Grid.ColumnSpan="4"
                             ItemsSource="{Binding Malls}" SelectionChangedCommand="{Binding GoToMallDetail}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16" />
+                <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="0" CornerRadius="7" HeightRequest="130">
+                    <Frame Padding="0" CornerRadius="7" HeightRequest="100" WidthRequest="100">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

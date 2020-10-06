@@ -40,7 +40,7 @@
        -->
             <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="220" Margin="16,0"/>
 
-            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,24,0,0" TranslationY="5" FontSize="Medium" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="26,15" TranslationY="5" FontSize="24" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
 
             <pv:PancakeView Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="16,15" VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="34" WidthRequest="130"
                             BackgroundColor="White" BorderColor="Black" HasShadow="True" CornerRadius="5" Padding="0">
@@ -55,7 +55,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Column="0" Grid.RowSpan="2" TextColor="#7E2081" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" Text="Filtrar por"/>
+                    <Label Grid.Column="0" Grid.RowSpan="2" TextColor="#7E2081" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="16" Text="Filtrar por"/>
                     <ImageButton Grid.Column="1" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White" Source="filter_list_24px.png"/>
                 </Grid>
             </pv:PancakeView>

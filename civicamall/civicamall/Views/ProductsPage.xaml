@@ -62,7 +62,7 @@
                                 </Grid.RowDefinitions>
                                 <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
                                 <Label Grid.Column="0" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Start" Margin="12,5"
-                                       FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="{Binding Name}"/>
+                                       FontAttributes="Bold" FontSize="21" TextColor="White" Text="{Binding Name}"/>
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>

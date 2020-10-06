@@ -38,7 +38,7 @@
                         <tabview:XFTabPage>
                             <tabview:XFTabPage.Header>
                                 <tabview:XFTabHeader Padding="0">
-                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="Medium" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
+                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="20" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
                                    Text="Productos">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
@@ -53,8 +53,8 @@
                         <tabview:XFTabPage>
                             <tabview:XFTabPage.Header>
                                 <tabview:XFTabHeader>
-                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium" TranslationX="5" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
-                                   Text="Promociones">
+                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" TranslationX="10" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
+                                   Text="Información">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
                                         </Label.GestureRecognizers>
@@ -62,7 +62,7 @@
                                 </tabview:XFTabHeader>
                             </tabview:XFTabPage.Header>
                             <tabview:XFTabPage.CustomContentPage>
-                                <Local:PromosBrandPage />
+                                <Local:InfoBrandPage />
                             </tabview:XFTabPage.CustomContentPage>
                         </tabview:XFTabPage>
 
