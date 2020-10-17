@@ -94,22 +94,19 @@ namespace civicamall.Controls
 
         private async void GoCar()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
         
         private async void GoNotFound()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new NotFoundPage());
+            await App.Navigator.PushAsync(new NotFoundPage());
         }
 
         
 
         private async void GoBack()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PopAsync();
+            await App.Navigator.PopAsync();
         }
         private void Slider()
         {

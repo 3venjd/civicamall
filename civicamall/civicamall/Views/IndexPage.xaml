@@ -100,8 +100,8 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Margin="24,0"
-                FontAttributes="Bold"
+                Margin="0,0,24,16"
+                TranslationY="7"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="End"
@@ -174,7 +174,7 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="32,24,0,0"
+                Margin="32,24,0,16"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="24"
@@ -194,7 +194,7 @@
                 WidthRequest="60"
                >
                 <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                    <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
                 <Button
                     BackgroundColor="White"
@@ -214,7 +214,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                 <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                    <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
                 <Button
                     BackgroundColor="White"
@@ -235,7 +235,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                 <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                    <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
                 <Button
                     BackgroundColor="White"
@@ -255,7 +255,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                 <pv:PancakeView.Shadow>
-                    <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                    <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
                 <Button
                     BackgroundColor="White"
@@ -348,7 +348,7 @@
                 Grid.Row="8"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Margin="24,0,0,0"
+                Margin="24,0,0,16"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="24"
@@ -357,9 +357,9 @@
             <Label
                 Grid.Row="8"
                 Grid.Column="3"
-                FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 TranslationX="-30"
+                Margin="0,0,0,16"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="Center"
                 FontSize="16"
@@ -369,7 +369,7 @@
                 Grid.Row="9"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="24,0,24,0"
+                Margin="24,0,0,24"
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"
@@ -395,7 +395,7 @@
                 Grid.Row="10"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Margin="24,0,0,0"
+                Margin="24,0,0,16"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="24"
@@ -405,7 +405,7 @@
                 Grid.Row="10"
                 Grid.Column="3"
                 TranslationX="-30"
-                FontAttributes="Bold"
+                Margin="0,0,0,16"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
                 VerticalTextAlignment="Center"
@@ -416,7 +416,7 @@
                 Grid.Row="11"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="24,0"
+                Margin="24,0,0,16"
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"

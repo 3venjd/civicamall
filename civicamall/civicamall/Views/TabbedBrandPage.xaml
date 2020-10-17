@@ -73,7 +73,7 @@
                     <pv:PancakeView.Shadow>
                         <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
-                    <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding BranDetail.Image}" Command="{Binding GoToInfoPageCommand}" BackgroundColor="White"  Padding="5"/>
+                    <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding BranDetail.Image}" BackgroundColor="White"  Padding="5"/>
                 </pv:PancakeView>
             </Grid>
         </StackLayout>

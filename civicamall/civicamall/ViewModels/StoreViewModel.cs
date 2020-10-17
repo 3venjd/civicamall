@@ -254,7 +254,7 @@ namespace civicamall.ViewModels
             {
                 new ShoppingCar
                 {
-                     Name = "Camiseta",
+                     Name = "Camiseta con degradados azul a blanco con botones blancos",
                      Image = "camiseta_1.jpg",
                      Base_cost = 50000,
                      Discount = 0,
@@ -302,20 +302,17 @@ namespace civicamall.ViewModels
 
         private async void GoToProductBrand()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new TabbedBrandPage());
+            await App.Navigator.PushAsync(new TabbedBrandPage());
         }
 
         private async void GoToInfoPage()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
+            await App.Navigator.PushAsync(new InfoBrandPage());
         }
 
         private async void GoCar()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
 

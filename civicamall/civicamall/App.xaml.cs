@@ -7,7 +7,7 @@ namespace civicamall
 {
     public partial class App : Application
     {
-        public static object Navigator { get; internal set; }
+        public static NavigationPage Navigator { get; internal set; }
 
         public App()
         {

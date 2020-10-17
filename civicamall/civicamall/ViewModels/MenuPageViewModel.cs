@@ -28,6 +28,8 @@ namespace civicamall.ViewModels
 
         public ICommand GoToYourStoresCommand { get { return new RelayCommand(GoToYourStores); } }
 
+        public ICommand GoToLoginCommand { get { return new RelayCommand(GoToLogin); } }
+
         public MenuPageViewModel()
         {
             LoadData();
@@ -114,53 +116,43 @@ namespace civicamall.ViewModels
         private async void GoOrderHistory()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new OrderHistoryPage());
-
+            await App.Navigator.PushAsync(new OrderHistoryPage());
         }
 
         private async void GoWishes()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new WishesPages());
-
+            await App.Navigator.PushAsync(new WishesPages());
         }
+
         private async void GoCoupon()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new CouponPage());
-
+            await App.Navigator.PushAsync(new CouponPage());
         }
 
         private async void GoEmptyCar()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new EmptyCartPage());
-
+            await App.Navigator.PushAsync(new EmptyCartPage());
         }
 
         private async void GoToPaymentMethods()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new PaymentMethodsPage());
+            await App.Navigator.PushAsync(new PaymentMethodsPage());
         }
 
         private async void GoToYourMalls()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new YourMallsPage());
+            await App.Navigator.PushAsync(new YourMallsPage());
         }
 
         private async void GoToYourStores()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new YourStoresPage());
+            await App.Navigator.PushAsync(new YourStoresPage());
         }
 
         private void CloseMenu()
@@ -168,8 +160,11 @@ namespace civicamall.ViewModels
             (App.Current.MainPage as MasterDetailPage).IsPresented = false;
         }
 
+        private async void GoToLogin()
+        {
+            await App.Navigator.PushAsync(new LoginPage());
+        }
 
-        
 
     }
 }

@@ -34,6 +34,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <!--
             <Local:BackArrow Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
@@ -46,14 +47,15 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 HeightRequest="220"
-                Margin="16,0"
+                Margin="24,0,16,16"
             />
-            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TranslationX="20" Margin="0,20,0,0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="24" TextColor="#4C4456" Text="Promociones"/>
+            <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="24,20,0,16" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="24" TextColor="#4C4456" Text="Promociones"/>
             <Label
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Margin="24,20,24,0"
+                Margin="24,0"
+                TranslationY="5"
                 FontAttributes="Bold"
                 TextColor="#2CBFFF"
                 HorizontalTextAlignment="End"
@@ -62,7 +64,7 @@
                 Text="Ver todo"
               />
 
-            <CollectionView Grid.Row="3" Grid.ColumnSpan="4" HeightRequest="140" Margin="24,0,24,0" SelectionMode="Single" ItemsSource="{Binding Categories}">
+            <CollectionView Grid.Row="3" Grid.ColumnSpan="4" HeightRequest="140" Margin="24,0,0,0" SelectionMode="Single" ItemsSource="{Binding Categories}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
                 </CollectionView.ItemsLayout>
@@ -93,13 +95,13 @@
                 Grid.Row="5"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="24,0"
+                Margin="24,32"
                 HeightRequest="200"
                 SelectionMode="Single"
                 ItemsSource="{Binding Products}"
                 SelectionChangedCommand="{Binding GoToProductDetail}">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+                    <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="16" VerticalItemSpacing="16"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -116,6 +118,31 @@
 
             <Image Grid.Row="6" Grid.ColumnSpan="4" Source="Banner.png" Aspect="AspectFill" />
 
+
+            <CollectionView
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="24,32,24,0"
+                HeightRequest="200"
+                SelectionMode="Single"
+                ItemsSource="{Binding Products}"
+                SelectionChangedCommand="{Binding GoToProductDetail}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="16" VerticalItemSpacing="16"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Local:ProductCustomControl
+                            ProductImage="{Binding Image}"
+                            ProductName="{Binding Name}"
+                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                            IsFavorite="{Binding IsFavorite}"
+                        />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
         </Grid>
     </ScrollView>
 </ContentPage>

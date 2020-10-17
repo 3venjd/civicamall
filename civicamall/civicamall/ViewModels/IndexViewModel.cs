@@ -33,16 +33,6 @@ namespace civicamall.ViewModels
 
         public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
 
-        public ICommand GoToNotAvailableCommand { get { return new RelayCommand(GoToNotAvailable); } }
-
-        public ICommand ErrorPageCommand { get { return new RelayCommand(ErrorPageLoad); } }
-
-        public ICommand GoToYourMallsCommand { get { return new RelayCommand(GoToYourMalls); } }
-
-        public ICommand GoToYourStoresCommand { get { return new RelayCommand(GoToYourStores); } }
-
-        public ICommand GoToYourVisitedPlacesCommand { get { return new RelayCommand(GoToYourVisitedPlaces); } }
-
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 
         public IndexViewModel()
@@ -228,7 +218,7 @@ namespace civicamall.ViewModels
 
         private async void GoToPromo()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
+            /*var mdp = Application.Current.MainPage as MasterDetailPage;
 
             await Task.WhenAll(
                 mdp.RotateXTo(100, 600, Easing.SinOut),
@@ -244,129 +234,45 @@ namespace civicamall.ViewModels
 
             // Application.Current.MainPage = new NavigationPage(new PromosPage());
             // await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
+            */
+            await App.Navigator.PushAsync(new PromosPage());
 
         }
         private async void GoToProductList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await Task.WhenAll(
-               mdp.RotateTo(360, 600, Easing.SinOut),
-               mdp.FadeTo(0, 600)
-               );
-            await mdp.Detail.Navigation.PushAsync(new ProductsPage());
-
-            await Task.WhenAll(
-               mdp.RotateTo(-360, 600, Easing.SinIn),
-               mdp.FadeTo(1, 600, Easing.SinIn)
-               );
-
+            await App.Navigator.PushAsync(new ProductsPage());
         }
         private async void GoToStoreList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            var initial_width = mdp.Bounds.Width;
-            var initial_height = mdp.Bounds.Height;
-            await Task.WhenAll(
-               mdp.LayoutTo(Rectangle.FromLTRB(0, 0, 0, 0), 600, Easing.SinOut)
-               );
-            await mdp.Detail.Navigation.PushAsync(new StorePage());
-            await Task.WhenAll(
-               mdp.LayoutTo(Rectangle.FromLTRB(0, 0, initial_width, initial_height), 600, Easing.SinOut)
-               );
-
+            await App.Navigator.PushAsync(new StorePage());
         }
         private async void GoToMallList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-
-            await Task.WhenAll(
-                mdp.FadeTo(0, 600, Easing.SinOut),
-                mdp.TranslateTo(mdp.Bounds.Center.X,0, 600)
-                );
-            await mdp.Detail.Navigation.PushAsync(new MallPage());
-
-            await Task.WhenAll(
-               mdp.TranslateTo(0,0, 600),
-               mdp.FadeTo(1, 600, Easing.SinIn)
-               );
+            await App.Navigator.PushAsync(new MallPage());
         }
 
         private async void GoToProductDetails()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-
-            await Task.WhenAll(
-                mdp.FadeTo(0, 600, Easing.SinOut),
-                mdp.ScaleTo(0, 600)
-                );
-
-            await mdp.Detail.Navigation.PushAsync(new ProductDetailPage());
-
-            await Task.WhenAll(
-               mdp.ScaleTo(1, 600),
-               mdp.FadeTo(1, 600, Easing.SinIn)
-               );
+            await App.Navigator.PushAsync(new ProductDetailPage());
         }
 
 
         private async void GoToLocations()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new LocationPage());
-        }
-
-        private async void GoToNotAvailable()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new NotAvailableProduct());
-        }
-
-        private async void ErrorPageLoad()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ErrorPage());
-        }
-
-        private async void GoToYourMalls()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new YourMallsPage());
-        }
-
-        private async void GoToYourStores()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new YourStoresPage());
-        }
-
-        private async void GoToYourVisitedPlaces()
-        {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new YourVisitedPlacesPage());
+            await App.Navigator.PushAsync(new LocationPage());
         }
 
         private async void GoCar()
         {
-
-
-
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-
-            await Task.WhenAll(
-                mdp.FadeTo(0, 600, Easing.SinOut)
-            );
-
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
-
-            await Task.WhenAll(
-                mdp.FadeTo(1, 600, Easing.SinIn)
-                );
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
         private void ShowMaster()
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
+
+        
 
 
 

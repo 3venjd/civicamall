@@ -138,39 +138,29 @@ namespace civicamall.ViewModels
         }
         private async void GoToPromo()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new PromosPage());
-
-            //Application.Current.MainPage = new NavigationPage(new PromosPage());
-            //await Application.Current.MainPage.Navigation.PushAsync(new PromosPage());
-
+            await App.Navigator.PushAsync(new PromosPage());
         }
         private async void GoToProductList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ProductsPage());
+            await App.Navigator.PushAsync(new ProductsPage());
         }
         private async void GoToStoreList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new StorePage());
+            await App.Navigator.PushAsync(new StorePage());
         }
         private async void GoToMallList()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new MallPage());
+            await App.Navigator.PushAsync(new MallPage());
         }
 
         private async void GoToProductDetails()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ProductDetailPage());
+            await App.Navigator.PushAsync(new ProductDetailPage());
         }
 
         private async void GoCar()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
     }
 }

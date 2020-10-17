@@ -40,20 +40,34 @@
            
             <Local:ShoppingCart Grid.Column="3" Grid.Row="0" />
             
+            
 -->
-            <Local:EntrySearch Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="EndAndExpand" 
-                               WidthRequest="220" Padding="0" Margin="0,0,10,0"/>
-            <ImageButton Grid.Column="3" Grid.Row="1" BackgroundColor="#7E2081" VerticalOptions="Center" HorizontalOptions="Start"
-                    HeightRequest="40" WidthRequest="40" CornerRadius="6" Source="Mic_white.png" Padding="9"/>
-            <CollectionView Grid.Row="3" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="32,5"
+            
+            
+            <pv:PancakeView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="EndAndExpand" 
+                               WidthRequest="220" Padding="0" Margin="0,24,10,0">
+                <pv:PancakeView.Shadow>
+                    <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="6" Opacity="0.1"/>
+                </pv:PancakeView.Shadow>
+                <Local:EntrySearch  VerticalOptions="Center" />
+            </pv:PancakeView>
+            
+            
+            <ImageButton Grid.Column="3" Grid.Row="0" BackgroundColor="#7E2081" VerticalOptions="Center" HorizontalOptions="Start"
+                    HeightRequest="40" WidthRequest="40" CornerRadius="6" Source="Mic_white.png" Padding="9" Margin="0,24,0,0"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Text="Categorías" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="24" 
+                   Margin="0,32,0,24" TextColor="#7E2081" FontAttributes="Bold"/>
+
+            <CollectionView Grid.Row="2" Grid.Column ="0" Grid.ColumnSpan="4" SelectionMode="Single" Margin="25,0" HorizontalOptions="FillAndExpand"
                             ItemsSource="{Binding Categories}" SelectionChangedCommand="{Binding GoToCategory}">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />
+                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="16" VerticalItemSpacing="16"   />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView Padding="0" CornerRadius="7" HeightRequest="150" WidthRequest="150" >
-                            <Grid Padding="0">
+                        <pv:PancakeView Padding="0" CornerRadius="7" HeightRequest="130" WidthRequest="130">
+                            <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
@@ -62,7 +76,7 @@
                                 </Grid.RowDefinitions>
                                 <Image Grid.Column="0" Grid.Row="0" Aspect="Fill" Source="{Binding Image}"/>
                                 <Label Grid.Column="0" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Start" Margin="12,5"
-                                       FontAttributes="Bold" FontSize="21" TextColor="White" Text="{Binding Name}"/>
+                                       FontAttributes="Bold" FontSize="18" TextColor="White" Text="{Binding Name}"/>
                             </Grid>
                         </pv:PancakeView>
                     </DataTemplate>

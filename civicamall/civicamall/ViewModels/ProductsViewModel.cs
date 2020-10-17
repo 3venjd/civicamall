@@ -161,8 +161,7 @@ namespace civicamall.ViewModels
 
         private async void GoCar()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
         private void Slider()

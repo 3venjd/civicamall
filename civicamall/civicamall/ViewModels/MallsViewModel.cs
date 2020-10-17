@@ -214,31 +214,26 @@ namespace civicamall.ViewModels
 
         private async void GoToMallDetails()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new MallDetailPage());
+            await App.Navigator.PushAsync(new MallDetailPage());
         }
         private async void GoToPromo()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new PromosPage());
+            await App.Navigator.PushAsync(new PromosPage());
         }
 
         private async void GoToStore()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new StorePage());
+            await App.Navigator.PushAsync(new StorePage());
         }
 
         private async void GoToInfoPage()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new InfoBrandPage());
+            await App.Navigator.PushAsync(new InfoBrandPage());
         }
 
         private async void GoCar()
         {
-            var mdp = Application.Current.MainPage as MasterDetailPage;
-            await mdp.Detail.Navigation.PushAsync(new ShoppingCarPage());
+            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
 
