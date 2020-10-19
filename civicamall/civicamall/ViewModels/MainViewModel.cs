@@ -36,6 +36,7 @@ namespace civicamall.ViewModels
 
         public MainViewModel()
         {
+            this.MenuMaster = new MenuPageViewModel();
             this.Index = new IndexViewModel();
             this.BrandProducts = new BrandProductsViewModel();
             this.Location = new LocationViewModel();
