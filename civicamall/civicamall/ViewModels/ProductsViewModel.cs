@@ -10,14 +10,43 @@ namespace civicamall.ViewModels
 {
     public class ProductsViewModel : BaseViewModel
     {
-        public ObservableCollection<Category> Categories { get; set; }
-        public ObservableCollection<ProductImages> ProductImages { get; set; }
+        private ObservableCollection<Category> categories;
 
-        public ObservableCollection<ProdcutSize> Sizes { get; set; }
+        public ObservableCollection<Category> Categories
+        {
+            get { return this.categories; }
+            set { this.SetValue(ref this.categories, value); }
+        }
 
-        public ObservableCollection<ProductColor> Colors { get; set; }
+        private ObservableCollection<ProductImages> productImages;
 
-        public Product Productdetail { get; set; }
+        public ObservableCollection<ProductImages> ProductImages
+        {
+            get { return this.productImages; }
+            set { this.SetValue(ref this.productImages, value); }
+        }
+
+        private ObservableCollection<ProdcutSize> sizes;
+        public ObservableCollection<ProdcutSize> Sizes
+        {
+            get { return this.sizes; }
+            set { this.SetValue(ref this.sizes, value); }
+        }
+
+        private ObservableCollection<ProductColor> colors;
+
+        public ObservableCollection<ProductColor> Colors
+        {
+            get { return this.colors; }
+            set { this.SetValue(ref this.colors, value); }
+        }
+
+        private Product productdetail;
+        public Product Productdetail
+        {
+            get { return this.productdetail; }
+            set { this.SetValue(ref this.productdetail, value); }
+        }
 
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 

@@ -11,12 +11,10 @@
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.TabbedBrandPage">
-    <ContentPage.BindingContext>
-        <ip:StoreViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.TabbedBrandPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ScrollView>
-        <StackLayout>
+        <StackLayout BindingContext="{Binding Store}">
             <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -47,7 +45,7 @@
                                 </tabview:XFTabHeader>
                             </tabview:XFTabPage.Header>
                             <tabview:XFTabPage.CustomContentPage>
-                                <Local:BrandProductsPage/>
+                                <Local:BrandProductsPage BindingContext="{Binding BrandProducts}"/>
                             </tabview:XFTabPage.CustomContentPage>
                         </tabview:XFTabPage>
                         <tabview:XFTabPage>
@@ -62,7 +60,7 @@
                                 </tabview:XFTabHeader>
                             </tabview:XFTabPage.Header>
                             <tabview:XFTabPage.CustomContentPage>
-                                <Local:InfoBrandPage />
+                                <Local:InfoBrandPage BindingContext="{Binding Store}"/>
                             </tabview:XFTabPage.CustomContentPage>
                         </tabview:XFTabPage>
 

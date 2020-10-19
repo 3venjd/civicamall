@@ -7,16 +7,14 @@
              NavigationPage.HasBackButton="False"
              mc:Ignorable="d"
              x:Class="civicamall.Views.LoginPage"
-             BackgroundColor="#F2EDF8">
-    <ContentPage.BindingContext>
-        <ip:LoginViewModel />
-    </ContentPage.BindingContext>
+             BackgroundColor="#F2EDF8"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView >
         <Label Text="Ingresar" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold" />
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindingContext="{Binding Login}">
                 <StackLayout
                     Margin="0,50">
                     <Image Source="Civicamall.png" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>

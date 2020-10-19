@@ -3,22 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:ip="clr-namespace:civicamall.ViewModels" 
-             xmlns:Local="clr-namespace:civicamall.Controls" 
              xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="True"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.YourMallsPage">
-    <ContentPage.BindingContext>
-        <ip:IndexViewModel />
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.YourMallsPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView >
         <Label Margin="0,0,25,0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Tus Malls" />
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
-    <Grid BackgroundColor="#F2EDF8">
+    <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding Index}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.6*"/>
             <RowDefinition Height="0.05*"/>

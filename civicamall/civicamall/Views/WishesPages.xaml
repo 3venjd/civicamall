@@ -8,17 +8,15 @@
              xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="true"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.WishesPages">
-    <ContentPage.BindingContext>
-        <ip:MenuPageViewModel />
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.WishesPages"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView >
         <Label Margin="0,0,25,0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="#4C4456" Text="Tus deseados" />
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
-    <Grid BackgroundColor="#F2EDF8">
+    <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding MenuMaster}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="0.1*"/>

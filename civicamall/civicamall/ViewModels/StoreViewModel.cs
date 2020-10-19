@@ -1,11 +1,8 @@
 ﻿using civicamall.Models;
 using civicamall.Views;
 using GalaSoft.MvvmLight.Command;
-using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Xam.TabView;
-using Xam.TabView.Control;
 using Xamarin.Forms;
 
 namespace civicamall.ViewModels
@@ -20,76 +17,73 @@ namespace civicamall.ViewModels
 
         private int _selectedIndex;
 
-        public Color BackgroundColor1 
-        { 
-            get => _backgroundColor1; 
-            set 
-            {
-                _backgroundColor1 = value;
-                OnPropertyChanged();
-            } 
+        public Color BackgroundColor1
+        {
+            get { return this._backgroundColor1; }
+            set { this.SetValue(ref this._backgroundColor1, value); }
         }
         public Color BackgroundColor2
         {
-            get => _backgroundColor2;
-            set
-            {
-                _backgroundColor2 = value;
-                OnPropertyChanged();
-            }
+            get { return this._backgroundColor2; }
+            set { this.SetValue(ref this._backgroundColor2, value); }
         }
         public Color TextColor1
         {
-            get => _textColor1;
-            set
-            {
-                _textColor1 = value;
-                OnPropertyChanged();
-            }
+            get { return this._textColor1; }
+            set { this.SetValue(ref this._textColor1, value); }
         }
         public Color TextColor2
         {
-            get => _textColor2;
-            set
-            {
-                _textColor2 = value;
-                OnPropertyChanged();
-            }
+            get { return this._textColor2; }
+            set { this.SetValue(ref this._textColor2, value); }
         }
-        public int ClickIndex 
-        { 
-            get => _selectedIndex;
-            set 
-            {
-                if (_selectedIndex != value)
-                {
-                    _selectedIndex = value;
-                    OnPropertyChanged();
-                }
-            }
+        public int ClickIndex
+        {
+            get { return this._selectedIndex; }
+            set { this.SetValue(ref this._selectedIndex, value); }
         }
 
 
-        public ObservableCollection<Brand> Brands { get; set; }
 
-        public Brand BranDetail { get; set; }
+        private ObservableCollection<Brand> brands;
 
-        public ObservableCollection<ShoppingCar> ShopInCar { get; set; }
+        public ObservableCollection<Brand> Brands
+        {
+            get { return this.brands; }
+            set { this.SetValue(ref this.brands, value); }
+        }
 
-        public ObservableCollection<Product> Products { get; set; }
+        private Brand branDetail;
+        public Brand BranDetail
+        {
+            get { return this.branDetail; }
+            set { this.SetValue(ref this.branDetail, value); }
+        }
+
+        private ObservableCollection<ShoppingCar> shopInCar;
+        public ObservableCollection<ShoppingCar> ShopInCar
+        {
+            get { return this.shopInCar; }
+            set { this.SetValue(ref this.shopInCar, value); }
+        }
+
+        private ObservableCollection<Product> products;
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
         public ICommand GoToBrand { get { return new RelayCommand(GoToProductBrand); } }
 
         public ICommand GoToInfoPageCommand { get { return new RelayCommand(GoToInfoPage); } }
 
-        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
-
         ICommand _tapIndex1Command;
         ICommand _tapIndex2Command;
 
-        public ICommand TapIndex1Command  { get => _tapIndex1Command;}
+        public ICommand TapIndex1Command { get => _tapIndex1Command; }
         public ICommand TapIndex2Command { get => _tapIndex2Command; }
-        
+
 
         public StoreViewModel()
         {
@@ -308,11 +302,6 @@ namespace civicamall.ViewModels
         private async void GoToInfoPage()
         {
             await App.Navigator.PushAsync(new InfoBrandPage());
-        }
-
-        private async void GoCar()
-        {
-            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
 

@@ -3,22 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:sp="clr-namespace:civicamall.ViewModels"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
-             xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
-             x:Class="civicamall.Views.ShoppingCarPage">
-    <ContentPage.BindingContext>
-        <sp:StoreViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.ShoppingCarPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView>
         <Label Text="Tus artículos" HorizontalOptions="Center" Margin="0,0,25,0" FontSize="Large" FontAttributes="Bold" TextColor="#4C4456" />
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="delete_forever_24px.png" Command="{Binding EmptyCart}"/>
     </ContentPage.ToolbarItems>
-    <Grid>
+    <Grid BindingContext="{Binding Store}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>

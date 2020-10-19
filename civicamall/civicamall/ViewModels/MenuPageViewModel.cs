@@ -10,7 +10,13 @@ namespace civicamall.ViewModels
     public class MenuPageViewModel : BaseViewModel
     {
 
-        public ObservableCollection<Product> Products { get; set; }
+        private ObservableCollection<Product> products;
+
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
         public ICommand GoOrderHistoryCommand { get { return new RelayCommand(GoOrderHistory); } }
 

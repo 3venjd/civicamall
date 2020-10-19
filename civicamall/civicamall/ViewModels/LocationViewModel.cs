@@ -7,11 +7,23 @@ using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class LocationViewModel
+    public class LocationViewModel : BaseViewModel
     {
-        public Location LocationObject { get; set; }
+        private Location locationObject;
 
-        public ObservableCollection<Product> Products { get; set; }
+        public Location LocationObject
+        {
+            get { return this.locationObject; }
+            set { this.SetValue(ref this.locationObject, value); }
+        }
+
+        private ObservableCollection<Product> products;
+
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
         public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
 
@@ -22,8 +34,6 @@ namespace civicamall.ViewModels
         public ICommand GoToMalls { get { return new RelayCommand(GoToMallList); } }
 
         public ICommand GoToProductDetail { get { return new RelayCommand(GoToProductDetails); } }
-
-        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
 
         public LocationViewModel()
         {
@@ -156,11 +166,6 @@ namespace civicamall.ViewModels
         private async void GoToProductDetails()
         {
             await App.Navigator.PushAsync(new ProductDetailPage());
-        }
-
-        private async void GoCar()
-        {
-            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
     }
 }

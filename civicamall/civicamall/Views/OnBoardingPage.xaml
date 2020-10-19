@@ -6,13 +6,15 @@
              xmlns:PV="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
               xmlns:ip="clr-namespace:civicamall.ViewModels"
               mc:Ignorable="d"
-             x:Class="civicamall.Views.OnBoardingPage">
+             x:Class="civicamall.Views.OnBoardingPage"
+              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <CarouselPage.BindingContext>
         <ip:OnBoardingViewModel />
     </CarouselPage.BindingContext>
+    
     <ContentPage>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindingContext="{Binding OnBoarding}">
                 <PV:PancakeView>
                     <StackLayout BackgroundColor="White" Margin="16,26,16,0">
                         <Label Text="Bienvenido a" TextColor="#7E2081" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,32,0,0"/>
@@ -73,11 +75,9 @@
             </StackLayout>
         </ScrollView>
     </ContentPage>
-    
-    
     <ContentPage>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindingContext="{Binding OnBoarding}">
                 <PV:PancakeView BackgroundColor="White" Margin="16,26,16,0" Padding="0" CornerRadius="10">
                     <StackLayout>
                         <Label Text="Ropa y accesorios" TextColor="#3E4D4C" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,32,0,0"/>
@@ -138,7 +138,7 @@
     </ContentPage>
     <ContentPage>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindingContext="{Binding OnBoarding}">
                 <PV:PancakeView BackgroundColor="White" Margin="16,26,16,0" Padding="0" CornerRadius="10">
                     <StackLayout>
                         <Label Text="¿Deseas recibir promociones y descuentos?" TextColor="#3E4D4C" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="31,32,20,0"/>
@@ -193,12 +193,9 @@
             </StackLayout>
         </ScrollView>
     </ContentPage>
-    
-    
-    
     <ContentPage>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindingContext="{Binding OnBoarding}">
                 <PV:PancakeView BackgroundColor="White" CornerRadius="10" Margin="26,16">
                     <StackLayout>
                         <Label Text="Gracias por configurar tus preferencias" TextColor="#3E4D4C" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" Margin="44,20" />

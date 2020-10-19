@@ -8,10 +8,8 @@
              xmlns:Local="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
-             x:Class="civicamall.Views.PromosPage">
-    <ContentPage.BindingContext>
-        <pp:PromosViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.PromosPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView>
         <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,40,0"/>
     </NavigationPage.TitleView>
@@ -20,7 +18,7 @@
     </ContentPage.ToolbarItems>
     <ScrollView>
 
-        <Grid BackgroundColor="#F2EDF8">
+        <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding Promos}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.15*" />
                 <ColumnDefinition Width="0.325*" />

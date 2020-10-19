@@ -9,8 +9,6 @@ namespace civicamall.ViewModels
 {
     public class MallsViewModel : BaseViewModel
     {
-        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
-
         private Color _backgroundColor1;
         private Color _backgroundColor2;
 
@@ -68,11 +66,28 @@ namespace civicamall.ViewModels
             }
         }
 
-        public ObservableCollection<Product> Products { get; set; }
+        private ObservableCollection<Product> products;
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
-        public ObservableCollection<Mall> Malls { get; set; }
+        private ObservableCollection<Mall> malls;
 
-        public Mall MallDetail { get; set; }
+        public ObservableCollection<Mall> Malls
+        {
+            get { return this.malls; }
+            set { this.SetValue(ref this.malls, value); }
+        }
+
+        private Mall mallDetail;
+
+        public Mall MallDetail
+        {
+            get { return this.mallDetail; }
+            set { this.SetValue(ref this.mallDetail, value); }
+        }
 
         public ICommand GoToMallDetail { get { return new RelayCommand(GoToMallDetails); } }
 
@@ -230,12 +245,6 @@ namespace civicamall.ViewModels
         {
             await App.Navigator.PushAsync(new InfoBrandPage());
         }
-
-        private async void GoCar()
-        {
-            await App.Navigator.PushAsync(new ShoppingCarPage());
-        }
-
 
         void TapIndex1(object sender)
         {

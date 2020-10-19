@@ -8,12 +8,9 @@
              xmlns:CustomControl="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              x:Class="civicamall.Views.BrandProductsPage"
-             BackgroundColor="#CAC4D5">
-
-    <ContentPage.BindingContext>
-        <bp:BrandProductsViewModel/>
-    </ContentPage.BindingContext>
-    <StackLayout>
+             BackgroundColor="#CAC4D5"
+             >
+    <StackLayout >
         <StackLayout Background="#CAC4D5">
             <StackLayout Margin="20,5">
                 <Grid HorizontalOptions="FillAndExpand">

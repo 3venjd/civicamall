@@ -9,11 +9,9 @@
              Title="Información"
              BackgroundColor="#F2EDF8"
              >
-    <ContentPage.BindingContext>
-        <sp:StoreViewModel/>
-    </ContentPage.BindingContext>
+
     <ScrollView>
-        <Grid BackgroundColor="White" Margin="16,38,16,5">
+        <Grid BackgroundColor="White" Margin="16,38,16,5" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.7*"/>
                 <ColumnDefinition Width="0.3*"/>

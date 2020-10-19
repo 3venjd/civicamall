@@ -7,13 +7,19 @@ using Xamarin.Forms;
 
 namespace civicamall.ViewModels
 {
-    public class BrandProductsViewModel
+    public class BrandProductsViewModel : BaseViewModel
     {
-        public ObservableCollection<Product> Products { get; set; }
+        private ObservableCollection<Product> products;
+
+        public ObservableCollection<Product> ProductsList
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
         public BrandProductsViewModel()
         {
-            Products = new ObservableCollection<Product>
+            ProductsList = new ObservableCollection<Product>
             {
                 new Product
                 {

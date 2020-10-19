@@ -8,10 +8,8 @@
              NavigationPage.HasNavigationBar="True"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:Local="clr-namespace:civicamall.Controls"
-             x:Class="civicamall.Views.ProductsPage">
-    <ContentPage.BindingContext>
-        <sp:ProductsViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.ProductsPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
     </ContentPage.ToolbarItems>
@@ -21,7 +19,7 @@
                    TextColor="#4C4456" Text="¡Explora!"/>
     </NavigationPage.TitleView>
     <ScrollView>
-        <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0">
+        <Grid BackgroundColor="#F2EDF8" ColumnSpacing="0" BindingContext="{Binding Products}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>

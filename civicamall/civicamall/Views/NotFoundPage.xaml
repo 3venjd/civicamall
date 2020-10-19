@@ -7,11 +7,9 @@
              xmlns:Pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.NotFoundPage">
-    <ContentPage.BindingContext>
-        <ip1:HeaderControlViewModel />
-    </ContentPage.BindingContext>
-    <Grid BackgroundColor="#F2EDF8">
+             x:Class="civicamall.Views.NotFoundPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding HeaderControl}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.6*"/>

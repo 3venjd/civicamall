@@ -7,7 +7,8 @@
              xmlns:Local="clr-namespace:civicamall.Controls"
              NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.CouponPage">
+             x:Class="civicamall.Views.CouponPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
         <Grid BackgroundColor="#F2EDF8">
             <Grid.RowDefinitions>

@@ -9,11 +9,9 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              x:Class="civicamall.Views.NotAvailableProduct"
-             BackgroundColor="#F2EDF8">
-    <ContentPage.BindingContext>
-        <ip:IndexViewModel />
-    </ContentPage.BindingContext>
-    <Grid>
+             BackgroundColor="#F2EDF8"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <Grid BindingContext="{Binding Index}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.6*"/>

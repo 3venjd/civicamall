@@ -8,10 +8,8 @@
              NavigationPage.HasNavigationBar="True"
              xmlns:ip="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
-             x:Class="civicamall.Views.PaymentMethodsPage">
-    <ContentPage.BindingContext>
-        <Local:MenuPageViewModel />
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.PaymentMethodsPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView>
         <Label Text="Métodos de pago" HorizontalOptions="Center" Margin="0,0,25,0" FontSize="Large" FontAttributes="Bold" TextColor="#4C4456" />
     </NavigationPage.TitleView>
@@ -19,7 +17,7 @@
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCart}"/>
     </ContentPage.ToolbarItems>
     
-    <Grid BackgroundColor="#F2EDF8">
+    <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding MenuMaster}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>

@@ -11,13 +11,37 @@ namespace civicamall.ViewModels
 {
     public class IndexViewModel : BaseViewModel
     {
-        public ObservableCollection<Store> Stores { get; set; }
+        private ObservableCollection<Store> stores;
 
-        public ObservableCollection<Product> Products { get; set; }
+        public ObservableCollection<Store> Stores 
+        { 
+            get { return this.stores; }
+            set { this.SetValue(ref this.stores , value); }
+        }
 
-        public ObservableCollection<Mall> Malls { get; set; }
+        public ObservableCollection<Product> products;
 
-        public ObservableCollection<Brand> Brands { get; set; }
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
+
+        public ObservableCollection<Mall> malls;
+
+        public ObservableCollection<Mall> Malls
+        {
+            get { return this.malls; }
+            set { this.SetValue(ref this.malls, value); }
+        }
+
+        public ObservableCollection<Brand> brands;
+
+        public ObservableCollection<Brand> Brands
+        {
+            get { return this.brands; }
+            set { this.SetValue(ref this.brands, value); }
+        }
 
         public ICommand GoToPromos { get { return new RelayCommand(GoToPromo); } }
 
@@ -33,7 +57,7 @@ namespace civicamall.ViewModels
 
         public ICommand ShowMasterCommand { get { return new RelayCommand(ShowMaster); } }
 
-        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+        
 
         public IndexViewModel()
         {
@@ -262,10 +286,7 @@ namespace civicamall.ViewModels
             await App.Navigator.PushAsync(new LocationPage());
         }
 
-        private async void GoCar()
-        {
-            await App.Navigator.PushAsync(new ShoppingCarPage());
-        }
+        
 
         private void ShowMaster()
         {

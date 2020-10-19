@@ -8,17 +8,15 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
              x:Class="civicamall.Views.MallPage"
-             BackgroundColor="#F2EDF8">
-    <ContentPage.BindingContext>
-        <mv:MallsViewModel/>
-    </ContentPage.BindingContext>
+             BackgroundColor="#F2EDF8"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <NavigationPage.TitleView>
         <Local:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,40,0"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCartCommand}"/>
     </ContentPage.ToolbarItems>
-    <Grid BackgroundColor="#F2EDF8">
+    <Grid BackgroundColor="#F2EDF8" BindingContext="{Binding Malls}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.15*" />
             <ColumnDefinition Width="0.325*" />

@@ -12,11 +12,20 @@ namespace civicamall.ViewModels
 {
     public class PromosViewModel : BaseViewModel
     {
-        public ObservableCollection<Category> Categories { get; set; }
+        private ObservableCollection<Category> categories;
 
-        public ObservableCollection<Product> Products { get; set; }
+        public ObservableCollection<Category> Categories
+        {
+            get { return this.categories; }
+            set { this.SetValue(ref this.categories, value); }
+        }
 
-        public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }
+        private ObservableCollection<Product> products;
+        public ObservableCollection<Product> Products
+        {
+            get { return this.products; }
+            set { this.SetValue(ref this.products, value); }
+        }
 
         public PromosViewModel()
         {
@@ -124,11 +133,6 @@ namespace civicamall.ViewModels
 
             };
 
-        }
-
-        private async void GoCar()
-        {
-            await App.Navigator.PushAsync(new ShoppingCarPage());
         }
     }
 }

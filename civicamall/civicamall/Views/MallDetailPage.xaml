@@ -11,12 +11,10 @@
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             x:Class="civicamall.Views.MallDetailPage">
-    <ContentPage.BindingContext>
-        <mv:MallsViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.MallDetailPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ScrollView>
-        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BindingContext="{Binding Malls}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
@@ -44,7 +42,7 @@
                             </tabview:XFTabHeader>
                         </tabview:XFTabPage.Header>
                         <tabview:XFTabPage.CustomContentPage>
-                            <Local1:MallOffers/>
+                            <Local1:MallOffers BindingContext="{Binding Malls}"/>
                         </tabview:XFTabPage.CustomContentPage>
                     </tabview:XFTabPage>
                     <tabview:XFTabPage>
@@ -59,7 +57,7 @@
                             </tabview:XFTabHeader>
                         </tabview:XFTabPage.Header>
                         <tabview:XFTabPage.CustomContentPage>
-                            <Local1:PromosBrandPage />
+                            <Local1:PromosBrandPage BindingContext="{Binding Products}"/>
                         </tabview:XFTabPage.CustomContentPage>
                     </tabview:XFTabPage>
                 </control:XFTabControl.XFTabPages>
@@ -69,7 +67,7 @@
                 <pv:PancakeView.Shadow>
                     <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
-                <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding MallDetail.Image}" Command="{Binding GoToInfoPageCommand}" BackgroundColor="White" Padding="5"/>
+                <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding MallDetail.Image}" BackgroundColor="White" Padding="5"/>
             </pv:PancakeView>
             
         </Grid>

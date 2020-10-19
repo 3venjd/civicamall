@@ -3,27 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:sp="clr-namespace:civicamall.ViewModels" 
              xmlns:Pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="True"
              NavigationPage.BackButtonTitle="CivicaMall"
-             x:Class="civicamall.Views.ProductDetailPage">
-    <ContentPage.BindingContext>
-        <sp:ProductsViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="civicamall.Views.ProductDetailPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png"/>
     </ContentPage.ToolbarItems>
     <NavigationPage.TitleView >
         <Label Text="Civicamall" TextColor="#4C4456" FontSize="Medium" FontAttributes="Bold"/>
     </NavigationPage.TitleView>
-    <Grid>
+    <Grid BindingContext="{Binding Products}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-
         <ScrollView Grid.Row="0">
             <Grid Grid.Row="0" RowSpacing="25" BackgroundColor="#F2EDF8">
                 <Grid.RowDefinitions>
