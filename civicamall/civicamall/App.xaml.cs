@@ -1,4 +1,5 @@
-﻿using civicamall.Views;
+﻿using civicamall.ViewModels;
+using civicamall.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,10 +13,11 @@ namespace civicamall
         public App()
         {
             InitializeComponent();
-            bool firts_tiem = false;
+            bool firts_tiem = true;
 
             if (firts_tiem)
             {
+                MainViewModel.GetInstance().OnBoarding = new OnBoardingViewModel();
                 MainPage = new OnBoardingPage();
             }
             else

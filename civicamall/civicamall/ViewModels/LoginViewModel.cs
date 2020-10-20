@@ -16,9 +16,10 @@ namespace civicamall.ViewModels
         {
 
         }
-        private async void GoToIndex()
-        {
-            await App.Navigator.PushAsync(new MasterPage());
+        private void GoToIndex()
+        { 
+            MainViewModel.GetInstance().Index = new IndexViewModel();
+            Application.Current.MainPage = new MasterPage();
         }
     }
 }

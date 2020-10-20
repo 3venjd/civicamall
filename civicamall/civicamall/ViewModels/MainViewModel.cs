@@ -36,18 +36,31 @@ namespace civicamall.ViewModels
 
         public MainViewModel()
         {
+            instance = this;
+            this.OnBoarding = new OnBoardingViewModel();
+            this.Login = new LoginViewModel();
             this.MenuMaster = new MenuPageViewModel();
             this.Index = new IndexViewModel();
             this.BrandProducts = new BrandProductsViewModel();
             this.Location = new LocationViewModel();
             this.Malls = new MallsViewModel();
             this.ModeSelection = new ModeSelectionViewModel();
-            this.OnBoarding = new OnBoardingViewModel();
             this.Products = new ProductsViewModel();
             this.Promos = new PromosViewModel();
             this.Store = new StoreViewModel();
             this.HeaderControl = new HeaderControlViewModel();
-            this.Login = new LoginViewModel();
+            
+        }
+
+        private static MainViewModel instance;
+
+        public static MainViewModel GetInstance()
+        {
+            if (instance == null)
+            {
+                return new MainViewModel();
+            }
+            return instance;
         }
 
         public ICommand GoToCarCommand { get { return new RelayCommand(GoCar); } }

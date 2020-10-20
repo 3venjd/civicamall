@@ -19,7 +19,8 @@ namespace civicamall.ViewModels
 
         private async void GoToLogin()
         {
-            await App.Navigator.PushAsync(new LoginPage());
+            MainViewModel.GetInstance().Login = new LoginViewModel();
+            Application.Current.MainPage = new LoginPage();
         }
     }
 }
