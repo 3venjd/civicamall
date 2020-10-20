@@ -3,30 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:mv="clr-namespace:civicamall.ViewModels" 
              xmlns:Local="clr-namespace:civicamall.Controls" 
              xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView" 
              xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView" 
              xmlns:Local1="clr-namespace:civicamall.Views"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              x:Class="civicamall.Views.MallDetailPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}" Priority="1"/>
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BindingContext="{Binding Malls}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="230"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Image Grid.Column="0" Grid.Row="0" Source="{Binding MallDetail.Image}"/>
 
+            <!--
             <Local:BackArrowWhite HorizontalOptions="Start"/>
             <Local:ShoppingCart HorizontalOptions="End"/>
-
+            -->
             <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" HeaderHeight="40" BackgroundColor="#F2EDF8"
                     HeaderColor="#7E2081" SelectionColor="#F2EDF8" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
                 <control:XFTabControl.XFTabPages >

@@ -3,16 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:ip="clr-namespace:civicamall.ViewModels"
              xmlns:tabview="clr-namespace:Xam.TabView;assembly=Xam.TabView"
              xmlns:control="clr-namespace:Xam.TabView.Control;assembly=Xam.TabView"
              xmlns:Local="clr-namespace:civicamall.Views" 
-             xmlns:header1="clr-namespace:civicamall.Controls"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="True"
              mc:Ignorable="d"
              x:Class="civicamall.Views.TabbedBrandPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}" Priority="1"/>
+        <ToolbarItem IconImageSource="favorite_purple_24px.png" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView >
+        <Label Text="ADIDAS" HorizontalOptions="Start" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>
+
     <ScrollView>
         <StackLayout BindingContext="{Binding Store}">
             <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
@@ -20,16 +26,17 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
-                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="230"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Image Grid.Column="0" Grid.Row="0" Source="Adidas_logo.png"/>
 
+                <!--
                 <header1:BackArrowWhite HorizontalOptions="Start"/>
                 <Label Text="{Binding BranDetail.Name}" HorizontalOptions="Start" TextColor="#7E2081" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Start" Margin="50,10"/>
                 <header1:ShoppingCart HorizontalOptions="End"/>
                 <Button HorizontalOptions="End" VerticalOptions="Start" Margin="50,0" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" ImageSource="favorite_purple_24px.png"/>
-
+-->
                 <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" HeaderHeight="40" BackgroundColor="#F2EDF8"
                     HeaderColor="#7E2081" SelectionColor="#F2EDF8" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
                     <control:XFTabControl.XFTabPages >

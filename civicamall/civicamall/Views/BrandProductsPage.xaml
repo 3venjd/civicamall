@@ -3,34 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:bp="clr-namespace:civicamall.ViewModels" 
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
              xmlns:CustomControl="clr-namespace:civicamall.Controls"
              mc:Ignorable="d"
              x:Class="civicamall.Views.BrandProductsPage"
              BackgroundColor="#CAC4D5"
              >
-    <StackLayout >
-        <StackLayout Background="#CAC4D5">
-            <StackLayout Margin="20,5">
-                <Grid HorizontalOptions="FillAndExpand">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="Promociones" TextColor="#4C4456" FontAttributes="Bold" FontSize="24"/>
-                    <pv:PancakeView Grid.Column="1" BackgroundColor="#3DAA35" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="33" WidthRequest="80" CornerRadius="5" Margin="90,0,0,0" Padding="3">
-                        <Label Text="Ver más" TextColor="White" FontSize="16" VerticalOptions="Center" HorizontalOptions="Center"/>
-                    </pv:PancakeView>
-                </Grid>
-            </StackLayout>
-            <StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <pv:PancakeView Grid.Column="0" Grid.Row="0" Background="#CAC4D5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="Promociones" TextColor="#4C4456" FontAttributes="Bold" FontSize="24"/>
+                <pv:PancakeView Grid.Column="1" Grid.Row="0" BackgroundColor="#3DAA35" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="33" WidthRequest="80" CornerRadius="5" Margin="90,0,0,0" Padding="3">
+                    <Label Text="Ver más" TextColor="White" FontSize="16" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </pv:PancakeView>
+
                 <CollectionView
-                    HeightRequest="200"
-                    Margin="21,0,0,10"
-                    SelectionMode="Single"
-                    ItemsSource="{Binding Products}"
-                    SelectionChangedCommand="{Binding GoToProductDetail}">
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        HeightRequest="200"
+                        Margin="21,0,0,10"
+                        SelectionMode="Single"
+                        ItemsSource="{Binding Products}"
+                        SelectionChangedCommand="{Binding GoToProductDetail}">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
                     </CollectionView.ItemsLayout>
@@ -49,30 +60,32 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </StackLayout>
-        </StackLayout>
-        <StackLayout>
-            <CollectionView
-                    HeightRequest="200"
-                    Margin="21,0,0,10"
-                    SelectionMode="Single"
-                    ItemsSource="{Binding Products}"
-                    SelectionChangedCommand="{Binding GoToProductDetail}">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <CustomControl:ProductCustomControl
+            </Grid>
+        </pv:PancakeView>
+
+        <CollectionView
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="21,0,0,10"
+            SelectionMode="Single"
+            ItemsSource="{Binding Products}"
+            SelectionChangedCommand="{Binding GoToProductDetail}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <CustomControl:ProductCustomControl
                                 x:Name="CollectionProduct1"
                                 ProductImage="{Binding Image}"
                                 ProductName="{Binding Name}"
                                 ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
                                 IsFavorite="{Binding IsFavorite}"
                             />
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+    </Grid>
 </ContentPage>
