@@ -19,6 +19,7 @@
     <None Remove="Images\clear_24px.svg" />
     <None Remove="Images\close_24px.svg" />
     <None Remove="Images\delete_forever_24px.svg" />
+    <None Remove="Images\escaneo_de_codigo_qr.svg" />
     <None Remove="Images\exit_to_app_24px.svg" />
     <None Remove="Images\facebook_logo.svg" />
     <None Remove="Images\facebook_purple_logo.svg" />
@@ -91,6 +92,7 @@
     <SharedImage Include="Images\clear_24px.svg" />
     <SharedImage Include="Images\close_24px.svg" />
     <SharedImage Include="Images\delete_forever_24px.svg" />
+    <SharedImage Include="Images\escaneo_de_codigo_qr.svg" />
     <SharedImage Include="Images\exit_to_app_24px.svg" />
     <SharedImage Include="Images\facebook_logo.svg" />
     <SharedImage Include="Images\facebook_purple_logo.svg" />

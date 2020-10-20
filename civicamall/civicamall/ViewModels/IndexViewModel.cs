@@ -125,7 +125,91 @@ namespace civicamall.ViewModels
                     Base_cost = 50000,
                     Discount = 0,
                     IsFavorite = true,
-                    IsDiscount = false
+                    IsDiscount = false,
+                    Images = new ObservableCollection<ProductImages>
+                    {
+                        new ProductImages
+                        {
+                            Id = 0,
+                            Image ="zapatillas_1.png"
+                        },
+                        new ProductImages
+                        {
+                            Id = 1,
+                            Image ="zapatillas_1_1.jpg"
+                        },
+                        new ProductImages
+                        {
+                            Id = 2,
+                            Image ="zapatillas_1_2.jpg"
+                        },
+                    },
+                    Colors = new ObservableCollection<ProductColor>
+                    {
+                        new ProductColor
+                        {
+                            Id = 0,
+                            Color="#000000"
+                        },
+                        new ProductColor
+                        {
+                            Id = 1,
+                            Color="#FF7D27"
+                        },
+                        new ProductColor
+                        {
+                            Id = 2,
+                            Color="#7E2081"
+                        },
+                        new ProductColor
+                        {
+                            Id = 3,
+                            Color="#00A09C"
+                        },
+                        new ProductColor
+                        {
+                            Id = 4,
+                            Color="#FFFFFF"
+                        },
+                        new ProductColor
+                        {
+                            Id = 5,
+                            Color="#9AAFAF"
+                        },
+                    },
+                    Sizes = new ObservableCollection<ProdcutSize>
+                    {
+                        new ProdcutSize
+                        {
+                            Id = 0,
+                            Size="29"
+                        },
+                        new ProdcutSize
+                        {
+                            Id = 1,
+                            Size="32"
+                        },
+                        new ProdcutSize
+                        {
+                            Id = 2,
+                            Size="35"
+                        },
+                        new ProdcutSize
+                        {
+                            Id = 3,
+                            Size="39"
+                        },
+                        new ProdcutSize
+                        {
+                            Id = 4,
+                            Size="42"
+                        },
+                        new ProdcutSize
+                        {
+                            Id = 5,
+                            Size="45"
+                        },
+                    }
 
                 },
                 new Product
