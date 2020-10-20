@@ -19,51 +19,28 @@ namespace civicamall.ViewModels
 
         public Color BackgroundColor1
         {
-            get => _backgroundColor1;
-            set
-            {
-                _backgroundColor1 = value;
-                OnPropertyChanged();
-            }
+            get { return this._backgroundColor1; }
+            set { this.SetValue(ref this._backgroundColor1, value); }
         }
         public Color BackgroundColor2
         {
-            get => _backgroundColor2;
-            set
-            {
-                _backgroundColor2 = value;
-                OnPropertyChanged();
-            }
+            get { return this._backgroundColor2; }
+            set { this.SetValue(ref this._backgroundColor2, value); }
         }
         public Color TextColor1
         {
-            get => _textColor1;
-            set
-            {
-                _textColor1 = value;
-                OnPropertyChanged();
-            }
+            get { return this._textColor1; }
+            set { this.SetValue(ref this._textColor1, value); }
         }
         public Color TextColor2
         {
-            get => _textColor2;
-            set
-            {
-                _textColor2 = value;
-                OnPropertyChanged();
-            }
+            get { return this._textColor2; }
+            set { this.SetValue(ref this._textColor2, value); }
         }
         public int ClickIndex
         {
-            get => _selectedIndex;
-            set
-            {
-                if (_selectedIndex != value)
-                {
-                    _selectedIndex = value;
-                    OnPropertyChanged();
-                }
-            }
+            get { return this._selectedIndex; }
+            set { this.SetValue(ref this._selectedIndex, value); }
         }
 
         private ObservableCollection<Product> products;

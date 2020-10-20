@@ -54,12 +54,10 @@ namespace civicamall.ViewModels
 
         public int Position
         {
-            get => _position;
-            set
-            {
-                _position = value;
-                OnPropertyChanged();
-            }
+
+            get { return this._position; }
+            set { this.SetValue(ref this._position, value); }
+
         }
 
         public ProductsViewModel()
