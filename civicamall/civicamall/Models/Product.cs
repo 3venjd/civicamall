@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace civicamall.Models
 {
     public class Product
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public string Image { get; set; }
@@ -27,5 +29,11 @@ namespace civicamall.Models
         public string ShowDiscount => $"-{Discount}%";
 
         public float Final_cost => Base_cost - (Base_cost * (Discount / 100));
+
+        public ObservableCollection<ProductImages> Images { get; set; }
+
+        public ObservableCollection<ProductColor> Colors { get; set; }
+
+        public ObservableCollection<ProdcutSize> Sizes { get; set; }
     }
 }

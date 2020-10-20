@@ -37,17 +37,7 @@ namespace civicamall.ViewModels
         public MainViewModel()
         {
             instance = this;
-            this.OnBoarding = new OnBoardingViewModel();
-            this.Login = new LoginViewModel();
-            this.MenuMaster = new MenuPageViewModel();
-            this.Index = new IndexViewModel();
-            this.BrandProducts = new BrandProductsViewModel();
-            this.Location = new LocationViewModel();
-            this.Malls = new MallsViewModel();
             this.ModeSelection = new ModeSelectionViewModel();
-            this.Products = new ProductsViewModel();
-            this.Promos = new PromosViewModel();
-            this.Store = new StoreViewModel();
             this.HeaderControl = new HeaderControlViewModel();
             
         }

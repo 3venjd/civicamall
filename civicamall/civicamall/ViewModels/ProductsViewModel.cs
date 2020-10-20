@@ -67,14 +67,17 @@ namespace civicamall.ViewModels
             {
                 new ProductImages
                 {
+                    Id = 0,
                     Image ="zapatillas_1.png"
                 },
                 new ProductImages
                 {
+                    Id = 1,
                     Image ="zapatillas_1_1.jpg"
                 },
                 new ProductImages
                 {
+                    Id = 2,
                     Image ="zapatillas_1_2.jpg"
                 },
             };
@@ -83,26 +86,31 @@ namespace civicamall.ViewModels
             {
                 new Category
                 {
+                    Id = 0,
                     Name = "Calzado",
                     Image = "Calzado.jpg"
                 },
                 new Category
                 {
+                    Id = 1,
                     Name = "Camisetas",
                     Image = "Camisetas.jpg"
                 },
                 new Category
                 {
+                    Id = 2,
                     Name = "Vestidos",
                     Image = "Vestidos.jpg"
                 },
                 new Category
                 {
+                    Id = 3,
                     Name = "Pantalones",
                     Image = "Pantalones.jpg"
                 },
                 new Category
                 {
+                    Id = 4,
                     Name = "Gorras",
                     Image = "Gorras.jpg"
                 },
@@ -112,26 +120,32 @@ namespace civicamall.ViewModels
             {
                 new ProdcutSize
                 {
+                    Id = 0,
                     Size="29"
                 },
                 new ProdcutSize
                 {
+                    Id = 1,
                     Size="32"
                 },
                 new ProdcutSize
                 {
+                    Id = 2,
                     Size="35"
                 },
                 new ProdcutSize
                 {
+                    Id = 3,
                     Size="39"
                 },
                 new ProdcutSize
                 {
+                    Id = 4,
                     Size="42"
                 },
                 new ProdcutSize
                 {
+                    Id = 5,
                     Size="45"
                 },
             };
@@ -140,32 +154,39 @@ namespace civicamall.ViewModels
             {
                 new ProductColor
                 {
+                    Id = 0,
                     Color="#000000"
                 },
                 new ProductColor
                 {
+                    Id = 1,
                     Color="#FF7D27"
                 },
                 new ProductColor
                 {
+                    Id = 2,
                     Color="#7E2081"
                 },
                 new ProductColor
                 {
+                    Id = 3,
                     Color="#00A09C"
                 },
                 new ProductColor
                 {
+                    Id = 4,
                     Color="#FFFFFF"
                 },
                 new ProductColor
                 {
+                    Id = 5,
                     Color="#9AAFAF"
                 },
             };
 
             Productdetail = new Product 
             {
+                Id = 0,
                 Name = "Zapatillas",
                 Image = "zapatillas_1",
                 Brand = "Nike",
@@ -188,6 +209,7 @@ namespace civicamall.ViewModels
 
         private async void GoCar()
         {
+            MainViewModel.GetInstance().Store = new StoreViewModel();
             await App.Navigator.PushAsync(new ShoppingCarPage());
         }
 
