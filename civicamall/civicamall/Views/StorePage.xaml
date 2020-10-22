@@ -35,7 +35,10 @@
             <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
        -->
-            <Local:Advertisements Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="220" Margin="16,0"/>
+            <pv:PancakeView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" CornerRadius="10" Padding="0" BackgroundColor="Red" Margin="16,0">
+                <Image  Source="Banner_2x.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="83" />
+            </pv:PancakeView>
+            
 
             <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="26,15" TranslationY="5" FontSize="24" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
 

@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <pv:PancakeView Grid.Column="0" Grid.Row="0" Background="#CAC4D5">
+        <pv:PancakeView Grid.Column="0" Grid.Row="0" Background="#CAC4D5" Margin="0,16">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -28,8 +28,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Grid.Row="0" Text="Promociones" TextColor="#4C4456" FontAttributes="Bold" FontSize="24"/>
-                <pv:PancakeView Grid.Column="1" Grid.Row="0" BackgroundColor="#3DAA35" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="33" WidthRequest="80" CornerRadius="5" Margin="90,0,0,0" Padding="3">
+                <Label Grid.Column="0" Grid.Row="0" Text="Promociones" TextColor="#4C4456" FontAttributes="Bold" FontSize="24" Margin="26,26,0,0"/>
+                <pv:PancakeView Grid.Column="1" Grid.Row="0" BackgroundColor="#3DAA35" VerticalOptions="Center" HorizontalOptions="End" HeightRequest="33" WidthRequest="80" CornerRadius="5" Margin="0,16,15,0" Padding="3">
                     <Label Text="Ver más" TextColor="White" FontSize="16" VerticalOptions="Center" HorizontalOptions="Center"/>
                 </pv:PancakeView>
 
@@ -38,7 +38,7 @@
                         Grid.Row="1"
                         Grid.ColumnSpan="2"
                         HeightRequest="200"
-                        Margin="21,0,0,10"
+                        Margin="21,17,0,10"
                         SelectionMode="Single"
                         ItemsSource="{Binding Products}"
                         SelectionChangedCommand="{Binding GoToProductDetail}">
