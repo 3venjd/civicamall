@@ -13,7 +13,7 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}">
     
     <NavigationPage.TitleView >
-        <CustomControl:EntrySearch HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,40,0"/>
+        <CustomControl:EntrySearch HorizontalOptions="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="shopping_cart_24px.png" Command="{Binding GoToCarCommand}"/>
@@ -130,7 +130,7 @@
                             <Frame
                             Padding="0"
                             HasShadow="False"
-                            CornerRadius="7"
+                            CornerRadius="8"
                             VerticalOptions="Center"
                             HorizontalOptions="Center"
                             BackgroundColor="Transparent"
@@ -144,20 +144,20 @@
                                         <RowDefinition Height="0.8*" />
                                         <RowDefinition Height="0.2*" />
                                     </Grid.RowDefinitions>
-                                    <Frame  
+                                    <pv:PancakeView  
                                     Grid.Row="0"
                                     Grid.Column="0"
                                     VerticalOptions="CenterAndExpand"
                                     HorizontalOptions="CenterAndExpand"
                                     Margin="2"
                                     Padding="0"
+                                    HasShadow="False"
                                     HeightRequest="90"
                                     WidthRequest="90"
-                                    CornerRadius="7">
-                                        <Image
-                                    Aspect="AspectFill"
-                                    Source="{Binding Image}" />
-                                    </Frame>
+                                        
+                                    CornerRadius="8">
+                                        <Image  Aspect="AspectFill" Source="{Binding Image}" />
+                                    </pv:PancakeView>
 
                                     <Label
                                     Grid.Row="1"
@@ -176,7 +176,7 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
-                Margin="32,24,0,16"
+                Margin="32,16,0,16"
                 FontAttributes="Bold"
                 TextColor="#4C4456"
                 FontSize="24"
@@ -196,7 +196,7 @@
                 WidthRequest="60"
                >
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Button
                     BackgroundColor="White"
@@ -216,7 +216,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Button
                     BackgroundColor="White"
@@ -237,7 +237,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Button
                     BackgroundColor="White"
@@ -257,7 +257,7 @@
                 HeightRequest="60"
                 WidthRequest="60">
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Button
                     BackgroundColor="White"
@@ -270,7 +270,7 @@
                 Grid.Row="6"
                 Grid.Column="0"
                 FontSize="15"
-                Margin="32,0,0,0"
+                Margin="32,8,0,0"
                HorizontalOptions="Center"
                 VerticalOptions="Center"
                 TextColor="#7E2081"
@@ -279,6 +279,7 @@
                 Grid.Row="6"
                 Grid.Column="1"
                 FontSize="15"
+                Margin="0,8,0,0"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 TranslationX="5"
@@ -288,6 +289,7 @@
                 Grid.Row="6"
                 Grid.Column="2"
                 FontSize="15"
+                    Margin="0,8,0,0"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 TranslationX="-5"
@@ -297,7 +299,7 @@
                 Grid.Row="6"
                 Grid.Column="3"
                 FontSize="15"
-                Margin="0,0,32,0"
+                Margin="0,8,32,0"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 TextColor="#7E2081"
@@ -386,7 +388,7 @@
                             x:Name="CollectionProduct1"
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
-                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                            ProductFinalCost="{Binding Final_cost,StringFormat=' {0:C2}'}"
                             IsFavorite="{Binding IsFavorite}"
                         />
                         </DataTemplate>
@@ -432,7 +434,7 @@
                             <CustomControl:ProductCustomControl
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
-                            ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                            ProductFinalCost="{Binding Final_cost}"
                             IsFavorite="{Binding IsFavorite}"
                         />
                         </DataTemplate>
@@ -444,7 +446,14 @@
             </Grid>
         </ScrollView>
 
-        <Button Grid.Row="0" BorderColor="#2b3c3c" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#00A09C" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="64" HeightRequest="64" ImageSource="escaneo_de_codigo_qr.png" Margin="0,0,20,22" VerticalOptions="End"/>
+        <pv:PancakeView Grid.Row="0"  Margin="0,0,40,56" 
+                 HorizontalOptions="EndAndExpand" BackgroundColor="LightBlue" CornerRadius="32" WidthRequest="64" HeightRequest="64"
+                 VerticalOptions="EndAndExpand">
+            <pv:PancakeView.Shadow>
+                <pv:DropShadow Color="#223E3E" Offset="0,15" BlurRadius="10" Opacity="0.3"/>
+            </pv:PancakeView.Shadow>
+            <Button ImageSource="escaneo_de_codigo_qr.png" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="32" WidthRequest="64" HeightRequest="64" BackgroundColor="#00A09C"/>
+        </pv:PancakeView>
 
     </Grid>
 </ContentPage>

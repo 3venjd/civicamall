@@ -25,7 +25,7 @@
                     <renders:CustomEntry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="¿Qué necesitas?" PlaceholderColor="#4C4456"/>
                 </On>
                 <On Platform="iOS">
-                    <Entry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="¿Qué necesitas?" PlaceholderColor="#4C4456"/>
+                    <Entry Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" Placeholder="¿Qué necesitas?" PlaceholderColor="#4C4456"/>
 
                 </On>
             </OnPlatform>

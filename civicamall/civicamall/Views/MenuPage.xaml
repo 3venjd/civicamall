@@ -36,7 +36,7 @@
 
                 <pv:PancakeView  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HeightRequest="110" Margin="24,5" CornerRadius="5" Padding="0" BackgroundColor="white" HasShadow="True" >
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="10" Opacity="0.16"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Grid Padding="0">
                         <Grid.RowDefinitions>
@@ -74,7 +74,7 @@
                         <TapGestureRecognizer Command="{Binding GoCouponCommand}" />
                     </pv:PancakeView.GestureRecognizers>
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="10" Opacity="0.16"/>
+                        <pv:DropShadow Color="#150C37" Offset="0,10" BlurRadius="10" Opacity="0.3"/>
                     </pv:PancakeView.Shadow>
                     <Grid>
                         <Grid.ColumnDefinitions>

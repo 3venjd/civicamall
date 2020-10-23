@@ -159,21 +159,6 @@
     <BundleResource Include="Resources\Banner.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Banner_el_huecoImagen_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Banner_el_huecoImagen_2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Banner_el_huecoMesa_de_trabajo_3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Calzado.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -319,5 +304,35 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosBanner_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosBanner_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosHueco 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosHueco_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosHueco_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosHueco_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosHueco_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosBanner_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RedimensionadosBanner_2.jpg" />
   </ItemGroup>
 </Project>

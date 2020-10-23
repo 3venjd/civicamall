@@ -37,14 +37,14 @@
                 <header1:ShoppingCart HorizontalOptions="End"/>
                 <Button HorizontalOptions="End" VerticalOptions="Start" Margin="50,0" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" ImageSource="favorite_purple_24px.png"/>
 -->
-                <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" Padding="0" VerticalOptions="FillAndExpand" HeaderHeight="40" BackgroundColor="#F2EDF8"
-                    HeaderColor="#7E2081" SelectionColor="#F2EDF8" HasShadow="True" SelectedIndex="{Binding ClickIndex}">
-                    <control:XFTabControl.XFTabPages >
+                <control:XFTabControl Grid.Column="0" Grid.Row="1" x:Name="Tabcomponent" SelectionColor="Transparent" HeaderHeight="44"
+                    HasShadow="False" SelectedIndex="{Binding ClickIndex}">
+                    <control:XFTabControl.XFTabPages>
                         <tabview:XFTabPage>
                             <tabview:XFTabPage.Header>
-                                <tabview:XFTabHeader Padding="0">
-                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TranslationX="-5" FontSize="20" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"
-                                   Text="Productos">
+                                <tabview:XFTabHeader HasShadow="False" HeightRequest="44" Padding="0">
+                                    <Label VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" BackgroundColor="{Binding BackgroundColor1}" TextColor="{Binding TextColor1}" FontAttributes="Bold"  
+                                           Text="Productos">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding TapIndex1Command}"/>
                                         </Label.GestureRecognizers>
@@ -57,8 +57,8 @@
                         </tabview:XFTabPage>
                         <tabview:XFTabPage>
                             <tabview:XFTabPage.Header>
-                                <tabview:XFTabHeader>
-                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" TranslationX="10" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
+                                <tabview:XFTabHeader HasShadow="False">
+                                    <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" BackgroundColor="{Binding BackgroundColor2}" TextColor="{Binding TextColor2}" FontAttributes="Bold"
                                    Text="Información">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding TapIndex2Command}"/>
@@ -74,11 +74,11 @@
                     </control:XFTabControl.XFTabPages>
                 </control:XFTabControl>
 
-                <pv:PancakeView Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-15" BackgroundColor="White" HeightRequest="72" WidthRequest="72" CornerRadius="40">
+                <pv:PancakeView Grid.Column="0" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="-15" BackgroundColor="White" HeightRequest="72" WidthRequest="72" CornerRadius="35" HasShadow="True">
                     <pv:PancakeView.Shadow>
-                        <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
+                        <pv:DropShadow Color="#4C4456" Offset="0,3" BlurRadius="6" Opacity="0.4"/>
                     </pv:PancakeView.Shadow>
-                    <ImageButton Grid.Column="0" Grid.Row="1" Source="{Binding BranDetail.Image}" BackgroundColor="White"  Padding="5"/>
+                    <Button Grid.Column="0" Grid.Row="1" ImageSource="{Binding BranDetail.Image}" BackgroundColor="Transparent" HeightRequest="72" WidthRequest="72" CornerRadius="30" Padding="5"/>
                 </pv:PancakeView>
             </Grid>
         </StackLayout>

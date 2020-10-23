@@ -13,7 +13,7 @@ namespace civicamall
         public App()
         {
             InitializeComponent();
-            bool firts_tiem = true;
+            bool firts_tiem = false;
 
             if (firts_tiem)
             {
@@ -22,6 +22,7 @@ namespace civicamall
             }
             else
             {
+                MainViewModel.GetInstance().Index = new IndexViewModel();
                 MainPage = new MasterPage();
             }
             

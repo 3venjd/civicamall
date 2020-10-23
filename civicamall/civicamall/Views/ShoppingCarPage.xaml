@@ -14,17 +14,17 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="delete_forever_24px.png" Command="{Binding EmptyCart}"/>
     </ContentPage.ToolbarItems>
+
+
     <Grid BindingContext="{Binding Store}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <ScrollView Grid.Row="0">
+        
             <Grid BackgroundColor="#F2EDF8" HorizontalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <pv:PancakeView Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="750" CornerRadius="6" Padding="0" Margin="16,0">
+                <ScrollView>
+                    <pv:PancakeView Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="750" CornerRadius="6" Padding="0" Margin="16,0">
                     <CollectionView SelectionMode="Single" ItemsSource="{Binding ShopInCar}">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Span="1" Orientation="Vertical" HorizontalItemSpacing="0" VerticalItemSpacing="0" />
@@ -54,33 +54,34 @@
                                         <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" FontSize="18" Margin="16,0,0,0" TranslationY="5" TextColor="#2E2E2E" Text="{Binding Name}" VerticalTextAlignment="Center" LineBreakMode="TailTruncation" MaxLines="2"/>
                                         <Button Grid.Row="0" Grid.Column="4" TranslationY="-10" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" HeightRequest="24" WidthRequest="24" TranslationX="-5" ImageSource="clear_24px.png"/>
 
-                                        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" TextColor="#3E4D4C" VerticalTextAlignment="Center" Margin="16,0,0,0" Padding="0" FontSize="16" Text="{Binding Final_cost, StringFormat='{0:C}'}"/>
+                                        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" TextColor="#3E4D4C" VerticalTextAlignment="Center" Margin="16,0,0,0" Padding="0" FontSize="16" Text="{Binding Final_cost, StringFormat=' {0:C}'}"/>
 
 
                                         <pv:PancakeView Grid.Row="2" Grid.Column="1" VerticalOptions="EndAndExpand" HeightRequest="20" Margin="12,0,0,0" CornerRadius="5" IsVisible="{Binding IsDiscount}">
                                             <Grid ColumnSpacing="0">
-                                                <Label Grid.Column="0" VerticalTextAlignment="Center" Margin="5,0" FontSize="16" TextColor="#3E4D4C" Text="{Binding Base_cost, StringFormat='{0:C}'}"/>
+                                                <Label Grid.Column="0" VerticalTextAlignment="Center" Margin="5,0" FontSize="16" TextColor="#3E4D4C" Text="{Binding Base_cost, StringFormat=' {0:C}'}"/>
                                                 <Image Grid.Column="0" HorizontalOptions="Start" Source="Tachado.png"/>
                                             </Grid>
                                         </pv:PancakeView>
 
                                         <pv:PancakeView Grid.Row="2" Grid.Column="2" BackgroundColor="White" Padding="0" TranslationX="-8" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" CornerRadius="2">
                                             <pv:PancakeView.Shadow>
-                                                <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="10" Opacity="0.16"/>
+                                                <pv:DropShadow Color="#150C37" Offset="0,3" BlurRadius="3" Opacity="0.16"/>
                                             </pv:PancakeView.Shadow>
-                                            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="4" ImageSource="add_gray_24px.png" BackgroundColor="White"/>
+                                            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="4" ImageSource="remove_gray_24px.png" BackgroundColor="Transparent"/>
                                         </pv:PancakeView>
 
                                         <Label Grid.Row="2" Grid.Column="3" HorizontalOptions="Start" VerticalOptions="Center" TranslationX="-8" BackgroundColor="Transparent" Text="100"/>
 
                                         <pv:PancakeView Grid.Row="2" Grid.Column="4" BackgroundColor="White" Padding="0" TranslationX="-13" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" CornerRadius="2">
                                             <pv:PancakeView.Shadow>
-                                                <pv:DropShadow Color="#150C37" Offset="0,0" BlurRadius="10" Opacity="0.16"/>
+                                                <pv:DropShadow Color="#150C37" Offset="0,3" BlurRadius="3" Opacity="0.16"/>
                                             </pv:PancakeView.Shadow>
-                                            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="4" ImageSource="remove_gray_24px.png" BackgroundColor="White"/>
+                                            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="4" ImageSource="add_gray_24px.png" BackgroundColor="White"/>
                                         </pv:PancakeView>
 
                                         <Frame Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" BackgroundColor="#B6C1C8" HasShadow="False" BorderColor="Transparent"/>
+
 
                                     </Grid>
                                 </pv:PancakeView>
@@ -89,21 +90,21 @@
 
                     </CollectionView>
                 </pv:PancakeView>
-            </Grid>
-        </ScrollView>
+                </ScrollView>
+                <pv:PancakeView Grid.Row="1" Margin="24,0,24,32" Padding="0" VerticalOptions="End" HorizontalOptions="FillAndExpand" HeightRequest="48" BackgroundColor="#3DAA35" CornerRadius="6">
+                    <Grid Padding="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" TextColor="White" Text="Pagar" FontSize="18" FontAttributes="Bold" Padding="0" Margin="24,0,0,0" BackgroundColor="#3DAA35"/>
+                        <Label Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  TextColor="White" FontSize="18" Margin="0,0,5,0" Text="$200.000.000.000"/>
+                    </Grid>
 
+                </pv:PancakeView>
+            </Grid>
         
-        <pv:PancakeView Grid.Row="0" Margin="24,0,24,32" Padding="0" VerticalOptions="End" HorizontalOptions="FillAndExpand" HeightRequest="43" BackgroundColor="#3DAA35" CornerRadius="6">
-            <Grid Padding="0" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"/>
-                    <ColumnDefinition Width="0.6*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" TextColor="White" Text="Pagar" HorizontalOptions="Start" FontSize="18" FontAttributes="Bold" Margin="24,0,0,0" BackgroundColor="#3DAA35"/>
-                <Label HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Column="1" TextColor="White" FontSize="18" Margin="0,0,24,0" Text="$200.000.000.000"/>
-            </Grid>
-
-        </pv:PancakeView>
+        
     </Grid>
 </ContentPage>
 
