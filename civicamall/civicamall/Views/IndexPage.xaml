@@ -434,7 +434,7 @@
                             <CustomControl:ProductCustomControl
                             ProductImage="{Binding Image}"
                             ProductName="{Binding Name}"
-                            ProductFinalCost="{Binding Final_cost}"
+                            ProductFinalCost="{Binding Final_cost,StringFormat=' {0:C2}'}"
                             IsFavorite="{Binding IsFavorite}"
                         />
                         </DataTemplate>

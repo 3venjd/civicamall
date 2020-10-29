@@ -3,15 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:sp="clr-namespace:civicamall.ViewModels"
+             xmlns:PV="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="civicamall.Views.InfoBrandPage"
              Title="Información"
-             BackgroundColor="#F2EDF8"
              >
-
-    <ScrollView>
-        <Grid BackgroundColor="White" Margin="16,38,16,5" >
+    <PV:PancakeView  Margin="16,24" Padding="0,24" CornerRadius="5" BackgroundColor="White">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.7*"/>
                 <ColumnDefinition Width="0.3*"/>
@@ -26,38 +24,29 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Margin="16,24,0,0" FontAttributes="Bold" FontSize="24" TextColor="#2E2E2E" Text="{Binding BranDetail.Name}" />
-            
-            <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#3DAA35" HasShadow="False">
-                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="16" Text="Abierto"/>
-            </Frame>
-            <Frame Grid.Column="1" Grid.Row="0" Margin="0,30,16,0" Padding="0" BackgroundColor="#FF2727" HasShadow="False" IsVisible="{Binding BranDetail.IsClose}">
-                <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="16" Text="Cerrado"/>
-            </Frame>
-            
-            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" MaxLines="4" Margin="20,0" FontSize="12" TextColor="#99AAA9" HorizontalTextAlignment="Start" 
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" MaxLines="4" Margin="24,0" FontSize="12" TextColor="#99AAA9" HorizontalTextAlignment="Start" 
                        Text="{Binding BranDetail.Description}" LineHeight="1" LineBreakMode="TailTruncation" />
-            
+
             <Label Grid.Column="1" Grid.Row="2" Margin="0,0,25,0" HorizontalOptions="End" TranslationY="10" VerticalOptions="End" FontSize="16" TextColor="#41CBFF" Text="Ver más"/>
 
             <Label Grid.Column="0" Grid.Row="3" Margin="32,5" FontAttributes="Bold" FontSize="20" TextColor="#2E2E2E" Text="Horarios" />
-            
+
             <Frame Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="32,5" Padding="0" BackgroundColor="Transparent" HasShadow="False">
                 <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="0.05*"/>
-                    <ColumnDefinition Width="0.5*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.05*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Image Grid.Column="0" Grid.Row="0" Source="timelapse_24px.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
 
@@ -76,11 +65,11 @@
 
                     <Label Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" FontAttributes="Bold" FontSize="15" TextColor="#898D8F" Text="Domingos y festivos"/>
 
-                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.Open_Hour}"/>
-                    <Label Grid.Column="2" Grid.Row="5" TextColor="#979797" FontSize="12" Text="-"/>
-                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" FontSize="12" Text="{Binding BranDetail.CLose_hour}"/>
+                    <Label Grid.Column="1" Grid.Row="5" TextColor="#979797" Margin="0,0,0,16" FontSize="12" Text="{Binding BranDetail.Open_Hour}"/>
+                    <Label Grid.Column="2" Grid.Row="5" TextColor="#979797" Margin="0,0,0,16" FontSize="12" Text="-"/>
+                    <Label Grid.Column="3" Grid.Row="5" TextColor="#979797" Margin="0,0,0,16" FontSize="12" Text="{Binding BranDetail.CLose_hour}"/>
 
-                    <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="5" BackgroundColor="#B6C1C8" HeightRequest="2"/>
+                    <Label Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="5" BackgroundColor="#B6C1C8" HeightRequest="2" Margin="0,0,0,16"/>
                 </Grid>
             </Frame>
 
@@ -96,8 +85,7 @@
                 <ImageButton Grid.Column="2" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="twitter_purple_logo.png"/>
                 <ImageButton Grid.Column="3" Margin="0,0,16,0" HeightRequest="30" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="youtube_purple_logo.png"/>
             </Grid>
-
-            
         </Grid>
-    </ScrollView>
+    </PV:PancakeView>
+   
 </ContentPage>

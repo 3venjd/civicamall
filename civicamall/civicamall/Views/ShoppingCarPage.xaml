@@ -48,7 +48,7 @@
                                         </Grid.RowDefinitions>
 
                                         <pv:PancakeView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="8,0,0,0" BackgroundColor="Black" CornerRadius="8">
-                                            <Image Source="{Binding Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" BackgroundColor="Red"/>
+                                            <Image Source="{Binding Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" BackgroundColor="Transparent"/>
                                         </pv:PancakeView>
 
                                         <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" FontSize="18" Margin="16,0,0,0" TranslationY="5" TextColor="#2E2E2E" Text="{Binding Name}" VerticalTextAlignment="Center" LineBreakMode="TailTruncation" MaxLines="2"/>

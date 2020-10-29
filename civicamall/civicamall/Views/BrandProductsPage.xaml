@@ -37,7 +37,7 @@
                         Grid.Column="0"
                         Grid.Row="1"
                         Grid.ColumnSpan="2"
-                        HeightRequest="200"
+                        HeightRequest="280"
                         Margin="21,17,0,10"
                         SelectionMode="Single"
                         ItemsSource="{Binding Products}"
@@ -53,8 +53,8 @@
                                 ProductName="{Binding Name}"
                                 IsDiscount="{Binding IsDiscount}"
                                 ProductDiscountValue="{Binding ShowDiscount}"
-                                ProductBaseCost="{Binding Base_cost,StringFormat='{0:C}'}"
-                                ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                                ProductBaseCost="{Binding Base_cost,StringFormat=' {0:C}'}"
+                                ProductFinalCost="{Binding Final_cost, StringFormat=' {0:C}'}"
                                 IsFavorite="{Binding IsFavorite}"
                             />
                         </DataTemplate>
@@ -76,10 +76,9 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <CustomControl:ProductCustomControl
-                                x:Name="CollectionProduct1"
                                 ProductImage="{Binding Image}"
                                 ProductName="{Binding Name}"
-                                ProductFinalCost="{Binding Final_cost, StringFormat='{0:C}'}"
+                                ProductFinalCost="{Binding Final_cost, StringFormat=' {0:C}'}"
                                 IsFavorite="{Binding IsFavorite}"
                             />
                 </DataTemplate>
