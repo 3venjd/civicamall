@@ -35,7 +35,8 @@
             <Local:EntrySearch Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"/>
             <Local:ShoppingCart Grid.Row="0" Grid.Column="3" HorizontalOptions="End"/>
        -->
-            <pv:PancakeView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" CornerRadius="10" Padding="0" BackgroundColor="Red" Margin="16,0">
+            <pv:PancakeView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" CornerRadius="10" Padding="0"
+                            Margin="16,0">
                 <Image  Source="Banner_2x.png" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="83" />
             </pv:PancakeView>
             
@@ -43,7 +44,7 @@
             <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="26,15" TranslationY="5" FontSize="24" FontAttributes="Bold" TextColor="#4C4456" Text="Tiendas" />
 
             <pv:PancakeView Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="16,15" VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="34" WidthRequest="130"
-                            BackgroundColor="White" BorderColor="Black" HasShadow="True" CornerRadius="5" Padding="0">
+                            BackgroundColor="White" HasShadow="True" CornerRadius="5" Padding="0">
                 <pv:PancakeView.Shadow>
                     <pv:DropShadow Color="#4C4456" Offset="0,0" BlurRadius="5" Opacity="0.3"/>
                 </pv:PancakeView.Shadow>
@@ -67,7 +68,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView Padding="0" HeightRequest="90" BackgroundColor="White">
+                        <pv:PancakeView Padding="0" HeightRequest="90" BackgroundColor="White" BorderColor="Red">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.4*"/>
@@ -78,7 +79,10 @@
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="1"/>
                                 </Grid.RowDefinitions>
-                                <pv:PancakeView Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.RowSpan="2" CornerRadius="6">
+                                <pv:PancakeView Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.RowSpan="2" CornerRadius="6" Margin="5">
+                                    <pv:PancakeView.Border>
+                                        <pv:Border Color="{Binding Status_color}" Thickness="2"/>
+                                    </pv:PancakeView.Border>
                                     <Image Source="{Binding Image}"/>
                                 </pv:PancakeView>
                                 <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding Name}"/>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace civicamall.Models
 {
@@ -38,5 +39,7 @@ namespace civicamall.Models
         public bool IsOpen { get; set; }
 
         public bool IsClose { get; set; }
+
+        public string Status_color => IsClose == true ? "#FF0000" : "#00FF00";
     }
 }
