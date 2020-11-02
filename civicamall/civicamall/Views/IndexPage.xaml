@@ -446,13 +446,13 @@
             </Grid>
         </ScrollView>
 
-        <pv:PancakeView Grid.Row="0"  Margin="0,0,40,56" 
-                 HorizontalOptions="EndAndExpand" BackgroundColor="LightBlue" CornerRadius="32" WidthRequest="64" HeightRequest="64"
+        <pv:PancakeView Grid.Row="0"  Margin="0,0,5,10" 
+                 HorizontalOptions="EndAndExpand" BackgroundColor="LightBlue" CornerRadius="32" WidthRequest="60" HeightRequest="60"
                  VerticalOptions="EndAndExpand">
             <pv:PancakeView.Shadow>
                 <pv:DropShadow Color="#223E3E" Offset="0,15" BlurRadius="10" Opacity="0.3"/>
             </pv:PancakeView.Shadow>
-            <Button ImageSource="escaneo_de_codigo_qr.png" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="32" WidthRequest="64" HeightRequest="64" BackgroundColor="#00A09C"/>
+            <Button ImageSource="escaneo_de_codigo_qr.png" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="32" WidthRequest="60" HeightRequest="60" BackgroundColor="#00A09C"/>
         </pv:PancakeView>
 
     </Grid>
